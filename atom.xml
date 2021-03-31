@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://renyunfan.github.io</id>
-    <title>Gridea</title>
-    <updated>2021-03-31T01:36:35.160Z</updated>
+    <title>RENyunfan</title>
+    <updated>2021-03-31T01:40:41.737Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://renyunfan.github.io"/>
     <link rel="self" href="https://renyunfan.github.io/atom.xml"/>
@@ -10,7 +10,7 @@
 一件比一件疯狂</subtitle>
     <logo>https://renyunfan.github.io/images/avatar.png</logo>
     <icon>https://renyunfan.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, Gridea</rights>
+    <rights>All rights reserved 2021, RENyunfan</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://renyunfan.github.io/post/hello-gridea/</id>
