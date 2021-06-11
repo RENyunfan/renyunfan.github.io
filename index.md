@@ -1,8 +1,8 @@
 ---
 layout: home
 profile_picture:
-  src: /assets/img/profile.jpg
-  alt: website picture
+  src: ./assets/img/profile.jpg
+  alt: Yunfan REN
 ---
 
 <p>
