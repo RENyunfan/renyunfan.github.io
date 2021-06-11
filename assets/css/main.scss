@@ -1,54 +1,35 @@
 ---
+# Only the main Sass file needs front matter (the dashes are enough)
 ---
-// CSS Style Guide: http://codeguide.co/#css
 
+@charset "utf-8";
 
+// Our variables
+$base-url: "{{ site.baseurl }}";
 
-$scheme    : '{{ site.scheme | default: Muse }}';
-$variables : base $scheme custom;
-$mixins    : base $scheme custom;
+$base-font-family: Charter, Georgia, Helvetica, Arial, sans-serif;
+$base-font-size: 14px;
+$small-font-size: $base-font-size * 0.875;
+$base-line-height: 1.7;
 
+$spacing-unit: 30px;
 
-{% include _helper/config_map.html %}
-$jekyll-config-map : {{ config_map }};
+$text-color: #111;
+$background-color: #fdfdfd;
+$brand-color: #2a7ae2;
 
-@function jekyll-config($key) {
-  @return map-get($jekyll-config-map, $key);
+$grey-color: #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark: darken($grey-color, 25%);
+
+$on-mobile: 500px;
+$on-laptop: 800px;
+
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
 }
 
-// Variables Layer
-// --------------------------------------------------
-@import "_variables/base";
-@import "_variables/{{ site.scheme | default: Muse }}";
-@import "_variables/custom";
-
-// Mixins Layer
-// --------------------------------------------------
-@import "_mixins/base";
-@import "_mixins/{{ site.scheme | default: Muse }}";
-@import "_mixins/custom";
-
-
-
-// Common Layer
-// --------------------------------------------------
-
-// Scaffolding
-@import "_common/scaffolding/scaffolding";
-
-// Layout
-@import "_common/outline/outline";
-
-// Components
-@import "_common/components/components";
-
-
-// Schemes Layer
-// --------------------------------------------------
-@import "_schemes/{{ site.scheme | default: Muse }}/index";
-
-
-
-// Custom Layer
-// --------------------------------------------------
-@import "_custom/custom";
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "base", "layout", "site", "work", "blog", "post", "404";
