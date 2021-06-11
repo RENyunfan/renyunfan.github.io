@@ -8,4 +8,6 @@ profile_picture:
 <p>
   Welcome! This site belongs to Yunfan REN from HITsz
 </p>
-![profile](https://kevin-1257631984.cos.ap-guangzhou.myqcloud.com/img/profile.jpg)
+<p>
+  Yunfan REN's reseach interests include robotics, mobile robots, motion and path planning.
+</p>
