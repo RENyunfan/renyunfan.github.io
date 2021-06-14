@@ -3,18 +3,18 @@ layout: work
 title: Work
 slug: /work
 items:
-  - title: My Interest 1
+  - title: MAV Motion and Path Planning
     image:
-      src: /assets/img/work/water.png
+      src: /assets/img/work/wuav.png
       alt: water
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  - title: My Interest 2
+    description: We use onboard computers and sensors to online generate high-quality safe, and smooth trajectories to help MAVs operate autonomously at high speeds in unknown environments.
+  - title: Lidar SLAM
     image:
-      src: /assets/img/work/sand.png
+      src: /assets/img/work/lidar_slam.png
       alt: sand
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    description: Use solid-state lidar such as Livox, to perform high-speed and high-quality localization and mapping. All algorithms should be done on an onboard computer and run online.
 ---
 
-This is an example of a "Work" page, displaying your work, your interests, your projects.
+
 <br />
 <br />
