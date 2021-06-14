@@ -5,7 +5,7 @@ slug: /work
 items:
   - title: MAV Motion and Path Planning
     image:
-      src: /assets/img/work/wuav.png
+      src: /assets/img/work/uav.png
       alt: water
     description: We use onboard computers and sensors to online generate high-quality safe, and smooth trajectories to help MAVs operate autonomously at high speeds in unknown environments.
   - title: Lidar SLAM
