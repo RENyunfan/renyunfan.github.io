@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LiDER-Inertial | Jiarong Lin</title>
+    <link>https://ziv-lin.github.io/tag/lider-inertial/</link>
+      <atom:link href="https://ziv-lin.github.io/tag/lider-inertial/index.xml" rel="self" type="application/rss+xml" />
+    <description>LiDER-Inertial</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 13 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://ziv-lin.github.io/media/icon_hu9d99c7745ea620931e335f427cb4032d_148591_512x512_fill_lanczos_center_3.png</url>
+      <title>LiDER-Inertial</title>
+      <link>https://ziv-lin.github.io/tag/lider-inertial/</link>
+    </image>
+    
+    <item>
+      <title>ImMesh: An Immediate LiDAR Localization and Meshing Framework</title>
+      <link>https://ziv-lin.github.io/publication/paper_immesh/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://ziv-lin.github.io/publication/paper_immesh/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
+  &lt;/div&gt;
+&lt;/div&gt;
+ 
+--&gt;
+&lt;!-- Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). --&gt;
+&lt;h2 id=&#34;immesh-an-immediate-lidar-localization-and-meshing-framework&#34;&gt;ImMesh: An &lt;strong&gt;Im&lt;/strong&gt;mediate LiDAR Localization and &lt;strong&gt;Mesh&lt;/strong&gt;ing Framework&lt;/h2&gt;
+&lt;h3 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;ImMesh&lt;/strong&gt; is a novel LiDAR(-inertial) odometry and meshing framework, which takes advantage of input of LiDAR data, achieving the goal of &lt;strong&gt;simultaneous localization and meshing&lt;/strong&gt; in real-time. ImMesh comprises four tightly-coupled modules: receiver, localization, meshing, and broadcaster. The localization module utilizes the prepossessed sensor data from the receiver, estimates the sensor pose online by registering LiDAR scans to maps, and dynamically grows the map. Then, our meshing module takes the registered LiDAR scan for &lt;strong&gt;incrementally reconstructing the triangle mesh on the fly&lt;/strong&gt;. Finally, the real-time odometry, map, and mesh are published via our broadcaster.&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/overview_v7.jpg&#34; style=&#34;margin: -1px 0px 0px 0px&#34; alt=&#34;video&#34; width=&#34;100%&#34; /&gt;
+&lt;/div&gt;
+&lt;h4 id=&#34;12-our-accompanying-videos&#34;&gt;1.2 Our accompanying videos&lt;/h4&gt;
+&lt;p&gt;Our &lt;strong&gt;accompanying videos&lt;/strong&gt; are now available on &lt;strong&gt;YouTube&lt;/strong&gt; (click below images to open) and &lt;strong&gt;Bilibili&lt;/strong&gt;&lt;sup&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1AG4y1177z&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;1&lt;/a&gt;, &lt;a href=&#34;https://www.bilibili.com/video/BV1Xd4y1j7on/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2&lt;/a&gt;, &lt;a href=&#34;https://www.bilibili.com/video/BV1W8411N7D2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;a href=&#34;https://youtu.be/pzT2fMwz428&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/video_cover.jpg&#34; style=&#34;margin: -5px 0px 0px 0px&#34; alt=&#34;video&#34; width=&#34;100%&#34; /&gt;&lt;/a&gt;
+&lt;!-- &lt;a href=&#34;https://youtu.be/pzT2fMwz428?t=4&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/video_contents.jpg&#34; alt=&#34;video&#34; width=&#34;100%&#34; /&gt;&lt;/a&gt; --&gt;
+&lt;a href=&#34;https://youtu.be/pzT2fMwz428?t=10&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/video_cover_1.jpg&#34; style=&#34;margin: 2px 0px 0px 0px&#34; alt=&#34;video&#34; width=&#34;100%&#34; /&gt;&lt;/a&gt;
+&lt;!-- &lt;a href=&#34;https://youtu.be/pzT2fMwz428?t=191&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/video_cover_2.jpg&#34; style=&#34;margin: 2px 0px 0px 0px&#34; alt=&#34;video&#34; width=&#34;100%&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://youtu.be/pzT2fMwz428?t=321&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/video_cover_3.jpg&#34; style=&#34;margin: 2px 0px 0px 0px&#34; alt=&#34;video&#34; width=&#34;100%&#34; /&gt;&lt;/a&gt; --&gt;
+&lt;a href=&#34;https://youtu.be/pzT2fMwz428?t=499&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/video_cover_4.jpg&#34; style=&#34;margin: 2px 0px 0px 0px&#34; alt=&#34;video&#34; width=&#34;100%&#34; /&gt;&lt;/a&gt;
+&lt;!-- &lt;a href=&#34;https://youtu.be/pzT2fMwz428?t=622&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/video_cover_5.jpg&#34; style=&#34;margin: 2px 0px 0px 0px&#34; alt=&#34;video&#34; width=&#34;100%&#34; /&gt;&lt;/a&gt; --&gt;
+&lt;a href=&#34;https://youtu.be/pzT2fMwz428?t=892&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/video_cover_6.jpg&#34; style=&#34;margin: 2px 0px 0px 0px&#34; alt=&#34;video&#34; width=&#34;100%&#34; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;2-what-can-immesh-do&#34;&gt;2. What can ImMesh do?&lt;/h3&gt;
+&lt;h4 id=&#34;21-simultaneous-lidar-localization-and-mesh-reconstruction-on-the-fly&#34;&gt;2.1 Simultaneous LiDAR localization and mesh reconstruction on the fly&lt;/h4&gt;
+&lt;div class=&#34;row&#34;&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/gifs/hku_seq_campus.gif&#34; style=&#34;margin: -2px 0px 0px 0px&#34; alt=&#34;video&#34;   width=&#34;49%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/gifs/hku_seq_main_building.gif&#34; style=&#34;margin: -2px 0px 0px 5px&#34; alt=&#34;video&#34;   width=&#34;49%&#34; /&gt;
+&lt;/div&gt;
+&lt;h4 id=&#34;22-immesh-for-lidar-point-cloud-reinforement&#34;&gt;2.2 ImMesh for LiDAR point cloud reinforement&lt;/h4&gt;
+&lt;div class=&#34;row&#34;&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/gifs/application_1_fov.gif&#34; style=&#34;margin: -2px 0px 0px 0px&#34; alt=&#34;video&#34;  width=&#34;49%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/gifs/application_1_res.gif&#34; style=&#34;margin: -2px 0px 0px 5px&#34; alt=&#34;video&#34;  width=&#34;49%&#34; /&gt;
+&lt;/div&gt;
+&lt;h4 id=&#34;23-immesh-for-rapid-lossless-texture-reconstruction&#34;&gt;2.3 ImMesh for rapid, lossless texture reconstruction&lt;/h4&gt;
+&lt;div class=&#34;row&#34;&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/gifs/application_2_trial_1-0.gif&#34; style=&#34;margin: -2px 0px 0px 0px&#34; alt=&#34;video&#34;   width=&#34;49%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/gifs/application_2_trial_1-1.gif&#34; style=&#34;margin: -2px 2px 0px 2px&#34; width=&#34;49%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/gifs/application_2_trial_2-0.gif&#34; style=&#34;margin: 2px 0px 0px 0px&#34; width=&#34;49%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/gifs/application_2_trial_2-1.gif&#34; style=&#34;margin: 2px 2px 0px 2px&#34; width=&#34;49%&#34; /&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;3-contact-us&#34;&gt;3. Contact us&lt;/h3&gt;
+&lt;p&gt;If you have any questions about this work, please feel free to contact me &amp;lt;ziv.lin.ljrATgmail.com&amp;gt; and Dr. Fu Zhang &amp;lt;fuzhangAThku.hk&amp;gt; via email.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>🆕ImMesh: An Immediate LiDAR Localization and Meshing Framework</title>
+      <link>https://ziv-lin.github.io/project/proj_immesh/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://ziv-lin.github.io/project/proj_immesh/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
+  &lt;/div&gt;
+&lt;/div&gt;
+ 
+--&gt;
+&lt;!-- Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). --&gt;
+&lt;h2 id=&#34;immesh-an-immediate-lidar-localization-and-meshing-framework&#34;&gt;ImMesh: An &lt;strong&gt;Im&lt;/strong&gt;mediate LiDAR Localization and &lt;strong&gt;Mesh&lt;/strong&gt;ing Framework&lt;/h2&gt;
+&lt;div class=&#34;row&#34;&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/cover_v4.jpg&#34; style=&#34;margin: -1px 0px 0px 0px&#34;  alt=&#34;video&#34; width=&#34;100%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/island_appendix.jpg&#34; style=&#34;margin: -1px 0px 0px 0px&#34;  alt=&#34;video&#34; width=&#34;100%&#34; /&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;ImMesh&lt;/strong&gt; is a novel LiDAR(-inertial) odometry and meshing framework, which takes advantage of input of LiDAR data, achieving the goal of &lt;strong&gt;simultaneous localization and meshing&lt;/strong&gt; in real-time. ImMesh comprises four tightly-coupled modules: receiver, localization, meshing, and broadcaster. The localization module utilizes the prepossessed sensor data from the receiver, estimates the sensor pose online by registering LiDAR scans to maps, and dynamically grows the map. Then, our meshing module takes the registered LiDAR scan for &lt;strong&gt;incrementally reconstructing the triangle mesh on the fly&lt;/strong&gt;. Finally, the real-time odometry, map, and mesh are published via our broadcaster.&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/overview_v7.jpg&#34; style=&#34;margin: -1px 0px 0px 0px&#34; alt=&#34;video&#34; width=&#34;100%&#34; /&gt;
+&lt;/div&gt;
+&lt;h4 id=&#34;12-our-accompanying-videos&#34;&gt;1.2 Our accompanying videos&lt;/h4&gt;
+&lt;p&gt;Our &lt;strong&gt;accompanying videos&lt;/strong&gt; are now available on &lt;strong&gt;YouTube&lt;/strong&gt; (click below images to open) and &lt;strong&gt;Bilibili&lt;/strong&gt;&lt;sup&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1AG4y1177z&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;1&lt;/a&gt;, &lt;a href=&#34;https://www.bilibili.com/video/BV1Xd4y1j7on/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2&lt;/a&gt;, &lt;a href=&#34;https://www.bilibili.com/video/BV1W8411N7D2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;a href=&#34;https://youtu.be/pzT2fMwz428&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/video_cover.jpg&#34; style=&#34;margin: -5px 0px 0px 0px&#34; alt=&#34;video&#34; width=&#34;100%&#34; /&gt;&lt;/a&gt;
+&lt;!-- &lt;a href=&#34;https://youtu.be/pzT2fMwz428?t=4&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/video_contents.jpg&#34; alt=&#34;video&#34; width=&#34;100%&#34; /&gt;&lt;/a&gt; --&gt;
+&lt;a href=&#34;https://youtu.be/pzT2fMwz428?t=10&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/video_cover_1.jpg&#34; style=&#34;margin: 2px 0px 0px 0px&#34; alt=&#34;video&#34; width=&#34;100%&#34; /&gt;&lt;/a&gt;
+&lt;!-- &lt;a href=&#34;https://youtu.be/pzT2fMwz428?t=191&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/video_cover_2.jpg&#34; style=&#34;margin: 2px 0px 0px 0px&#34; alt=&#34;video&#34; width=&#34;100%&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://youtu.be/pzT2fMwz428?t=321&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/video_cover_3.jpg&#34; style=&#34;margin: 2px 0px 0px 0px&#34; alt=&#34;video&#34; width=&#34;100%&#34; /&gt;&lt;/a&gt; --&gt;
+&lt;a href=&#34;https://youtu.be/pzT2fMwz428?t=499&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/video_cover_4.jpg&#34; style=&#34;margin: 2px 0px 0px 0px&#34; alt=&#34;video&#34; width=&#34;100%&#34; /&gt;&lt;/a&gt;
+&lt;!-- &lt;a href=&#34;https://youtu.be/pzT2fMwz428?t=622&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/video_cover_5.jpg&#34; style=&#34;margin: 2px 0px 0px 0px&#34; alt=&#34;video&#34; width=&#34;100%&#34; /&gt;&lt;/a&gt; --&gt;
+&lt;a href=&#34;https://youtu.be/pzT2fMwz428?t=892&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/video_cover_6.jpg&#34; style=&#34;margin: 2px 0px 0px 0px&#34; alt=&#34;video&#34; width=&#34;100%&#34; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;2-what-can-immesh-do&#34;&gt;2. What can ImMesh do?&lt;/h3&gt;
+&lt;h4 id=&#34;21-simultaneous-lidar-localization-and-mesh-reconstruction-on-the-fly&#34;&gt;2.1 Simultaneous LiDAR localization and mesh reconstruction on the fly&lt;/h4&gt;
+&lt;div class=&#34;row&#34;&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/gifs/hku_seq_campus.gif&#34; style=&#34;margin: -2px 0px 0px 0px&#34; alt=&#34;video&#34;   width=&#34;49%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/gifs/hku_seq_main_building.gif&#34; style=&#34;margin: -2px 0px 0px 5px&#34; alt=&#34;video&#34;   width=&#34;49%&#34; /&gt;
+&lt;/div&gt;
+&lt;h4 id=&#34;22-immesh-for-lidar-point-cloud-reinforement&#34;&gt;2.2 ImMesh for LiDAR point cloud reinforement&lt;/h4&gt;
+&lt;div class=&#34;row&#34;&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/gifs/application_1_fov.gif&#34; style=&#34;margin: -2px 0px 0px 0px&#34; alt=&#34;video&#34;  width=&#34;49%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/gifs/application_1_res.gif&#34; style=&#34;margin: -2px 0px 0px 5px&#34; alt=&#34;video&#34;  width=&#34;49%&#34; /&gt;
+&lt;/div&gt;
+&lt;h4 id=&#34;23-immesh-for-rapid-lossless-texture-reconstruction&#34;&gt;2.3 ImMesh for rapid, lossless texture reconstruction&lt;/h4&gt;
+&lt;div class=&#34;row&#34;&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/gifs/application_2_trial_1-0.gif&#34; style=&#34;margin: -2px 0px 0px 0px&#34; alt=&#34;video&#34;   width=&#34;49%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/gifs/application_2_trial_1-1.gif&#34; style=&#34;margin: -2px 2px 0px 2px&#34; width=&#34;49%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/gifs/application_2_trial_2-0.gif&#34; style=&#34;margin: 2px 0px 0px 0px&#34; width=&#34;49%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/ImMesh_release/raw/main/pics/gifs/application_2_trial_2-1.gif&#34; style=&#34;margin: 2px 2px 0px 2px&#34; width=&#34;49%&#34; /&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;3-contact-us&#34;&gt;3. Contact us&lt;/h3&gt;
+&lt;p&gt;If you have any questions about this work, please feel free to contact me &amp;lt;ziv.lin.ljrATgmail.com&amp;gt; and Dr. Fu Zhang &amp;lt;fuzhangAThku.hk&amp;gt; via email.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>FAST-LIO2: Fast Direct LiDAR-inertial Odometry</title>
+      <link>https://ziv-lin.github.io/project/proj_fastlio/</link>
+      <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>https://ziv-lin.github.io/project/proj_fastlio/</guid>
+      <description>&lt;h2 id=&#34;fast-lio&#34;&gt;&lt;strong&gt;FAST-LIO&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;FAST-LIO&lt;/strong&gt; (Fast LiDAR-Inertial Odometry) is a computationally efficient and robust LiDAR-inertial odometry package. It fuses LiDAR feature points with IMU data using a tightly-coupled iterated extended Kalman filter to allow robust navigation in fast-motion, noisy or cluttered environments where degeneration occurs. Our package address many key issues:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Fast iterated Kalman filter for odometry optimization;&lt;/li&gt;
+&lt;li&gt;Automaticaly initialized at most steady environments;&lt;/li&gt;
+&lt;li&gt;Parallel KD-Tree Search to decrease the computation;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;fast-lio-20-2021-07-05-update&#34;&gt;&lt;strong&gt;FAST-LIO 2.0 (2021-07-05 Update)&lt;/strong&gt;&lt;/h2&gt;
+&lt;div align=&#34;left&#34;&gt;
+&lt;img src=&#34;https://github.com/hku-mars/FAST_LIO/raw/main/doc/real_experiment2.gif&#34; width=100.0% /&gt;
+&lt;img src=&#34;https://github.com/hku-mars/FAST_LIO/raw/main/doc/ulhkwh_fastlio.gif&#34; width = 100.0% &gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Related video:&lt;/strong&gt;  &lt;a href=&#34;https://youtu.be/2OvjGnxszf8&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FAST-LIO2&lt;/a&gt;,  &lt;a href=&#34;https://youtu.be/iYCY6T79oNU&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FAST-LIO1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;FAST-LIO 2.0 Features:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Incremental mapping using &lt;a href=&#34;https://github.com/hku-mars/ikd-Tree&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ikd-Tree&lt;/a&gt;, achieve faster speed and over 100Hz LiDAR rate.&lt;/li&gt;
+&lt;li&gt;Direct odometry (scan to map) on Raw LiDAR points (feature extraction can be disabled), achieving better accuracy.&lt;/li&gt;
+&lt;li&gt;Since no requirements for feature extraction, FAST-LIO2 can support many types of LiDAR including spinning (Velodyne, Ouster) and solid-state (Livox Avia, Horizon, MID-70) LiDARs, and can be easily extended to support more LiDARs.&lt;/li&gt;
+&lt;li&gt;Support external IMU.&lt;/li&gt;
+&lt;li&gt;Support ARM-based platforms including Khadas VIM3, Nivida TX2, Raspberry Pi 4B(8G RAM).&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>FAST-LIO2: Fast Direct LiDAR-inertial Odometry</title>
+      <link>https://ziv-lin.github.io/publication/paper_fast_lio2/</link>
+      <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>https://ziv-lin.github.io/publication/paper_fast_lio2/</guid>
+      <description>&lt;h2 id=&#34;fast-lio&#34;&gt;&lt;strong&gt;FAST-LIO&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;FAST-LIO&lt;/strong&gt; (Fast LiDAR-Inertial Odometry) is a computationally efficient and robust LiDAR-inertial odometry package. It fuses LiDAR feature points with IMU data using a tightly-coupled iterated extended Kalman filter to allow robust navigation in fast-motion, noisy or cluttered environments where degeneration occurs. Our package address many key issues:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Fast iterated Kalman filter for odometry optimization;&lt;/li&gt;
+&lt;li&gt;Automaticaly initialized at most steady environments;&lt;/li&gt;
+&lt;li&gt;Parallel KD-Tree Search to decrease the computation;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;fast-lio-20-2021-07-05-update&#34;&gt;&lt;strong&gt;FAST-LIO 2.0 (2021-07-05 Update)&lt;/strong&gt;&lt;/h2&gt;
+&lt;div align=&#34;left&#34;&gt;
+&lt;img src=&#34;https://github.com/hku-mars/FAST_LIO/raw/main/doc/real_experiment2.gif&#34; width=100.0% /&gt;
+&lt;img src=&#34;https://github.com/hku-mars/FAST_LIO/raw/main/doc/ulhkwh_fastlio.gif&#34; width = 100.0% &gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Related video:&lt;/strong&gt;  &lt;a href=&#34;https://youtu.be/2OvjGnxszf8&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FAST-LIO2&lt;/a&gt;,  &lt;a href=&#34;https://youtu.be/iYCY6T79oNU&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FAST-LIO1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;FAST-LIO 2.0 Features:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Incremental mapping using &lt;a href=&#34;https://github.com/hku-mars/ikd-Tree&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ikd-Tree&lt;/a&gt;, achieve faster speed and over 100Hz LiDAR rate.&lt;/li&gt;
+&lt;li&gt;Direct odometry (scan to map) on Raw LiDAR points (feature extraction can be disabled), achieving better accuracy.&lt;/li&gt;
+&lt;li&gt;Since no requirements for feature extraction, FAST-LIO2 can support many types of LiDAR including spinning (Velodyne, Ouster) and solid-state (Livox Avia, Horizon, MID-70) LiDARs, and can be easily extended to support more LiDARs.&lt;/li&gt;
+&lt;li&gt;Support external IMU.&lt;/li&gt;
+&lt;li&gt;Support ARM-based platforms including Khadas VIM3, Nivida TX2, Raspberry Pi 4B(8G RAM).&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

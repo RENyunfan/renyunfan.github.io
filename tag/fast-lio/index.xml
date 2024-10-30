@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FAST-LIO | Jiarong Lin</title>
+    <link>https://ziv-lin.github.io/tag/fast-lio/</link>
+      <atom:link href="https://ziv-lin.github.io/tag/fast-lio/index.xml" rel="self" type="application/rss+xml" />
+    <description>FAST-LIO</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 15 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://ziv-lin.github.io/media/icon_hu9d99c7745ea620931e335f427cb4032d_148591_512x512_fill_lanczos_center_3.png</url>
+      <title>FAST-LIO</title>
+      <link>https://ziv-lin.github.io/tag/fast-lio/</link>
+    </image>
+    
+    <item>
+      <title>FAST-LIO2: Fast Direct LiDAR-inertial Odometry</title>
+      <link>https://ziv-lin.github.io/project/proj_fastlio/</link>
+      <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>https://ziv-lin.github.io/project/proj_fastlio/</guid>
+      <description>&lt;h2 id=&#34;fast-lio&#34;&gt;&lt;strong&gt;FAST-LIO&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;FAST-LIO&lt;/strong&gt; (Fast LiDAR-Inertial Odometry) is a computationally efficient and robust LiDAR-inertial odometry package. It fuses LiDAR feature points with IMU data using a tightly-coupled iterated extended Kalman filter to allow robust navigation in fast-motion, noisy or cluttered environments where degeneration occurs. Our package address many key issues:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Fast iterated Kalman filter for odometry optimization;&lt;/li&gt;
+&lt;li&gt;Automaticaly initialized at most steady environments;&lt;/li&gt;
+&lt;li&gt;Parallel KD-Tree Search to decrease the computation;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;fast-lio-20-2021-07-05-update&#34;&gt;&lt;strong&gt;FAST-LIO 2.0 (2021-07-05 Update)&lt;/strong&gt;&lt;/h2&gt;
+&lt;div align=&#34;left&#34;&gt;
+&lt;img src=&#34;https://github.com/hku-mars/FAST_LIO/raw/main/doc/real_experiment2.gif&#34; width=100.0% /&gt;
+&lt;img src=&#34;https://github.com/hku-mars/FAST_LIO/raw/main/doc/ulhkwh_fastlio.gif&#34; width = 100.0% &gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Related video:&lt;/strong&gt;  &lt;a href=&#34;https://youtu.be/2OvjGnxszf8&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FAST-LIO2&lt;/a&gt;,  &lt;a href=&#34;https://youtu.be/iYCY6T79oNU&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FAST-LIO1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;FAST-LIO 2.0 Features:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Incremental mapping using &lt;a href=&#34;https://github.com/hku-mars/ikd-Tree&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ikd-Tree&lt;/a&gt;, achieve faster speed and over 100Hz LiDAR rate.&lt;/li&gt;
+&lt;li&gt;Direct odometry (scan to map) on Raw LiDAR points (feature extraction can be disabled), achieving better accuracy.&lt;/li&gt;
+&lt;li&gt;Since no requirements for feature extraction, FAST-LIO2 can support many types of LiDAR including spinning (Velodyne, Ouster) and solid-state (Livox Avia, Horizon, MID-70) LiDARs, and can be easily extended to support more LiDARs.&lt;/li&gt;
+&lt;li&gt;Support external IMU.&lt;/li&gt;
+&lt;li&gt;Support ARM-based platforms including Khadas VIM3, Nivida TX2, Raspberry Pi 4B(8G RAM).&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>FAST-LIO2: Fast Direct LiDAR-inertial Odometry</title>
+      <link>https://ziv-lin.github.io/publication/paper_fast_lio2/</link>
+      <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>https://ziv-lin.github.io/publication/paper_fast_lio2/</guid>
+      <description>&lt;h2 id=&#34;fast-lio&#34;&gt;&lt;strong&gt;FAST-LIO&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;FAST-LIO&lt;/strong&gt; (Fast LiDAR-Inertial Odometry) is a computationally efficient and robust LiDAR-inertial odometry package. It fuses LiDAR feature points with IMU data using a tightly-coupled iterated extended Kalman filter to allow robust navigation in fast-motion, noisy or cluttered environments where degeneration occurs. Our package address many key issues:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Fast iterated Kalman filter for odometry optimization;&lt;/li&gt;
+&lt;li&gt;Automaticaly initialized at most steady environments;&lt;/li&gt;
+&lt;li&gt;Parallel KD-Tree Search to decrease the computation;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;fast-lio-20-2021-07-05-update&#34;&gt;&lt;strong&gt;FAST-LIO 2.0 (2021-07-05 Update)&lt;/strong&gt;&lt;/h2&gt;
+&lt;div align=&#34;left&#34;&gt;
+&lt;img src=&#34;https://github.com/hku-mars/FAST_LIO/raw/main/doc/real_experiment2.gif&#34; width=100.0% /&gt;
+&lt;img src=&#34;https://github.com/hku-mars/FAST_LIO/raw/main/doc/ulhkwh_fastlio.gif&#34; width = 100.0% &gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Related video:&lt;/strong&gt;  &lt;a href=&#34;https://youtu.be/2OvjGnxszf8&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FAST-LIO2&lt;/a&gt;,  &lt;a href=&#34;https://youtu.be/iYCY6T79oNU&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FAST-LIO1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;FAST-LIO 2.0 Features:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Incremental mapping using &lt;a href=&#34;https://github.com/hku-mars/ikd-Tree&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ikd-Tree&lt;/a&gt;, achieve faster speed and over 100Hz LiDAR rate.&lt;/li&gt;
+&lt;li&gt;Direct odometry (scan to map) on Raw LiDAR points (feature extraction can be disabled), achieving better accuracy.&lt;/li&gt;
+&lt;li&gt;Since no requirements for feature extraction, FAST-LIO2 can support many types of LiDAR including spinning (Velodyne, Ouster) and solid-state (Livox Avia, Horizon, MID-70) LiDARs, and can be easily extended to support more LiDARs.&lt;/li&gt;
+&lt;li&gt;Support external IMU.&lt;/li&gt;
+&lt;li&gt;Support ARM-based platforms including Khadas VIM3, Nivida TX2, Raspberry Pi 4B(8G RAM).&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

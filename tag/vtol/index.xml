@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VTOL | Jiarong Lin</title>
+    <link>https://ziv-lin.github.io/tag/vtol/</link>
+      <atom:link href="https://ziv-lin.github.io/tag/vtol/index.xml" rel="self" type="application/rss+xml" />
+    <description>VTOL</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 11 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://ziv-lin.github.io/media/icon_hu9d99c7745ea620931e335f427cb4032d_148591_512x512_fill_lanczos_center_3.png</url>
+      <title>VTOL</title>
+      <link>https://ziv-lin.github.io/tag/vtol/</link>
+    </image>
+    
+    <item>
+      <title>Full attitude control of an efficient quadrotor tail-sitter VTOL UAV with flexible modes</title>
+      <link>https://ziv-lin.github.io/publication/paper_vtol/</link>
+      <pubDate>Tue, 11 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://ziv-lin.github.io/publication/paper_vtol/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

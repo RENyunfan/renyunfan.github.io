@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R3LIVE | Jiarong Lin</title>
+    <link>https://ziv-lin.github.io/tag/r3live/</link>
+      <atom:link href="https://ziv-lin.github.io/tag/r3live/index.xml" rel="self" type="application/rss+xml" />
+    <description>R3LIVE</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 06 Aug 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://ziv-lin.github.io/media/icon_hu9d99c7745ea620931e335f427cb4032d_148591_512x512_fill_lanczos_center_3.png</url>
+      <title>R3LIVE</title>
+      <link>https://ziv-lin.github.io/tag/r3live/</link>
+    </image>
+    
+    <item>
+      <title>R$^3$LIVE&#43;&#43;: A Robust, Real-time, Radiance reconstruction package with a tightly-coupled LiDAR-Inertial-Visual state Estimator</title>
+      <link>https://ziv-lin.github.io/publication/paper_r3live_pp/</link>
+      <pubDate>Sat, 06 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://ziv-lin.github.io/publication/paper_r3live_pp/</guid>
+      <description>&lt;h3 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;R3LIVE&lt;/strong&gt; is a novel LiDAR-Inertial-Visual sensor fusion framework, which takes advantage of measurement of LiDAR, inertial, and visual sensors to achieve robust and accurate state estimation. R3LIVE is built upon our previous work &lt;a href=&#34;https://github.com/hku-mars/r2live&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R2LIVE&lt;/a&gt;, is contained of two subsystems: the LiDAR-inertial odometry (LIO) and the visual-inertial odometry (VIO). The LIO subsystem (&lt;a href=&#34;https://github.com/hku-mars/FAST_LIO&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FAST-LIO&lt;/a&gt;) takes advantage of the measurement from LiDAR and inertial sensors and builds the geometric structure of (i.e. the position of 3D points) global maps. The VIO subsystem utilizes the data of visual-inertial sensors and renders the map&amp;rsquo;s texture (i.e. the color of 3D points). &lt;br&gt;&lt;/p&gt;
+&lt;h4 id=&#34;11-our-accompanying-videos&#34;&gt;1.1 Our accompanying videos&lt;/h4&gt;
+&lt;p&gt;Our &lt;strong&gt;accompanying videos&lt;/strong&gt; are now available on YouTube (click below images to open) and Bilibili&lt;sup&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1d341117d6?share_source=copy_web&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;1&lt;/a&gt;, &lt;a href=&#34;https://www.bilibili.com/video/BV1e3411q7Di?share_source=copy_web&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;!-- &lt;div class=&#34;row&#34;&gt; --&gt;
+&lt;!-- ![This is an gif](r3live/test.gif) --&gt;
+&lt;!-- &lt;div class=&#34;row&#34;&gt;
+&lt;a href=&#34;https://youtu.be/j5fT8NE5fdg &#34;&gt;&lt;img src=https://github.com/ziv-lin/r3live_dataset/raw/main/pics/R3LIVE_demos.jpg  width=&#34;49%&#34; &gt;&lt;/a&gt;
+&lt;img src=https://github.com/ziv-lin/r3live_dataset/raw/main/pics/R3LIVE_paper.jpg  width=&#34;49%&#34; link=&#34;https://youtu.be/4rjrrLgL3nk&#34;/&gt;
+&lt;/div&gt; --&gt;
+&lt;!-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;a href=&#34;https://youtu.be/j5fT8NE5fdg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/r3live/pics/R3LIVE_paper_hu4e886cf4c2a701c490c531f08a48121d_112555_01d0c47bdc0750d55af7e494f700d0fb.webp 400w,
+               /media/r3live/pics/R3LIVE_paper_hu4e886cf4c2a701c490c531f08a48121d_112555_a6703638bad9482894ad70004cfc34ad.webp 760w,
+               /media/r3live/pics/R3LIVE_paper_hu4e886cf4c2a701c490c531f08a48121d_112555_1200x1200_fit_q100_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://ziv-lin.github.io/media/r3live/pics/R3LIVE_paper_hu4e886cf4c2a701c490c531f08a48121d_112555_01d0c47bdc0750d55af7e494f700d0fb.webp&#34;
+               width=&#34;40%&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;a href=&#34;https://youtu.be/4rjrrLgL3nk&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/r3live/pics/R3LIVE_demos_hub10b61bde77d99a46e1db5912aa2e0ed_113685_46551e43b52bd4f37e2b6c828876a0b7.webp 400w,
+               /media/r3live/pics/R3LIVE_demos_hub10b61bde77d99a46e1db5912aa2e0ed_113685_bb94bb76f1b18aa659755870aeaa3517.webp 760w,
+               /media/r3live/pics/R3LIVE_demos_hub10b61bde77d99a46e1db5912aa2e0ed_113685_1200x1200_fit_q100_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://ziv-lin.github.io/media/r3live/pics/R3LIVE_demos_hub10b61bde77d99a46e1db5912aa2e0ed_113685_46551e43b52bd4f37e2b6c828876a0b7.webp&#34;
+               width=&#34;40%&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+ --&gt;
+&lt;div class=&#34;row&#34;&gt;
+&lt;img src=https://github.com/ziv-lin/r3live_dataset/raw/main/pics/R3LIVE_demos.jpg style=&#34;margin: 0px 0px 0px 0px&#34; width=49% /&gt;
+&lt;img src=https://github.com/ziv-lin/r3live_dataset/raw/main/pics/R3LIVE_paper.jpg style=&#34;margin: 0px 0px 0px 2px&#34; width=49% link=&#34;https://youtu.be/4rjrrLgL3nk&#34;/&gt;
+&lt;/div&gt;
+&lt;!-- ![This is an jpg](r3live/test.jpg)
+![This is an png](r3live/test.png)
+![This is an gif](r3live/test.gif) --&gt;
+&lt;!-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;a href=&#34;https://youtu.be/j5fT8NE5fdg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/r3live/pics/R3LIVE_paper_hu4e886cf4c2a701c490c531f08a48121d_112555_01d0c47bdc0750d55af7e494f700d0fb.webp 400w,
+               /media/r3live/pics/R3LIVE_paper_hu4e886cf4c2a701c490c531f08a48121d_112555_a6703638bad9482894ad70004cfc34ad.webp 760w,
+               /media/r3live/pics/R3LIVE_paper_hu4e886cf4c2a701c490c531f08a48121d_112555_1200x1200_fit_q100_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://ziv-lin.github.io/media/r3live/pics/R3LIVE_paper_hu4e886cf4c2a701c490c531f08a48121d_112555_01d0c47bdc0750d55af7e494f700d0fb.webp&#34;
+               width=&#34;40%&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;a href=&#34;https://youtu.be/j5fT8NE5fdg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/r3live/pics/R3LIVE_demos_hub10b61bde77d99a46e1db5912aa2e0ed_113685_46551e43b52bd4f37e2b6c828876a0b7.webp 400w,
+               /media/r3live/pics/R3LIVE_demos_hub10b61bde77d99a46e1db5912aa2e0ed_113685_bb94bb76f1b18aa659755870aeaa3517.webp 760w,
+               /media/r3live/pics/R3LIVE_demos_hub10b61bde77d99a46e1db5912aa2e0ed_113685_1200x1200_fit_q100_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://ziv-lin.github.io/media/r3live/pics/R3LIVE_demos_hub10b61bde77d99a46e1db5912aa2e0ed_113685_46551e43b52bd4f37e2b6c828876a0b7.webp&#34;
+               width=&#34;40%&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+ --&gt;
+&lt;h4 id=&#34;12-our-associate-dataset-r3live-dataset&#34;&gt;1.2 Our associate dataset: R3LIVE-dataset&lt;/h4&gt;
+&lt;p&gt;Our associate dataset &lt;a href=&#34;https://github.com/ziv-lin/r3live_dataset&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;R3LIVE-dataset&lt;/strong&gt;&lt;/a&gt; that use for evaluation is also available online. You can access and download our datasets via this &lt;a href=&#34;https://github.com/ziv-lin/r3live_dataset&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Github repository&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;13-our-open-source-hardware-design&#34;&gt;1.3 Our open-source hardware design&lt;/h4&gt;
+&lt;p&gt;All of the mechanical modules of our handheld device that use for data collection are designed as FDM printable, with the schematics of the design are also open-sourced in this &lt;a href=&#34;https://github.com/ziv-lin/rxlive_handheld&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Github repository&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;a href=&#34;https://github.com/ziv-lin/rxlive_handheld&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://github.com/ziv-lin/rxlive_handheld/raw/master/pics/introduction_alpha.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;  width=&#34;100%&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+ --&gt;
+&lt;p&gt;&lt;a href=&#34;&#34; rel=&#34;some text&#34;&gt; &lt;img src=https://github.com/ziv-lin/rxlive_handheld/raw/master/pics/introduction_alpha.png style=&#34;margin: -5px 0px 0px 0px&#34; width=&#34;98%&#34; &gt; &lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-r3live-features&#34;&gt;2. R3LIVE Features&lt;/h3&gt;
+&lt;h4 id=&#34;21-strong-robustness-in-various-challenging-scenarios&#34;&gt;2.1 Strong robustness in various challenging scenarios&lt;/h4&gt;
+&lt;p&gt;R3LIVE is robust enough to work well in various of LiDAR-degenerated scenarios (see following figures):&lt;/p&gt;
+&lt;div class=&#34;row&#34;&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/pics/degenerate_02_pic.png&#34; style=&#34;margin: -1px 0px 0px 0px&#34; width=&#34;98%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/gifs/degenerate_01.gif&#34; style=&#34;margin: 2px 0px 0px 5px&#34; width=&#34;49%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/gifs/degenerate_02.gif&#34; style=&#34;margin: 2px 0px 0px 5px&#34; width=&#34;49%&#34; /&gt;
+&lt;/div&gt;
+&lt;p&gt;And even in simultaneously LiDAR degenerated and visual texture-less environments (see Experiment-1 of our &lt;a href=&#34;https://github.com/hku-mars/r3live/blob/master/papers/R3LIVE:%20A%20Robust%2C%20Real-time%2C%20RGB-colored%2C%20LiDAR-Inertial-Visual%20tightly-coupled%20stateEstimation%20and%20mapping%20package.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt;).&lt;/p&gt;
+&lt;div class=&#34;row&#34;&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/pics/exp_00.png&#34; style=&#34;margin: -1px 0px 0px 0px&#34; width=&#34;49%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/gifs/degenerate_00.gif&#34; style=&#34;margin: -1px 0px 0px 2px&#34; width=&#34;49%&#34; /&gt;
+&lt;/div&gt;
+&lt;h4 id=&#34;22-real-time-rgb-maps-reconstruction&#34;&gt;2.2 Real-time RGB maps reconstruction&lt;/h4&gt;
+&lt;p&gt;R3LIVE is able to reconstruct the precise, dense, 3D, RGB-colored maps of surrounding environment in real-time (watch this &lt;a href=&#34;https://youtu.be/j5fT8NE5fdg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;video&lt;/a&gt;).&lt;/p&gt;
+&lt;div class=&#34;row&#34;&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/pics/cover_half.jpg&#34; style=&#34;margin: -1px 0px 0px 0px&#34; width=&#34;98%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/pics/hku_campus_seq_01.png&#34; style=&#34;margin: 1px 0px 0px 0px&#34; width=&#34;98%&#34; /&gt;
+&lt;!-- &lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/pics/hku_park_01.png&#34; style=&#34;margin: 0px 0px 0px 0px&#34; width=&#34;98%&#34; /&gt; --&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/gifs/hku_demo.gif&#34; style=&#34;margin: 1px 0px 0px 0px&#34; width=&#34;49%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/gifs/hkust_demo.gif&#34; style=&#34;margin: 1px 0px 0px 2px&#34; width=&#34;49%&#34; /&gt;
+&lt;/div&gt;
+&lt;h4 id=&#34;23-ready-for-3d-applications&#34;&gt;2.3 Ready for 3D applications&lt;/h4&gt;
+&lt;p&gt;To make R3LIVE more extensible, we also provide a series of offline utilities for reconstructing and texturing meshes, which further reduce the gap between R3LIVE and various 3D applications (watch this &lt;a href=&#34;https://youtu.be/4rjrrLgL3nk&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;video&lt;/a&gt;).&lt;/p&gt;
+&lt;div class=&#34;row&#34;&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/pics/mesh.png&#34; style=&#34;margin: -1px 0px 0px 0px&#34; width=&#34;98%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/gifs/ue_game_0.gif&#34; style=&#34;margin: 1px 0px 0px 0px&#34; width=&#34;49%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/gifs/ue_game_1.gif&#34; style=&#34;margin: 1px 0px 0px 2px&#34; width=&#34;49%&#34; /&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;3-acknowledgments&#34;&gt;3. Acknowledgments&lt;/h3&gt;
+&lt;p&gt;In the development of R3LIVE, we stand on the shoulders of the following repositories:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hku-mars/r2live&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R2LIVE&lt;/a&gt;: A robust, real-time tightly-coupled multi-sensor fusion package.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hku-mars/FAST_LIO&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FAST-LIO&lt;/a&gt;: A computationally efficient and robust LiDAR-inertial odometry package.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hku-mars/ikd-Tree&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ikd-Tree&lt;/a&gt;: A state-of-art dynamic KD-Tree for 3D kNN search.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hku-mars/livox_camera_calib&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;livox_camera_calib&lt;/a&gt;: A robust, high accuracy extrinsic calibration tool between high resolution LiDAR (e.g. Livox) and camera in targetless environment.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hku-mars/loam_livox&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LOAM-Livox&lt;/a&gt;: A robust LiDAR Odometry and Mapping (LOAM) package for Livox-LiDAR.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cdcseacave/openMVS&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;openMVS&lt;/a&gt;: A library for computer-vision scientists and especially targeted to the Multi-View Stereo reconstruction community.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cnr-isti-vclab/vcglib&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VCGlib&lt;/a&gt;: An open source, portable, header-only Visualization and Computer Graphics Library.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cgal.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CGAL&lt;/a&gt;: A C++ Computational Geometry Algorithms Library.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>R$^3$LIVE: A Robust, Real-time, RGB-colored, LiDAR-Inertial-Visual tightly-coupled state Estimation and mapping package</title>
+      <link>https://ziv-lin.github.io/project/proj_r3live/</link>
+      <pubDate>Tue, 12 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://ziv-lin.github.io/project/proj_r3live/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
+  &lt;/div&gt;
+&lt;/div&gt;
+ 
+--&gt;
+&lt;!-- Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). --&gt;
+&lt;h3 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;R3LIVE&lt;/strong&gt; is a novel LiDAR-Inertial-Visual sensor fusion framework, which takes advantage of measurement of LiDAR, inertial, and visual sensors to achieve robust and accurate state estimation. R3LIVE is built upon our previous work &lt;a href=&#34;https://github.com/hku-mars/r2live&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R2LIVE&lt;/a&gt;, is contained of two subsystems: the LiDAR-inertial odometry (LIO) and the visual-inertial odometry (VIO). The LIO subsystem (&lt;a href=&#34;https://github.com/hku-mars/FAST_LIO&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FAST-LIO&lt;/a&gt;) takes advantage of the measurement from LiDAR and inertial sensors and builds the geometric structure of (i.e. the position of 3D points) global maps. The VIO subsystem utilizes the data of visual-inertial sensors and renders the map&amp;rsquo;s texture (i.e. the color of 3D points).&lt;/p&gt;
+&lt;h4 id=&#34;11-our-accompanying-videos&#34;&gt;1.1 Our accompanying videos&lt;/h4&gt;
+&lt;p&gt;Our &lt;strong&gt;accompanying videos&lt;/strong&gt; are now available on YouTube (click below images to open) and Bilibili&lt;sup&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1d341117d6?share_source=copy_web&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;1&lt;/a&gt;, &lt;a href=&#34;https://www.bilibili.com/video/BV1e3411q7Di?share_source=copy_web&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;!-- &lt;div class=&#34;row&#34;&gt; --&gt;
+&lt;!-- ![This is an gif](r3live/test.gif) --&gt;
+&lt;!-- &lt;div class=&#34;row&#34;&gt;
+&lt;a href=&#34;https://youtu.be/j5fT8NE5fdg &#34;&gt;&lt;img src=https://github.com/ziv-lin/r3live_dataset/raw/main/pics/R3LIVE_demos.jpg  width=&#34;49%&#34; &gt;&lt;/a&gt;
+&lt;img src=https://github.com/ziv-lin/r3live_dataset/raw/main/pics/R3LIVE_paper.jpg  width=&#34;49%&#34; link=&#34;https://youtu.be/4rjrrLgL3nk&#34;/&gt;
+&lt;/div&gt; --&gt;
+&lt;!-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;a href=&#34;https://youtu.be/j5fT8NE5fdg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/r3live/pics/R3LIVE_paper_hu4e886cf4c2a701c490c531f08a48121d_112555_01d0c47bdc0750d55af7e494f700d0fb.webp 400w,
+               /media/r3live/pics/R3LIVE_paper_hu4e886cf4c2a701c490c531f08a48121d_112555_a6703638bad9482894ad70004cfc34ad.webp 760w,
+               /media/r3live/pics/R3LIVE_paper_hu4e886cf4c2a701c490c531f08a48121d_112555_1200x1200_fit_q100_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://ziv-lin.github.io/media/r3live/pics/R3LIVE_paper_hu4e886cf4c2a701c490c531f08a48121d_112555_01d0c47bdc0750d55af7e494f700d0fb.webp&#34;
+               width=&#34;40%&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;a href=&#34;https://youtu.be/4rjrrLgL3nk&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/r3live/pics/R3LIVE_demos_hub10b61bde77d99a46e1db5912aa2e0ed_113685_46551e43b52bd4f37e2b6c828876a0b7.webp 400w,
+               /media/r3live/pics/R3LIVE_demos_hub10b61bde77d99a46e1db5912aa2e0ed_113685_bb94bb76f1b18aa659755870aeaa3517.webp 760w,
+               /media/r3live/pics/R3LIVE_demos_hub10b61bde77d99a46e1db5912aa2e0ed_113685_1200x1200_fit_q100_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://ziv-lin.github.io/media/r3live/pics/R3LIVE_demos_hub10b61bde77d99a46e1db5912aa2e0ed_113685_46551e43b52bd4f37e2b6c828876a0b7.webp&#34;
+               width=&#34;40%&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+ --&gt;
+&lt;div class=&#34;row&#34;&gt;
+&lt;img src=https://github.com/ziv-lin/r3live_dataset/raw/main/pics/R3LIVE_demos.jpg style=&#34;margin: 0px 0px 0px 0px&#34; width=49% /&gt;
+&lt;img src=https://github.com/ziv-lin/r3live_dataset/raw/main/pics/R3LIVE_paper.jpg style=&#34;margin: 0px 0px 0px 2px&#34; width=49% link=&#34;https://youtu.be/4rjrrLgL3nk&#34;/&gt;
+&lt;/div&gt;
+&lt;!-- ![This is an jpg](r3live/test.jpg)
+![This is an png](r3live/test.png)
+![This is an gif](r3live/test.gif) --&gt;
+&lt;!-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;a href=&#34;https://youtu.be/j5fT8NE5fdg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/r3live/pics/R3LIVE_paper_hu4e886cf4c2a701c490c531f08a48121d_112555_01d0c47bdc0750d55af7e494f700d0fb.webp 400w,
+               /media/r3live/pics/R3LIVE_paper_hu4e886cf4c2a701c490c531f08a48121d_112555_a6703638bad9482894ad70004cfc34ad.webp 760w,
+               /media/r3live/pics/R3LIVE_paper_hu4e886cf4c2a701c490c531f08a48121d_112555_1200x1200_fit_q100_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://ziv-lin.github.io/media/r3live/pics/R3LIVE_paper_hu4e886cf4c2a701c490c531f08a48121d_112555_01d0c47bdc0750d55af7e494f700d0fb.webp&#34;
+               width=&#34;40%&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;a href=&#34;https://youtu.be/j5fT8NE5fdg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/r3live/pics/R3LIVE_demos_hub10b61bde77d99a46e1db5912aa2e0ed_113685_46551e43b52bd4f37e2b6c828876a0b7.webp 400w,
+               /media/r3live/pics/R3LIVE_demos_hub10b61bde77d99a46e1db5912aa2e0ed_113685_bb94bb76f1b18aa659755870aeaa3517.webp 760w,
+               /media/r3live/pics/R3LIVE_demos_hub10b61bde77d99a46e1db5912aa2e0ed_113685_1200x1200_fit_q100_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://ziv-lin.github.io/media/r3live/pics/R3LIVE_demos_hub10b61bde77d99a46e1db5912aa2e0ed_113685_46551e43b52bd4f37e2b6c828876a0b7.webp&#34;
+               width=&#34;40%&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+ --&gt;
+&lt;h4 id=&#34;12-our-associate-dataset-r3live-dataset&#34;&gt;1.2 Our associate dataset: R3LIVE-dataset&lt;/h4&gt;
+&lt;p&gt;Our associate dataset &lt;a href=&#34;https://github.com/ziv-lin/r3live_dataset&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;R3LIVE-dataset&lt;/strong&gt;&lt;/a&gt; that use for evaluation is also available online. You can access and download our datasets via this &lt;a href=&#34;https://github.com/ziv-lin/r3live_dataset&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Github repository&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;13-our-open-source-hardware-design&#34;&gt;1.3 Our open-source hardware design&lt;/h4&gt;
+&lt;p&gt;All of the mechanical modules of our handheld device that use for data collection are designed as FDM printable, with the schematics of the design are also open-sourced in this &lt;a href=&#34;https://github.com/ziv-lin/rxlive_handheld&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Github repository&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;a href=&#34;https://github.com/ziv-lin/rxlive_handheld&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://github.com/ziv-lin/rxlive_handheld/raw/master/pics/introduction_alpha.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;  width=&#34;100%&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+ --&gt;
+&lt;p&gt;&lt;a href=&#34;&#34; rel=&#34;some text&#34;&gt; &lt;img src=https://github.com/ziv-lin/rxlive_handheld/raw/master/pics/introduction_alpha.png style=&#34;margin: -5px 0px 0px 0px&#34; width=&#34;98%&#34; &gt; &lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-r3live-features&#34;&gt;2. R3LIVE Features&lt;/h3&gt;
+&lt;h4 id=&#34;21-strong-robustness-in-various-challenging-scenarios&#34;&gt;2.1 Strong robustness in various challenging scenarios&lt;/h4&gt;
+&lt;p&gt;R3LIVE is robust enough to work well in various of LiDAR-degenerated scenarios (see following figures):&lt;/p&gt;
+&lt;div class=&#34;row&#34;&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/pics/degenerate_02_pic.png&#34; style=&#34;margin: -1px 0px 0px 0px&#34; width=&#34;98%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/gifs/degenerate_01.gif&#34; style=&#34;margin: 2px 0px 0px 5px&#34; width=&#34;49%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/gifs/degenerate_02.gif&#34; style=&#34;margin: 2px 0px 0px 5px&#34; width=&#34;49%&#34; /&gt;
+&lt;/div&gt;
+&lt;p&gt;And even in simultaneously LiDAR degenerated and visual texture-less environments (see Experiment-1 of our &lt;a href=&#34;https://github.com/hku-mars/r3live/blob/master/papers/R3LIVE:%20A%20Robust%2C%20Real-time%2C%20RGB-colored%2C%20LiDAR-Inertial-Visual%20tightly-coupled%20stateEstimation%20and%20mapping%20package.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt;).&lt;/p&gt;
+&lt;div class=&#34;row&#34;&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/pics/exp_00.png&#34; style=&#34;margin: -1px 0px 0px 0px&#34; width=&#34;49%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/gifs/degenerate_00.gif&#34; style=&#34;margin: -1px 0px 0px 2px&#34; width=&#34;49%&#34; /&gt;
+&lt;/div&gt;
+&lt;h4 id=&#34;22-real-time-rgb-maps-reconstruction&#34;&gt;2.2 Real-time RGB maps reconstruction&lt;/h4&gt;
+&lt;p&gt;R3LIVE is able to reconstruct the precise, dense, 3D, RGB-colored maps of surrounding environment in real-time (watch this &lt;a href=&#34;https://youtu.be/j5fT8NE5fdg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;video&lt;/a&gt;).&lt;/p&gt;
+&lt;div class=&#34;row&#34;&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/pics/cover_half.jpg&#34; style=&#34;margin: -1px 0px 0px 0px&#34; width=&#34;98%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/pics/hku_campus_seq_01.png&#34; style=&#34;margin: 1px 0px 0px 0px&#34; width=&#34;98%&#34; /&gt;
+&lt;!-- &lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/pics/hku_park_01.png&#34; style=&#34;margin: 0px 0px 0px 0px&#34; width=&#34;98%&#34; /&gt; --&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/gifs/hku_demo.gif&#34; style=&#34;margin: 1px 0px 0px 0px&#34; width=&#34;49%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/gifs/hkust_demo.gif&#34; style=&#34;margin: 1px 0px 0px 2px&#34; width=&#34;49%&#34; /&gt;
+&lt;/div&gt;
+&lt;h4 id=&#34;23-ready-for-3d-applications&#34;&gt;2.3 Ready for 3D applications&lt;/h4&gt;
+&lt;p&gt;To make R3LIVE more extensible, we also provide a series of offline utilities for reconstructing and texturing meshes, which further reduce the gap between R3LIVE and various 3D applications (watch this &lt;a href=&#34;https://youtu.be/4rjrrLgL3nk&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;video&lt;/a&gt;).&lt;/p&gt;
+&lt;div class=&#34;row&#34;&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/pics/mesh.png&#34; style=&#34;margin: -1px 0px 0px 0px&#34; width=&#34;98%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/gifs/ue_game_0.gif&#34; style=&#34;margin: 1px 0px 0px 0px&#34; width=&#34;49%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/gifs/ue_game_1.gif&#34; style=&#34;margin: 1px 0px 0px 2px&#34; width=&#34;49%&#34; /&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;3-acknowledgments&#34;&gt;3. Acknowledgments&lt;/h3&gt;
+&lt;p&gt;In the development of R3LIVE, we stand on the shoulders of the following repositories:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hku-mars/r2live&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R2LIVE&lt;/a&gt;: A robust, real-time tightly-coupled multi-sensor fusion package.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hku-mars/FAST_LIO&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FAST-LIO&lt;/a&gt;: A computationally efficient and robust LiDAR-inertial odometry package.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hku-mars/ikd-Tree&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ikd-Tree&lt;/a&gt;: A state-of-art dynamic KD-Tree for 3D kNN search.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hku-mars/livox_camera_calib&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;livox_camera_calib&lt;/a&gt;: A robust, high accuracy extrinsic calibration tool between high resolution LiDAR (e.g. Livox) and camera in targetless environment.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hku-mars/loam_livox&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LOAM-Livox&lt;/a&gt;: A robust LiDAR Odometry and Mapping (LOAM) package for Livox-LiDAR.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cdcseacave/openMVS&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;openMVS&lt;/a&gt;: A library for computer-vision scientists and especially targeted to the Multi-View Stereo reconstruction community.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cnr-isti-vclab/vcglib&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VCGlib&lt;/a&gt;: An open source, portable, header-only Visualization and Computer Graphics Library.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cgal.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CGAL&lt;/a&gt;: A C++ Computational Geometry Algorithms Library.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>R$^3$LIVE: A Robust, Real-time, RGB-colored, LiDAR-Inertial-Visual tightly-coupled state Estimation and mapping package</title>
+      <link>https://ziv-lin.github.io/publication/paper_r3live/</link>
+      <pubDate>Tue, 12 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://ziv-lin.github.io/publication/paper_r3live/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
+  &lt;/div&gt;
+&lt;/div&gt;
+ 
+--&gt;
+&lt;!-- Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). --&gt;
+&lt;h3 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;R3LIVE&lt;/strong&gt; is a novel LiDAR-Inertial-Visual sensor fusion framework, which takes advantage of measurement of LiDAR, inertial, and visual sensors to achieve robust and accurate state estimation. R3LIVE is built upon our previous work &lt;a href=&#34;https://github.com/hku-mars/r2live&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R2LIVE&lt;/a&gt;, is contained of two subsystems: the LiDAR-inertial odometry (LIO) and the visual-inertial odometry (VIO). The LIO subsystem (&lt;a href=&#34;https://github.com/hku-mars/FAST_LIO&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FAST-LIO&lt;/a&gt;) takes advantage of the measurement from LiDAR and inertial sensors and builds the geometric structure of (i.e. the position of 3D points) global maps. The VIO subsystem utilizes the data of visual-inertial sensors and renders the map&amp;rsquo;s texture (i.e. the color of 3D points). &lt;br&gt;&lt;/p&gt;
+&lt;h4 id=&#34;11-our-accompanying-videos&#34;&gt;1.1 Our accompanying videos&lt;/h4&gt;
+&lt;p&gt;Our &lt;strong&gt;accompanying videos&lt;/strong&gt; are now available on YouTube (click below images to open) and Bilibili&lt;sup&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1d341117d6?share_source=copy_web&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;1&lt;/a&gt;, &lt;a href=&#34;https://www.bilibili.com/video/BV1e3411q7Di?share_source=copy_web&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;!-- &lt;div class=&#34;row&#34;&gt; --&gt;
+&lt;!-- ![This is an gif](r3live/test.gif) --&gt;
+&lt;!-- &lt;div class=&#34;row&#34;&gt;
+&lt;a href=&#34;https://youtu.be/j5fT8NE5fdg &#34;&gt;&lt;img src=https://github.com/ziv-lin/r3live_dataset/raw/main/pics/R3LIVE_demos.jpg  width=&#34;49%&#34; &gt;&lt;/a&gt;
+&lt;img src=https://github.com/ziv-lin/r3live_dataset/raw/main/pics/R3LIVE_paper.jpg  width=&#34;49%&#34; link=&#34;https://youtu.be/4rjrrLgL3nk&#34;/&gt;
+&lt;/div&gt; --&gt;
+&lt;!-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;a href=&#34;https://youtu.be/j5fT8NE5fdg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/r3live/pics/R3LIVE_paper_hu4e886cf4c2a701c490c531f08a48121d_112555_01d0c47bdc0750d55af7e494f700d0fb.webp 400w,
+               /media/r3live/pics/R3LIVE_paper_hu4e886cf4c2a701c490c531f08a48121d_112555_a6703638bad9482894ad70004cfc34ad.webp 760w,
+               /media/r3live/pics/R3LIVE_paper_hu4e886cf4c2a701c490c531f08a48121d_112555_1200x1200_fit_q100_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://ziv-lin.github.io/media/r3live/pics/R3LIVE_paper_hu4e886cf4c2a701c490c531f08a48121d_112555_01d0c47bdc0750d55af7e494f700d0fb.webp&#34;
+               width=&#34;40%&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;a href=&#34;https://youtu.be/4rjrrLgL3nk&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/r3live/pics/R3LIVE_demos_hub10b61bde77d99a46e1db5912aa2e0ed_113685_46551e43b52bd4f37e2b6c828876a0b7.webp 400w,
+               /media/r3live/pics/R3LIVE_demos_hub10b61bde77d99a46e1db5912aa2e0ed_113685_bb94bb76f1b18aa659755870aeaa3517.webp 760w,
+               /media/r3live/pics/R3LIVE_demos_hub10b61bde77d99a46e1db5912aa2e0ed_113685_1200x1200_fit_q100_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://ziv-lin.github.io/media/r3live/pics/R3LIVE_demos_hub10b61bde77d99a46e1db5912aa2e0ed_113685_46551e43b52bd4f37e2b6c828876a0b7.webp&#34;
+               width=&#34;40%&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+ --&gt;
+&lt;div class=&#34;row&#34;&gt;
+&lt;img src=https://github.com/ziv-lin/r3live_dataset/raw/main/pics/R3LIVE_demos.jpg style=&#34;margin: 0px 0px 0px 0px&#34; width=49% /&gt;
+&lt;img src=https://github.com/ziv-lin/r3live_dataset/raw/main/pics/R3LIVE_paper.jpg style=&#34;margin: 0px 0px 0px 2px&#34; width=49% link=&#34;https://youtu.be/4rjrrLgL3nk&#34;/&gt;
+&lt;/div&gt;
+&lt;!-- ![This is an jpg](r3live/test.jpg)
+![This is an png](r3live/test.png)
+![This is an gif](r3live/test.gif) --&gt;
+&lt;!-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;a href=&#34;https://youtu.be/j5fT8NE5fdg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/r3live/pics/R3LIVE_paper_hu4e886cf4c2a701c490c531f08a48121d_112555_01d0c47bdc0750d55af7e494f700d0fb.webp 400w,
+               /media/r3live/pics/R3LIVE_paper_hu4e886cf4c2a701c490c531f08a48121d_112555_a6703638bad9482894ad70004cfc34ad.webp 760w,
+               /media/r3live/pics/R3LIVE_paper_hu4e886cf4c2a701c490c531f08a48121d_112555_1200x1200_fit_q100_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://ziv-lin.github.io/media/r3live/pics/R3LIVE_paper_hu4e886cf4c2a701c490c531f08a48121d_112555_01d0c47bdc0750d55af7e494f700d0fb.webp&#34;
+               width=&#34;40%&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;a href=&#34;https://youtu.be/j5fT8NE5fdg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/r3live/pics/R3LIVE_demos_hub10b61bde77d99a46e1db5912aa2e0ed_113685_46551e43b52bd4f37e2b6c828876a0b7.webp 400w,
+               /media/r3live/pics/R3LIVE_demos_hub10b61bde77d99a46e1db5912aa2e0ed_113685_bb94bb76f1b18aa659755870aeaa3517.webp 760w,
+               /media/r3live/pics/R3LIVE_demos_hub10b61bde77d99a46e1db5912aa2e0ed_113685_1200x1200_fit_q100_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://ziv-lin.github.io/media/r3live/pics/R3LIVE_demos_hub10b61bde77d99a46e1db5912aa2e0ed_113685_46551e43b52bd4f37e2b6c828876a0b7.webp&#34;
+               width=&#34;40%&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+ --&gt;
+&lt;h4 id=&#34;12-our-associate-dataset-r3live-dataset&#34;&gt;1.2 Our associate dataset: R3LIVE-dataset&lt;/h4&gt;
+&lt;p&gt;Our associate dataset &lt;a href=&#34;https://github.com/ziv-lin/r3live_dataset&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;R3LIVE-dataset&lt;/strong&gt;&lt;/a&gt; that use for evaluation is also available online. You can access and download our datasets via this &lt;a href=&#34;https://github.com/ziv-lin/r3live_dataset&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Github repository&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;13-our-open-source-hardware-design&#34;&gt;1.3 Our open-source hardware design&lt;/h4&gt;
+&lt;p&gt;All of the mechanical modules of our handheld device that use for data collection are designed as FDM printable, with the schematics of the design are also open-sourced in this &lt;a href=&#34;https://github.com/ziv-lin/rxlive_handheld&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Github repository&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;a href=&#34;https://github.com/ziv-lin/rxlive_handheld&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://github.com/ziv-lin/rxlive_handheld/raw/master/pics/introduction_alpha.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;  width=&#34;100%&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+ --&gt;
+&lt;p&gt;&lt;a href=&#34;&#34; rel=&#34;some text&#34;&gt; &lt;img src=https://github.com/ziv-lin/rxlive_handheld/raw/master/pics/introduction_alpha.png style=&#34;margin: -5px 0px 0px 0px&#34; width=&#34;98%&#34; &gt; &lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-r3live-features&#34;&gt;2. R3LIVE Features&lt;/h3&gt;
+&lt;h4 id=&#34;21-strong-robustness-in-various-challenging-scenarios&#34;&gt;2.1 Strong robustness in various challenging scenarios&lt;/h4&gt;
+&lt;p&gt;R3LIVE is robust enough to work well in various of LiDAR-degenerated scenarios (see following figures):&lt;/p&gt;
+&lt;div class=&#34;row&#34;&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/pics/degenerate_02_pic.png&#34; style=&#34;margin: -1px 0px 0px 0px&#34; width=&#34;98%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/gifs/degenerate_01.gif&#34; style=&#34;margin: 2px 0px 0px 5px&#34; width=&#34;49%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/gifs/degenerate_02.gif&#34; style=&#34;margin: 2px 0px 0px 5px&#34; width=&#34;49%&#34; /&gt;
+&lt;/div&gt;
+&lt;p&gt;And even in simultaneously LiDAR degenerated and visual texture-less environments (see Experiment-1 of our &lt;a href=&#34;https://github.com/hku-mars/r3live/blob/master/papers/R3LIVE:%20A%20Robust%2C%20Real-time%2C%20RGB-colored%2C%20LiDAR-Inertial-Visual%20tightly-coupled%20stateEstimation%20and%20mapping%20package.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt;).&lt;/p&gt;
+&lt;div class=&#34;row&#34;&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/pics/exp_00.png&#34; style=&#34;margin: -1px 0px 0px 0px&#34; width=&#34;49%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/gifs/degenerate_00.gif&#34; style=&#34;margin: -1px 0px 0px 2px&#34; width=&#34;49%&#34; /&gt;
+&lt;/div&gt;
+&lt;h4 id=&#34;22-real-time-rgb-maps-reconstruction&#34;&gt;2.2 Real-time RGB maps reconstruction&lt;/h4&gt;
+&lt;p&gt;R3LIVE is able to reconstruct the precise, dense, 3D, RGB-colored maps of surrounding environment in real-time (watch this &lt;a href=&#34;https://youtu.be/j5fT8NE5fdg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;video&lt;/a&gt;).&lt;/p&gt;
+&lt;div class=&#34;row&#34;&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/pics/cover_half.jpg&#34; style=&#34;margin: -1px 0px 0px 0px&#34; width=&#34;98%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/pics/hku_campus_seq_01.png&#34; style=&#34;margin: 1px 0px 0px 0px&#34; width=&#34;98%&#34; /&gt;
+&lt;!-- &lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/pics/hku_park_01.png&#34; style=&#34;margin: 0px 0px 0px 0px&#34; width=&#34;98%&#34; /&gt; --&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/gifs/hku_demo.gif&#34; style=&#34;margin: 1px 0px 0px 0px&#34; width=&#34;49%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/gifs/hkust_demo.gif&#34; style=&#34;margin: 1px 0px 0px 2px&#34; width=&#34;49%&#34; /&gt;
+&lt;/div&gt;
+&lt;h4 id=&#34;23-ready-for-3d-applications&#34;&gt;2.3 Ready for 3D applications&lt;/h4&gt;
+&lt;p&gt;To make R3LIVE more extensible, we also provide a series of offline utilities for reconstructing and texturing meshes, which further reduce the gap between R3LIVE and various 3D applications (watch this &lt;a href=&#34;https://youtu.be/4rjrrLgL3nk&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;video&lt;/a&gt;).&lt;/p&gt;
+&lt;div class=&#34;row&#34;&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/pics/mesh.png&#34; style=&#34;margin: -1px 0px 0px 0px&#34; width=&#34;98%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/gifs/ue_game_0.gif&#34; style=&#34;margin: 1px 0px 0px 0px&#34; width=&#34;49%&#34; /&gt;
+&lt;img src=&#34;https://github.com/ziv-lin/r3live_dataset/raw/main/gifs/ue_game_1.gif&#34; style=&#34;margin: 1px 0px 0px 2px&#34; width=&#34;49%&#34; /&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;3-acknowledgments&#34;&gt;3. Acknowledgments&lt;/h3&gt;
+&lt;p&gt;In the development of R3LIVE, we stand on the shoulders of the following repositories:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hku-mars/r2live&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R2LIVE&lt;/a&gt;: A robust, real-time tightly-coupled multi-sensor fusion package.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hku-mars/FAST_LIO&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FAST-LIO&lt;/a&gt;: A computationally efficient and robust LiDAR-inertial odometry package.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hku-mars/ikd-Tree&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ikd-Tree&lt;/a&gt;: A state-of-art dynamic KD-Tree for 3D kNN search.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hku-mars/livox_camera_calib&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;livox_camera_calib&lt;/a&gt;: A robust, high accuracy extrinsic calibration tool between high resolution LiDAR (e.g. Livox) and camera in targetless environment.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hku-mars/loam_livox&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LOAM-Livox&lt;/a&gt;: A robust LiDAR Odometry and Mapping (LOAM) package for Livox-LiDAR.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cdcseacave/openMVS&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;openMVS&lt;/a&gt;: A library for computer-vision scientists and especially targeted to the Multi-View Stereo reconstruction community.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cnr-isti-vclab/vcglib&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VCGlib&lt;/a&gt;: An open source, portable, header-only Visualization and Computer Graphics Library.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cgal.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CGAL&lt;/a&gt;: A C++ Computational Geometry Algorithms Library.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

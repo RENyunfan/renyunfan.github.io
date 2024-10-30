@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reinforcement Learning | Jiarong Lin</title>
+    <link>https://ziv-lin.github.io/tag/reinforcement-learning/</link>
+      <atom:link href="https://ziv-lin.github.io/tag/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
+    <description>Reinforcement Learning</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 28 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://ziv-lin.github.io/media/icon_hu9d99c7745ea620931e335f427cb4032d_148591_512x512_fill_lanczos_center_3.png</url>
+      <title>Reinforcement Learning</title>
+      <link>https://ziv-lin.github.io/tag/reinforcement-learning/</link>
+    </image>
+    
+    <item>
+      <title>Flying through a narrow gap using neural network: an end-to-end planning and control approach</title>
+      <link>https://ziv-lin.github.io/publication/paper_cross_gap/</link>
+      <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://ziv-lin.github.io/publication/paper_cross_gap/</guid>
+      <description>&lt;h2 id=&#34;flying-through-a-narrow-gap-using-neural-network-an-end-to-end-planning-and-control-approach&#34;&gt;Flying through a narrow gap using neural network: an end-to-end planning and control approach&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Crossgap_IL_RL&lt;/strong&gt; is the open-soured project of our IROS_2019 paper &amp;ldquo;Flying through a narrow gap using neural network: an end-to-end planning and control approach&amp;rdquo;
+(our preprint version on &lt;a href=&#34;https://arxiv.org/abs/1903.09088&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;arxiv&lt;/em&gt;&lt;/a&gt;, our video on &lt;a href=&#34;https://www.youtube.com/watch?v=jU1qRcLdjx0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Youtube&lt;/em&gt;&lt;/a&gt;) , including some of the training codes, pretrain networks, and simulator (based on &lt;a href=&#34;https://github.com/microsoft/AirSim&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Airsim&lt;/em&gt;&lt;/a&gt;).&lt;/p&gt;
+&lt;div class=&#34;row&#34;&gt;
+    &lt;img src=&#34;https://github.com/hku-mars/crossgap_il_rl/raw/master/pics/merge.jpg&#34; width = 55.4% style=&#34;margin: -1px 0px 0px 0px&#34; /&gt;
+    &lt;img src=&#34;https://github.com/hku-mars/crossgap_il_rl/raw/master/pics/gap_pose_2.jpg&#34; width = 41.6% style=&#34;margin: -1px 0px 0px 2px&#34;  /&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt;:
+Our project can be divided into two phases,the imitation learning and reinforcement learning. In the first phase, we train our end-to-end policy network by imitating from a tradition pipeline. In the second phase, we fine-tune our policy network using reinforcement learning to improve the network performance. The framework of our systems is shown as follows.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fine-tuning network using reinforcement-learning:&lt;/strong&gt;&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+    &lt;img src=&#34;https://github.com/hku-mars/crossgap_il_rl/raw/master/pics/RL.gif&#34; width = 100% /&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Our realworld experiments:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;row&#34;&gt;
+    &lt;img src=&#34;https://github.com/hku-mars/crossgap_il_rl/raw/master/pics/30.gif&#34; width = 45%  style=&#34;margin: -1px 0px 0px 0px&#34;/&gt;
+    &lt;img src=&#34;https://github.com/hku-mars/crossgap_il_rl/raw/master/pics/30_15.gif&#34; width = 45% style=&#34;margin: -1px 0px 0px 2px&#34;/&gt;
+&lt;/div&gt;
+&lt;div class=&#34;row&#34;&gt;
+    &lt;img src=&#34;https://github.com/hku-mars/crossgap_il_rl/raw/master/pics/45.gif&#34; width = 45%   style=&#34;margin: 1px 0px 0px 0px&#34;/&gt;
+    &lt;img src=&#34;https://github.com/hku-mars/crossgap_il_rl/raw/master/pics/60.gif&#34; width = 45%  style=&#34;margin: 1px 0px 0px 2px&#34;/&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

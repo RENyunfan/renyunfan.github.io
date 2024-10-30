@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Loop closure | Jiarong Lin</title>
+    <link>https://ziv-lin.github.io/tag/loop-closure/</link>
+      <atom:link href="https://ziv-lin.github.io/tag/loop-closure/index.xml" rel="self" type="application/rss+xml" />
+    <description>Loop closure</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 26 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://ziv-lin.github.io/media/icon_hu9d99c7745ea620931e335f427cb4032d_148591_512x512_fill_lanczos_center_3.png</url>
+      <title>Loop closure</title>
+      <link>https://ziv-lin.github.io/tag/loop-closure/</link>
+    </image>
+    
+    <item>
+      <title>STD: Stable Triangle Descriptor for 3D place recognition</title>
+      <link>https://ziv-lin.github.io/publication/paper_std/</link>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://ziv-lin.github.io/publication/paper_std/</guid>
+      <description>&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;STD&lt;/strong&gt; is a global descriptor for 3D place recognition. For a triangle, its shape is uniquely determined by the length of the sides or included angles. Moreover, the shape of triangles is completely invariant to rigid transformations. Based on this property, we first design an algorithm to efficiently extract local key points from the 3D point cloud and encode these key points into triangular descriptors. Then, place recognition is achieved by matching the side lengths (and some other information) of the descriptors between point clouds. The point correspondence obtained from the descriptor matching pair can be further used in geometric verification, which greatly improves the accuracy of place recognition.&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+    &lt;div align=&#34;center&#34;&gt;
+        &lt;img src=&#34;https://github.com/hku-mars/STD/raw/master/figs/introduction.png&#34; style=&#34;margin: 0px 0px 0px 0px&#34;  width = 100% &gt;
+    &lt;/div&gt;
+    &lt;font color=#a0a0a0 size=2&gt;A typical place recognition case with STD. These two frames of point clouds are collected by a small FOV LiDAR (Livox Avia) moving in opposite directions, resulting in a low point cloud overlap and drastic viewpoint change.&lt;/font&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;related-video&#34;&gt;Related video&lt;/h3&gt;
+&lt;p&gt;Our accompanying video is now available on &lt;strong&gt;YouTube&lt;/strong&gt;.&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+    &lt;a href=&#34;https://youtu.be/O-9iXn1ME3g&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://github.com/hku-mars/STD/raw/master/figs/video_cover.png&#34; width=100% style=&#34;margin: 0px 0px 0px 0px&#34;  /&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>A fast, complete, point cloud based loop closure for LiDAR odometry and mapping</title>
+      <link>https://ziv-lin.github.io/publication/paper_loop_closure/</link>
+      <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://ziv-lin.github.io/publication/paper_loop_closure/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

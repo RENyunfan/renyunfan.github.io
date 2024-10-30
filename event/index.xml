@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recent &amp; Upcoming Talks | Jiarong Lin</title>
+    <link>https://ziv-lin.github.io/event/</link>
+      <atom:link href="https://ziv-lin.github.io/event/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent &amp; Upcoming Talks</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 16 Jan 2023 20:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://ziv-lin.github.io/media/icon_hu9d99c7745ea620931e335f427cb4032d_148591_512x512_fill_lanczos_center_3.png</url>
+      <title>Recent &amp; Upcoming Talks</title>
+      <link>https://ziv-lin.github.io/event/</link>
+    </image>
+    
+    <item>
+      <title>Simultaneous Localization and Mapping with Multi-sensor Fusion</title>
+      <link>https://ziv-lin.github.io/talk/simultaneous-localization-and-mapping-with-multi-sensor-fusion/</link>
+      <pubDate>Mon, 16 Jan 2023 20:00:00 +0000</pubDate>
+      <guid>https://ziv-lin.github.io/talk/simultaneous-localization-and-mapping-with-multi-sensor-fusion/</guid>
+      <description>&lt;h4 id=&#34;ppt-slide&#34;&gt;PPT Slide:&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;uploads/Simultaneous_localization_and_mapping_with_Multi-sensor_Fusion.pdf&#34;&gt;Simultaneous_Localization_and_Mapping_with_Multi-sensor_Fusion.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;talks&#34;&gt;Talks:&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.shenlanxueyuan.com/open/course/181&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[&lt;strong&gt;Online&lt;/strong&gt;] Simultaneous Localization and Mapping with Multi-sensor Fusion (基于多传感器融合的定位和建图系统)&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;contents&#34;&gt;&lt;strong&gt;Contents&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;LiDAR(-inertial) SLAM
+&lt;ul&gt;
+&lt;li&gt;World&amp;rsquo;s first LiDAR odometry and mapping (LOAM) system for solid-state LiDAR (&lt;a href=&#34;https://github.com/hku-mars/loam_livox&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;loam-livox&lt;/strong&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Tightly-coupled LiDAR-inertial odometry (&lt;a href=&#34;https://github.com/hku-mars/FAST_LIO&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;FAST-LIO&lt;/strong&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Multi-sensor Fusion (LiDAR-Inertial-Visual)
+&lt;ul&gt;
+&lt;li&gt;World&amp;rsquo;s first open-source tightly-coupled LiDAR-Inertial-Visual system (&lt;a href=&#34;https://github.com/hku-mars/r2live&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;R&lt;sup&gt;2&lt;/sup&gt;LIVE&lt;/strong&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Real-time radiance map reconstruction package (&lt;a href=&#34;https://github.com/hku-mars/r3live&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;R&lt;sup&gt;3&lt;/sup&gt;LIVE&lt;/strong&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Immediate LiDAR localization and meshing Framework (&lt;a href=&#34;https://github.com/hku-mars/ImMesh&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;ImMesh&lt;/strong&gt;&lt;/a&gt;)
+&lt;ul&gt;
+&lt;li&gt;Introduction to ImMesh, experiments and results.&lt;/li&gt;
+&lt;li&gt;Applications based on ImMesh
+&lt;ul&gt;
+&lt;li&gt;ImMesh for LiDAR point cloud reinforcement&lt;/li&gt;
+&lt;li&gt;ImMesh for Rapid, Lossless texture reconstruction&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

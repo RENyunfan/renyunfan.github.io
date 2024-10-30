@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Calibration | Jiarong Lin</title>
+    <link>https://ziv-lin.github.io/tag/calibration/</link>
+      <atom:link href="https://ziv-lin.github.io/tag/calibration/index.xml" rel="self" type="application/rss+xml" />
+    <description>Calibration</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 10 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://ziv-lin.github.io/media/icon_hu9d99c7745ea620931e335f427cb4032d_148591_512x512_fill_lanczos_center_3.png</url>
+      <title>Calibration</title>
+      <link>https://ziv-lin.github.io/tag/calibration/</link>
+    </image>
+    
+    <item>
+      <title>A decentralized framework for simultaneous calibration, localization and mapping with multiple LiDARs</title>
+      <link>https://ziv-lin.github.io/publication/paper_dc_loam/</link>
+      <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://ziv-lin.github.io/publication/paper_dc_loam/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Screen-Based Method for Automated Camera Intrinsic Calibration on Production Lines</title>
+      <link>https://ziv-lin.github.io/publication/paper_screen_base/</link>
+      <pubDate>Thu, 22 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://ziv-lin.github.io/publication/paper_screen_base/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

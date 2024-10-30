@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R2LIVE | Jiarong Lin</title>
+    <link>https://ziv-lin.github.io/tag/r2live/</link>
+      <atom:link href="https://ziv-lin.github.io/tag/r2live/index.xml" rel="self" type="application/rss+xml" />
+    <description>R2LIVE</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 10 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://ziv-lin.github.io/media/icon_hu9d99c7745ea620931e335f427cb4032d_148591_512x512_fill_lanczos_center_3.png</url>
+      <title>R2LIVE</title>
+      <link>https://ziv-lin.github.io/tag/r2live/</link>
+    </image>
+    
+    <item>
+      <title>R$^2$LIVE: A Robust, Real-time, LiDAR-Inertial-Visual tightly-coupled state Estimator and mapping</title>
+      <link>https://ziv-lin.github.io/project/proj_r2live/</link>
+      <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>https://ziv-lin.github.io/project/proj_r2live/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
+  &lt;/div&gt;
+&lt;/div&gt;
+ 
+--&gt;
+&lt;!-- Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). --&gt;
+&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+&lt;div align=&#34;center&#34;&gt;
+    &lt;img src=&#34;https://github.com/hku-mars/r2live/raw/master/pics/cover.png&#34; style=&#34;margin: 0px 0px 0px 0px&#34; width = 100% &gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;R&lt;sup&gt;2&lt;/sup&gt;LIVE&lt;/strong&gt; is a robust, real-time tightly-coupled multi-sensor fusion framework, which fuses the measurement from the LiDAR, inertial sensor, visual camera to achieve robust, accurate state estimation. Taking advantage of measurement from all individual sensors, our algorithm is robust enough to various visual failure, LiDAR-degenerated scenarios, and is able to run in real time on an on-board computation platform, as shown by extensive experiments conducted in indoor, outdoor, and mixed environment of different scale.&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+    &lt;img src=&#34;https://github.com/hku-mars/r2live/raw/master/pics/main_building.png&#34; style=&#34;margin: 0px 0px 0px 0px&#34; width = 100% &gt;
+    &lt;font color=#a0a0a0 size=2&gt;The reconstructed 3D maps of HKU main building are shown in (d), and the detail point cloud with the correspondence panorama images are shown in (a) and (b). (c) shows that our algorithm can close the loop by itself (returning the starting point) without any additional processing (e.g. loop closure). In (e), we merge our map with the satellite image to further examine the accuracy of our system.&lt;/font&gt;
+&lt;/div&gt;
+&lt;!-- &lt;br&gt; --&gt;
+&lt;p&gt;&lt;strong&gt;Our related video&lt;/strong&gt;: our related video is now available on YouTube (click below images to open):&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=9lqRHmlN_MA&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://github.com/hku-mars/r2live/raw/master/pics/video_cover.jpg&#34; alt=&#34;video&#34; width=&#34;100%&#34;  style=&#34;margin: 0px 0px 0px 0px&#34;  /&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>R$^2$LIVE: A Robust, Real-time, LiDAR-Inertial-Visual tightly-coupled state Estimator and mapping</title>
+      <link>https://ziv-lin.github.io/publication/paper_r2live/</link>
+      <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>https://ziv-lin.github.io/publication/paper_r2live/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
+  &lt;/div&gt;
+&lt;/div&gt;
+ 
+--&gt;
+&lt;!-- Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). --&gt;
+&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+&lt;div align=&#34;center&#34;&gt;
+    &lt;img src=&#34;https://github.com/hku-mars/r2live/raw/master/pics/cover.png&#34; style=&#34;margin: 0px 0px 0px 0px&#34; width = 100% &gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;R&lt;sup&gt;2&lt;/sup&gt;LIVE&lt;/strong&gt; is a robust, real-time tightly-coupled multi-sensor fusion framework, which fuses the measurement from the LiDAR, inertial sensor, visual camera to achieve robust, accurate state estimation. Taking advantage of measurement from all individual sensors, our algorithm is robust enough to various visual failure, LiDAR-degenerated scenarios, and is able to run in real time on an on-board computation platform, as shown by extensive experiments conducted in indoor, outdoor, and mixed environment of different scale.&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+    &lt;img src=&#34;https://github.com/hku-mars/r2live/raw/master/pics/main_building.png&#34; style=&#34;margin: 0px 0px 0px 0px&#34; width = 100% &gt;
+    &lt;font color=#a0a0a0 size=2&gt;The reconstructed 3D maps of HKU main building are shown in (d), and the detail point cloud with the correspondence panorama images are shown in (a) and (b). (c) shows that our algorithm can close the loop by itself (returning the starting point) without any additional processing (e.g. loop closure). In (e), we merge our map with the satellite image to further examine the accuracy of our system.&lt;/font&gt;
+&lt;/div&gt;
+&lt;!-- &lt;br&gt; --&gt;
+&lt;p&gt;&lt;strong&gt;Our related video&lt;/strong&gt;: our related video is now available on YouTube (click below images to open):&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=9lqRHmlN_MA&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://github.com/hku-mars/r2live/raw/master/pics/video_cover.jpg&#34; alt=&#34;video&#34; width=&#34;100%&#34;  style=&#34;margin: 0px 0px 0px 0px&#34;  /&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
