@@ -1,2123 +1,1107 @@
 <!DOCTYPE html>
 <!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: February 23, 2024 --><html lang="en-us" >
+<!-- Last Published: February 23, 2024 -->
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  
-  
-  
     <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
-  
 
-  
-  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
 
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-  
-  
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  
-
-  
-  
-  
-    
-      
-      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
-    
-  
-
-  
-  
-
-  
-  
-    
     <script src="/js/mathjax-config.js"></script>
-  
 
-  
+    <link
+      rel="stylesheet"
+      href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css"
+      integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg=="
+      crossorigin="anonymous"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+      integrity=""
+      crossorigin="anonymous"
+      async
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="/css/wowchemy.0f229d4b7ebad1917a9a357cba2effab.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="/css/libs/chroma/github-light.min.css"
+      title="hl-light"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="/css/libs/chroma/dracula.min.css"
+      title="hl-dark"
+      media="print"
+      onload="this.media='all'"
+      disabled
+    />
+
+    <meta name="author" content="Jiarong Lin" />
+
+    <meta name="description" content="A person website of Jiarong Lin" />
+
+    <link
+      rel="alternate"
+      hreflang="en-us"
+      href="https://ziv-lin.github.io/tag/lider-inertial-visual/"
+    />
+    <link
+      rel="canonical"
+      href="https://ziv-lin.github.io/tag/lider-inertial-visual/"
+    />
+
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="/media/icon_hu9d99c7745ea620931e335f427cb4032d_148591_32x32_fill_lanczos_center_3.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      href="/media/icon_hu9d99c7745ea620931e335f427cb4032d_148591_180x180_fill_lanczos_center_3.png"
+    />
+
+    <meta name="theme-color" content="#1565c0" />
+
+    <meta property="twitter:card" content="summary" />
+    <meta
+      property="twitter:image"
+      content="https://ziv-lin.github.io/media/icon_hu9d99c7745ea620931e335f427cb4032d_148591_512x512_fill_lanczos_center_3.png"
+    />
+    <meta property="og:site_name" content="Jiarong Lin" />
+    <meta
+      property="og:url"
+      content="https://ziv-lin.github.io/tag/lider-inertial-visual/"
+    />
+    <meta property="og:title" content="LiDER-Inertial-Visual | Jiarong Lin" />
+    <meta property="og:description" content="A person website of Jiarong Lin" />
+    <meta
+      property="og:image"
+      content="https://ziv-lin.github.io/media/icon_hu9d99c7745ea620931e335f427cb4032d_148591_512x512_fill_lanczos_center_3.png"
+    />
+    <meta property="og:locale" content="en-us" />
 
-  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
-
-  
-  
-  
-    
-    
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
-    
-
-    
-    
-    
-    
-      
-      
-    
-    
-    
-
-    
-    
-    
-
-    
-
-    
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-  
-
-  
-  
-  
-  
-  
-  
-  <link rel="stylesheet" href="/css/wowchemy.0f229d4b7ebad1917a9a357cba2effab.css" />
-
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-    
-    
-    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
-    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
-  
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-
-
-
-
-
-
-  <meta name="author" content="Jiarong Lin" />
-
-
-
-
-
-  
-
-<meta name="description" content="A person website of Jiarong Lin" />
-
-
-
-<link rel="alternate" hreflang="en-us" href="https://ziv-lin.github.io/tag/lider-inertial-visual/" />
-<link rel="canonical" href="https://ziv-lin.github.io/tag/lider-inertial-visual/" />
-
-
-
-  <link rel="manifest" href="/manifest.webmanifest" />
-
-
-
-<link rel="icon" type="image/png" href="/media/icon_hu9d99c7745ea620931e335f427cb4032d_148591_32x32_fill_lanczos_center_3.png" />
-<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu9d99c7745ea620931e335f427cb4032d_148591_180x180_fill_lanczos_center_3.png" />
-
-<meta name="theme-color" content="#1565c0" />
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-
-
-
-
-<meta property="twitter:card" content="summary" />
-<meta property="twitter:image" content="https://ziv-lin.github.io/media/icon_hu9d99c7745ea620931e335f427cb4032d_148591_512x512_fill_lanczos_center_3.png" />
-<meta property="og:site_name" content="Jiarong Lin" />
-<meta property="og:url" content="https://ziv-lin.github.io/tag/lider-inertial-visual/" />
-<meta property="og:title" content="LiDER-Inertial-Visual | Jiarong Lin" />
-<meta property="og:description" content="A person website of Jiarong Lin" /><meta property="og:image" content="https://ziv-lin.github.io/media/icon_hu9d99c7745ea620931e335f427cb4032d_148591_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
-
-  
     <meta property="og:updated_time" content="2023-01-16T00:00:00&#43;00:00" />
-  
 
+    <link
+      rel="alternate"
+      href="/tag/lider-inertial-visual/index.xml"
+      type="application/rss+xml"
+      title="Jiarong Lin"
+    />
 
+    <title>LiDER-Inertial-Visual | Jiarong Lin</title>
+  </head>
 
+  <body
+    id="top"
+    data-spy="scroll"
+    data-offset="70"
+    data-target="#TableOfContents"
+    class="page-wrapper"
+  >
+    <script src="/js/wowchemy-init.min.fe8634e7d00f14d07fb33caf14cc8e55.js"></script>
 
+    <aside class="search-modal" id="search">
+      <div class="container">
+        <section class="search-header">
+          <div class="row no-gutters justify-content-between mb-3">
+            <div class="col-6">
+              <h1>Search</h1>
+            </div>
+            <div class="col-6 col-search-close">
+              <a class="js-search" href="#" aria-label="Close"
+                ><i
+                  class="fas fa-times-circle text-muted"
+                  aria-hidden="true"
+                ></i
+              ></a>
+            </div>
+          </div>
 
+          <div id="search-box">
+            <input
+              name="q"
+              id="search-query"
+              placeholder="Search..."
+              autocapitalize="off"
+              autocomplete="off"
+              autocorrect="off"
+              spellcheck="false"
+              type="search"
+              class="form-control"
+              aria-label="Search..."
+            />
+          </div>
+        </section>
+        <section class="section-search-results">
+          <div id="search-hits"></div>
+        </section>
+      </div>
+    </aside>
 
+    <div class="page-header header--fixed">
+      <header>
+        <nav
+          class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar"
+          id="navbar-main"
+        >
+          <div class="container-xl">
+            <div class="d-none d-lg-inline-flex">
+              <a class="navbar-brand" href="/">Jiarong Lin</a>
+            </div>
 
+            <button
+              type="button"
+              class="navbar-toggler"
+              data-toggle="collapse"
+              data-target="#navbar-content"
+              aria-controls="navbar-content"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span><i class="fas fa-bars"></i></span>
+            </button>
 
+            <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+              <a class="navbar-brand" href="/">Jiarong Lin</a>
+            </div>
 
+            <div
+              class="navbar-collapse main-menu-item collapse justify-content-start"
+              id="navbar-content"
+            >
+              <ul class="navbar-nav d-md-inline-flex">
+                <li class="nav-item">
+                  <a class="nav-link" href="/#about"><span>Home</span></a>
+                </li>
 
-  
-  
-  
+                <li class="nav-item">
+                  <a class="nav-link" href="/#posts"><span>News</span></a>
+                </li>
 
-  
-  
-    <link rel="alternate" href="/tag/lider-inertial-visual/index.xml" type="application/rss+xml" title="Jiarong Lin" />
-  
+                <li class="nav-item">
+                  <a class="nav-link" href="/#projects"
+                    ><span>Projects</span></a
+                  >
+                </li>
 
-  
+                <li class="nav-item">
+                  <a class="nav-link" href="/#featured"
+                    ><span>Publications</span></a
+                  >
+                </li>
 
+                <li class="nav-item">
+                  <a class="nav-link" href="/#talks"><span>Talks</span></a>
+                </li>
 
-  
-  <title>LiDER-Inertial-Visual | Jiarong Lin</title>
+                <li class="nav-item">
+                  <a class="nav-link" href="/#contact"><span>Contact</span></a>
+                </li>
+              </ul>
+            </div>
 
-  
-  
-  
-  
+            <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+              <li class="nav-item d-none d-lg-inline-flex">
+                <a class="nav-link" href="/#contact" aria-label="envelope">
+                  <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+              </li>
 
+              <li class="nav-item d-none d-lg-inline-flex">
+                <a
+                  class="nav-link"
+                  href="https://scholar.google.com/citations?hl=zh-CN&user=V11NovMAAAAJ"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="graduation-cap"
+                >
+                  <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                </a>
+              </li>
 
+              <li class="nav-item d-none d-lg-inline-flex">
+                <a
+                  class="nav-link"
+                  href="https://github.com/ziv-lin"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="github"
+                >
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+              </li>
 
+              <li class="nav-item d-none d-lg-inline-flex">
+                <a class="nav-link" href="/misc/yunfan_CV.pdf" aria-label="cv">
+                  <i class="ai ai-cv" aria-hidden="true"></i>
+                </a>
+              </li>
 
+              <li class="nav-item">
+                <a class="nav-link js-search" href="#" aria-label="Search"
+                  ><i class="fas fa-search" aria-hidden="true"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    </div>
 
+    <div class="page-body">
+      <div class="universal-wrapper pt-3">
+        <h1>LiDER-Inertial-Visual</h1>
+      </div>
 
+      <div class="universal-wrapper">
+        <div class="media stream-item view-compact">
+          <div class="media-body">
+            <div class="section-subheading article-title mb-0 mt-0">
+              <a href="/post/shenlang_talk/"
+                >Gave a talk on &#34;Simultaneous Localization and Mapping with
+                Multi-sensor Fusion&#34; at shenlanxueyuan.com (Audiences:
+                13,000&#43;).</a
+              >
+            </div>
 
+            <a href="/post/shenlang_talk/" class="summary-link">
+              <div class="article-style">
+                Invited by
+                <a
+                  href="https://www.shenlanxueyuan.com/"
+                  target="_blank"
+                  rel="noopener"
+                  >shenlanxueyuan.com</a
+                >, I give an online talk on
+                <a
+                  href="https://www.shenlanxueyuan.com/open/course/181"
+                  target="_blank"
+                  rel="noopener"
+                  >&ldquo;Simultaneous Localization and Mapping with
+                  Multi-sensor Fusion
+                  (基于多传感器融合的定位和建图系统)&rdquo;</a
+                >. In this talk, I shared my researches in my Ph.D. studies.
+              </div>
+            </a>
 
+            <div class="stream-meta article-metadata">
+              <div class="article-metadata">
+                <div>
+                  <span class="author-highlighted"> Jiarong Lin</span>
+                </div>
 
+                <span class="article-date"> Jan 16, 2023 </span>
 
+                <span class="middot-divider"></span>
+                <span class="article-reading-time"> 1 min read </span>
+              </div>
+            </div>
 
-</head>
+            <div class="btn-links">
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="/uploads/Simultaneous_localization_and_mapping_with_Multi-sensor_Fusion.pdf"
+                target="_blank"
+                rel="noopener"
+              >
+                Slides
+              </a>
 
-
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   "  >
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <script src="/js/wowchemy-init.min.fe8634e7d00f14d07fb33caf14cc8e55.js"></script>
-
-  
-
-
-<aside class="search-modal" id="search">
-  <div class="container">
-    <section class="search-header">
-
-      <div class="row no-gutters justify-content-between mb-3">
-        <div class="col-6">
-          <h1>Search</h1>
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="https://www.shenlanxueyuan.com/open/course/181"
+                target="_blank"
+                rel="noopener"
+              >
+                Talk</a
+              >
+            </div>
+          </div>
+          <div class="ml-3">
+            <a href="/post/shenlang_talk/">
+              <img
+                src="/post/shenlang_talk/featured_huebbfad1edfa8e198fe68a27ac6a615ca_796799_150x0_resize_q100_h2_lanczos.webp"
+                height="84"
+                width="150"
+                alt="Gave a talk on &#34;Simultaneous Localization and Mapping with Multi-sensor Fusion&#34; at shenlanxueyuan.com (Audiences: 13,000&#43;)."
+                loading="lazy"
+              />
+            </a>
+          </div>
         </div>
-        <div class="col-6 col-search-close">
-          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+
+        <div class="media stream-item view-compact">
+          <div class="media-body">
+            <div class="section-subheading article-title mb-0 mt-0">
+              <a href="/post/release_of_immesh/"
+                >Release of work &#34;ImMesh: An Immediate LiDAR Localization
+                and Meshing Framework&#34;</a
+              >
+            </div>
+
+            <a href="/post/release_of_immesh/" class="summary-link">
+              <div class="article-style">
+                <strong>ImMesh</strong> is a novel LiDAR(-inertial) odometry and
+                meshing framework, which takes advantage of input of LiDAR data,
+                achieving the goal of
+                <strong>simultaneous localization and meshing</strong> in
+                real-time.
+              </div>
+            </a>
+
+            <div class="stream-meta article-metadata">
+              <div class="article-metadata">
+                <div>
+                  <span class="author-highlighted"> Jiarong Lin</span>,
+                  <span> Chongjiang Yuan</span>, <span> Yixi Cai</span>,
+                  <span> Haotian Li</span>, <span> Yuying Zou</span>,
+                  <span> Xiaoping Hong</span>, <span> Fu Zhang</span>
+                </div>
+
+                <span class="article-date"> Jan 13, 2023 </span>
+
+                <span class="middot-divider"></span>
+                <span class="article-reading-time"> 1 min read </span>
+              </div>
+            </div>
+          </div>
+          <div class="ml-3">
+            <a href="/post/release_of_immesh/">
+              <img
+                src="/post/release_of_immesh/featured_hu7f436b084e9af9db6b1e6e2a03bb4ac2_1533052_150x0_resize_q100_h2_lanczos.webp"
+                height="121"
+                width="150"
+                alt="Release of work &#34;ImMesh: An Immediate LiDAR Localization and Meshing Framework&#34;"
+                loading="lazy"
+              />
+            </a>
+          </div>
         </div>
-      </div>
 
-      <div id="search-box">
-        
-        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
-        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
-        aria-label="Search...">
-        
-      </div>
-
-      
-      
-
-      
-
-    </section>
-    <section class="section-search-results">
-
-      <div id="search-hits">
-        
-      </div>
-
-    </section>
-  </div>
-</aside>
-
-
-
-  <div class="page-header header--fixed">
-  
-  
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-<header>
-  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
-    <div class="container-xl">
-
-      
-      <div class="d-none d-lg-inline-flex">
-        <a class="navbar-brand" href="/">Jiarong Lin</a>
-      </div>
-      
-
-      
-      <button type="button" class="navbar-toggler" data-toggle="collapse"
-              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
-      <span><i class="fas fa-bars"></i></span>
-      </button>
-      
-
-      
-      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
-        <a class="navbar-brand" href="/">Jiarong Lin</a>
-      </div>
-      
-
-      
-      
-      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
-
-        
-        <ul class="navbar-nav d-md-inline-flex">
-          
-
-          
-
-          
-          
-          
-            
-          
-
-          
-
-          
-          
-          
-          
-
-          
-            
-              
-              
-            
-            
-              
-              
-              
-                
-              
-              
-            
-          
-
-          <li class="nav-item">
-            <a class="nav-link " href="/#about"><span>Home</span></a>
-          </li>
-
-          
-          
-
-          
-
-          
-          
-          
-            
-          
-
-          
-
-          
-          
-          
-          
-
-          
-            
-              
-              
-            
-            
-              
-              
-              
-                
-              
-              
-            
-          
-
-          <li class="nav-item">
-            <a class="nav-link " href="/#posts"><span>News</span></a>
-          </li>
-
-          
-          
-
-          
-
-          
-          
-          
-            
-          
-
-          
-
-          
-          
-          
-          
-
-          
-            
-              
-              
-            
-            
-              
-              
-              
-                
-              
-              
-            
-          
-
-          <li class="nav-item">
-            <a class="nav-link " href="/#projects"><span>Projects</span></a>
-          </li>
-
-          
-          
-
-          
-
-          
-          
-          
-            
-          
-
-          
-
-          
-          
-          
-          
-
-          
-            
-              
-              
-            
-            
-              
-              
-              
-                
-              
-              
-            
-          
-
-          <li class="nav-item">
-            <a class="nav-link " href="/#featured"><span>Publications</span></a>
-          </li>
-
-          
-          
-
-          
-
-          
-          
-          
-            
-          
-
-          
-
-          
-          
-          
-          
-
-          
-            
-              
-              
-            
-            
-              
-              
-              
-                
-              
-              
-            
-          
-
-          <li class="nav-item">
-            <a class="nav-link " href="/#talks"><span>Talks</span></a>
-          </li>
-
-          
-          
-
-          
-
-          
-          
-          
-            
-          
-
-          
-
-          
-          
-          
-          
-
-          
-            
-              
-              
-            
-            
-              
-              
-              
-                
-              
-              
-            
-          
-
-          <li class="nav-item">
-            <a class="nav-link " href="/#contact"><span>Contact</span></a>
-          </li>
-
-          
-          
-
-        
-
-          
-        </ul>
-      </div>
-
-      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
-
-        
-        
-          
-            
-            <li class="nav-item d-none d-lg-inline-flex">
-              <a class="nav-link" href="/#contact"  aria-label="envelope">
-                <i class="fas fa-envelope" aria-hidden="true"></i>
+        <div class="media stream-item view-compact">
+          <div class="media-body">
+            <div class="section-subheading article-title mb-0 mt-0">
+              <a href="/publication/paper_r3live_pp/"
+                >R$^3$LIVE&#43;&#43;: A Robust, Real-time, Radiance
+                reconstruction package with a tightly-coupled
+                LiDAR-Inertial-Visual state Estimator</a
+              >
+            </div>
+
+            <a href="/publication/paper_r3live_pp/" class="summary-link">
+              <div class="article-style">
+                This work proposed a LiDAR-inertial-visual fusion framework
+                termed R$^3$LIVE++ to achieve robust and accurate state
+                estimation while simultaneously reconstructing the radiance map
+                on the fly. R$^3$LIVE++ consists of a LiDAR-inertial odometry
+                (LIO) and a visual-inertial odometry (VIO), both running in
+                real-time. The LIO subsystem utilizes the measurements from a
+                LiDAR for reconstructing the geometric structure, while the VIO
+                subsystem simultaneously recovers the radiance information of
+                the geometric structure from the input images. R$^3$LIVE++ is
+                developed based on R$^3$LIVE and further improves the accuracy
+                in localization and mapping by accounting for the camera
+                photometric calibration and the online estimation of camera
+                exposure time. We conduct more extensive experiments on public
+                and private datasets to compare our proposed system against
+                other state-of-the-art SLAM systems. Quantitative and
+                qualitative results show that R$^3$LIVE++ has significant
+                improvements over others in both accuracy and robustness.
+                Moreover, to demonstrate the extendability of R$^3$LIVE++, we
+                developed several applications based on our reconstructed maps,
+                such as high dynamic range (HDR) imaging, virtual environment
+                exploration, and 3D video gaming. Lastly, to share our findings
+                and make contributions to the community, we release our codes,
+                hardware design, and dataset on our Github:
+                <a
+                  href="https://github.com/hku-mars/r3live"
+                  target="_blank"
+                  rel="noopener"
+                  >https://github.com/hku-mars/r3live</a
+                >
+              </div>
+            </a>
+
+            <div class="stream-meta article-metadata">
+              <div>
+                <span class="author-highlighted"> Jiarong Lin</span>,
+                <span> Fu Zhang</span>
+              </div>
+            </div>
+
+            <div class="btn-links">
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="/uploads/r3live&#43;&#43;.pdf"
+                target="_blank"
+                rel="noopener"
+              >
+                PDF
               </a>
-            </li>
-          
-            
-            <li class="nav-item d-none d-lg-inline-flex">
-              <a class="nav-link" href="https://scholar.google.com/citations?user=JUHU33cAAAAJ&amp;hl" target="_blank" rel="noopener" aria-label="graduation-cap">
-                <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+
+              <a
+                href="#"
+                class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+                data-filename="/publication/paper_r3live_pp/cite.bib"
+              >
+                Cite
               </a>
-            </li>
-          
-            
-            <li class="nav-item d-none d-lg-inline-flex">
-              <a class="nav-link" href="https://github.com/ziv-lin" target="_blank" rel="noopener" aria-label="github">
-                <i class="fab fa-github" aria-hidden="true"></i>
+
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="https://github.com/hku-mars/r3live"
+                target="_blank"
+                rel="noopener"
+              >
+                Code on Github (★ 1.4K)</a
+              >
+
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="https://github.com/ziv-lin/r3live_dataset"
+                target="_blank"
+                rel="noopener"
+              >
+                Dataset</a
+              >
+
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="https://youtu.be/qXrnIfn-7yA"
+                target="_blank"
+                rel="noopener"
+              >
+                Video</a
+              >
+
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="https://github.com/ziv-lin/rxlive_handheld"
+                target="_blank"
+                rel="noopener"
+              >
+                Hardware-Design</a
+              >
+            </div>
+          </div>
+          <div class="ml-3">
+            <a href="/publication/paper_r3live_pp/">
+              <img
+                src="/publication/paper_r3live_pp/featured_hueb31c9654cfb79f1f3baa8b2f1f1f02a_3683324_150x0_resize_q100_h2_lanczos_3.webp"
+                height="28"
+                width="150"
+                alt="R$^3$LIVE&#43;&#43;: A Robust, Real-time, Radiance reconstruction package with a tightly-coupled LiDAR-Inertial-Visual state Estimator"
+                loading="lazy"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="media stream-item view-compact">
+          <div class="media-body">
+            <div class="section-subheading article-title mb-0 mt-0">
+              <a href="/project/proj_r3live/"
+                >R$^3$LIVE: A Robust, Real-time, RGB-colored,
+                LiDAR-Inertial-Visual tightly-coupled state Estimation and
+                mapping package</a
+              >
+            </div>
+
+            <a href="/project/proj_r3live/" class="summary-link">
+              <div class="article-style">
+                <strong>R$^3$LIVE</strong> is a versatile and well-engineered
+                system toward various possible applications, which can not only
+                serve as a SLAM system for realtime robotic applications but can
+                also reconstruct the dense, precise, RGB-colored 3D maps for
+                applications like surveying and mapping. In addition, we have
+                developed a series of offline utilities for reconstructing and
+                texturing meshes for various of 3D applications.
+              </div>
+            </a>
+
+            <div class="stream-meta article-metadata">
+              <div>
+                <span class="author-highlighted"> Jiarong Lin</span>,
+                <span> Fu Zhang</span>
+              </div>
+            </div>
+
+            <div class="btn-links">
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="/uploads/r3live&#43;&#43;.pdf"
+                target="_blank"
+                rel="noopener"
+              >
+                PDF
               </a>
-            </li>
-          
-            
-            <li class="nav-item d-none d-lg-inline-flex">
-              <a class="nav-link" href="/uploads/cv_Jiarong_Lin_Feb_20_2024.pdf"  aria-label="cv">
-                <i class="ai ai-cv" aria-hidden="true"></i>
+
+              <a
+                href="#"
+                class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+                data-filename="/project/proj_r3live/cite.bib"
+              >
+                Cite
               </a>
-            </li>
-          
-        
 
-        
-        
-        
-        <li class="nav-item">
-          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
-        </li>
-        
-
-        
-        
-        
-
-        
-        
-
-      </ul>
-
-    </div>
-  </nav>
-</header>
-
-
-  </div>
-
-  <div class="page-body">
-    
-    
-    
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-<div class="universal-wrapper pt-3">
-  <h1>LiDER-Inertial-Visual</h1>
-
-  
-
-  
-</div>
-
-
-
-<div class="universal-wrapper">
-  
-
-
-  
-
-  
-  
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item view-compact">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/post/shenlang_talk/" >Gave a talk on &#34;Simultaneous Localization and Mapping with Multi-sensor Fusion&#34; at shenlanxueyuan.com (Audiences: 13,000&#43;).</a>
-    </div>
-
-    
-    <a href="/post/shenlang_talk/"  class="summary-link">
-      <div class="article-style">
-        Invited by <a href="https://www.shenlanxueyuan.com/" target="_blank" rel="noopener">shenlanxueyuan.com</a>, I give an online talk on <a href="https://www.shenlanxueyuan.com/open/course/181" target="_blank" rel="noopener">&ldquo;Simultaneous Localization and Mapping with Multi-sensor Fusion (基于多传感器融合的定位和建图系统)&rdquo;</a>. In this talk, I shared my researches in my Ph.D. studies.
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
-
-
-<div class="article-metadata">
-
-  
-  
-  
-  
-  <div>
-    
-
-  <span class="author-highlighted">
-      Jiarong Lin</span>
-  </div>
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    Jan 16, 2023
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  
-  
-
-  
-  
-
-</div>
-
-      
-    </div>
-
-    
-    <div class="btn-links">
-      
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="/uploads/Simultaneous_localization_and_mapping_with_Multi-sensor_Fusion.pdf" target="_blank" rel="noopener">
-  Slides
-</a>
-
-
-
-
-
-
-  
-  
-  
-    
-  
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://www.shenlanxueyuan.com/open/course/181" target="_blank" rel="noopener">
-    Talk</a>
-
-
-    </div>
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-      
-      <a href="/post/shenlang_talk/" >
-        <img src="/post/shenlang_talk/featured_huebbfad1edfa8e198fe68a27ac6a615ca_796799_150x0_resize_q100_h2_lanczos.webp" height="84" width="150"
-            alt="Gave a talk on &#34;Simultaneous Localization and Mapping with Multi-sensor Fusion&#34; at shenlanxueyuan.com (Audiences: 13,000&#43;)." loading="lazy">
-      </a>
-    
-  </div>
-</div>
-
-  
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item view-compact">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/post/release_of_immesh/" >Release of work &#34;ImMesh: An Immediate LiDAR Localization and Meshing Framework&#34;</a>
-    </div>
-
-    
-    <a href="/post/release_of_immesh/"  class="summary-link">
-      <div class="article-style">
-        <strong>ImMesh</strong> is a novel LiDAR(-inertial) odometry and meshing framework, which takes advantage of input of LiDAR data, achieving the goal of <strong>simultaneous localization and meshing</strong> in real-time.
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
-
-
-<div class="article-metadata">
-
-  
-  
-  
-  
-  <div>
-    
-
-  <span class="author-highlighted">
-      Jiarong Lin</span>, <span >
-      Chongjiang Yuan</span>, <span >
-      Yixi Cai</span>, <span >
-      Haotian Li</span>, <span >
-      Yuying Zou</span>, <span >
-      Xiaoping Hong</span>, <span >
-      Fu Zhang</span>
-  </div>
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    Jan 13, 2023
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  
-  
-
-  
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-      
-      <a href="/post/release_of_immesh/" >
-        <img src="/post/release_of_immesh/featured_hu7f436b084e9af9db6b1e6e2a03bb4ac2_1533052_150x0_resize_q100_h2_lanczos.webp" height="121" width="150"
-            alt="Release of work &#34;ImMesh: An Immediate LiDAR Localization and Meshing Framework&#34;" loading="lazy">
-      </a>
-    
-  </div>
-</div>
-
-  
-    
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item view-compact">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/publication/paper_r3live_pp/" >R$^3$LIVE&#43;&#43;: A Robust, Real-time, Radiance reconstruction package with a tightly-coupled LiDAR-Inertial-Visual state Estimator</a>
-    </div>
-
-    
-    <a href="/publication/paper_r3live_pp/"  class="summary-link">
-      <div class="article-style">
-        This work proposed a LiDAR-inertial-visual fusion framework termed R$^3$LIVE++ to achieve robust and accurate state estimation while simultaneously reconstructing the radiance map on the fly. R$^3$LIVE++ consists of a LiDAR-inertial odometry (LIO) and a visual-inertial odometry (VIO), both running in real-time. The LIO subsystem utilizes the measurements from a LiDAR for reconstructing the geometric structure, while the VIO subsystem simultaneously recovers the radiance information of the geometric structure from the input images. R$^3$LIVE++ is developed based on R$^3$LIVE and further improves the accuracy in localization and mapping by accounting for the camera photometric calibration and the online estimation of camera exposure time. We conduct more extensive experiments on public and private datasets to compare our proposed system against other state-of-the-art SLAM systems. Quantitative and qualitative results show that R$^3$LIVE++ has significant improvements over others in both accuracy and robustness. Moreover, to demonstrate the extendability of R$^3$LIVE++, we developed several applications based on our reconstructed maps, such as high dynamic range (HDR) imaging, virtual environment exploration, and 3D video gaming. Lastly, to share our findings and make contributions to the community, we release our codes, hardware design, and dataset on our Github: <a href="https://github.com/hku-mars/r3live" target="_blank" rel="noopener">https://github.com/hku-mars/r3live</a>
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-      <div>
-        
-
-  <span class="author-highlighted">
-      Jiarong Lin</span>, <span >
-      Fu Zhang</span>
-      </div>
-      
-    </div>
-
-    
-    <div class="btn-links">
-      
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="/uploads/r3live&#43;&#43;.pdf" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
-        data-filename="/publication/paper_r3live_pp/cite.bib">
-  Cite
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-    
-  
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/hku-mars/r3live" target="_blank" rel="noopener">
-    Code on Github (★ 1.4K)</a>
-
-  
-  
-  
-    
-  
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/ziv-lin/r3live_dataset" target="_blank" rel="noopener">
-    Dataset</a>
-
-  
-  
-  
-    
-  
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://youtu.be/qXrnIfn-7yA" target="_blank" rel="noopener">
-    Video</a>
-
-  
-  
-  
-    
-  
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/ziv-lin/rxlive_handheld" target="_blank" rel="noopener">
-    Hardware-Design</a>
-
-
-    </div>
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-      
-      <a href="/publication/paper_r3live_pp/" >
-        <img src="/publication/paper_r3live_pp/featured_hueb31c9654cfb79f1f3baa8b2f1f1f02a_3683324_150x0_resize_q100_h2_lanczos_3.webp" height="28" width="150"
-            alt="R$^3$LIVE&#43;&#43;: A Robust, Real-time, Radiance reconstruction package with a tightly-coupled LiDAR-Inertial-Visual state Estimator" loading="lazy">
-      </a>
-    
-  </div>
-</div>
-
-  
-    
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item view-compact">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/project/proj_r3live/" >R$^3$LIVE: A Robust, Real-time, RGB-colored, LiDAR-Inertial-Visual tightly-coupled state Estimation and mapping package</a>
-    </div>
-
-    
-    <a href="/project/proj_r3live/"  class="summary-link">
-      <div class="article-style">
-        <strong>R$^3$LIVE</strong> is a versatile and well-engineered system toward various possible applications, which can not only serve as a SLAM system for realtime robotic applications but can also reconstruct the dense, precise, RGB-colored 3D maps for applications like surveying and mapping. In addition, we have developed a series of offline utilities for reconstructing and texturing meshes for various of 3D applications.
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-      <div>
-        
-
-  <span class="author-highlighted">
-      Jiarong Lin</span>, <span >
-      Fu Zhang</span>
-      </div>
-      
-    </div>
-
-    
-    <div class="btn-links">
-      
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="/uploads/r3live&#43;&#43;.pdf" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
-        data-filename="/project/proj_r3live/cite.bib">
-  Cite
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-    
-  
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/hku-mars/r3live" target="_blank" rel="noopener">
-    Code on Github (★ 1.4K)</a>
-
-  
-  
-  
-    
-  
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://www.youtube.com/watch?v=j5fT8NE5fdg" target="_blank" rel="noopener">
-    Video-1</a>
-
-  
-  
-  
-    
-  
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://www.youtube.com/watch?v=4rjrrLgL3nk" target="_blank" rel="noopener">
-    Video-2</a>
-
-  
-  
-  
-    
-  
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/ziv-lin/rxlive_handheld" target="_blank" rel="noopener">
-    Hardware-Design</a>
-
-
-    </div>
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-      
-      <a href="/project/proj_r3live/" >
-        <img src="/project/proj_r3live/featured_hu9adb7b6ed429abe8c2ea93041c235f8a_2060838_150x0_resize_q100_h2_lanczos.webp" height="144" width="150"
-            alt="R$^3$LIVE: A Robust, Real-time, RGB-colored, LiDAR-Inertial-Visual tightly-coupled state Estimation and mapping package" loading="lazy">
-      </a>
-    
-  </div>
-</div>
-
-  
-    
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item view-compact">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/publication/paper_r3live/" >R$^3$LIVE: A Robust, Real-time, RGB-colored, LiDAR-Inertial-Visual tightly-coupled state Estimation and mapping package</a>
-    </div>
-
-    
-    <a href="/publication/paper_r3live/"  class="summary-link">
-      <div class="article-style">
-        In this paper, we propose a novel LiDAR-Inertial-Visual sensor fusion framework termed R<sup>3</sup>LIVE, which takes advantage of measurement of LiDAR, inertial, and visual sensors to achieve robust and accurate state estimation. R$^3$LIVE consists of two subsystems, a LiDAR-Inertial odometry (LIO) and a Visual-Inertial odometry (VIO). The LIO subsystem (FAST-LIO) utilizes the measurements from LiDAR and inertial sensors and builds the geometric structure (i.e., the positions of 3D points) of the map. The VIO subsystem uses the data of Visual-Inertial sensors and renders the map&rsquo;s texture (i.e., the color of 3D points). More specifically, the VIO subsystem fuses the visual data directly and effectively by minimizing the frame-to-map photometric error. The proposed system R<sup>3</sup>LIVE is developed based on our previous work R$^2$LIVE, with a completely different VIO architecture design. The overall system is able to reconstruct the precise, dense, 3D, RGB-colored maps of the surrounding environment in real-time (see our attached video <a href="https://youtu.be/j5fT8NE5fdg%29" target="_blank" rel="noopener">https://youtu.be/j5fT8NE5fdg)</a>. Our experiments show that the resultant system achieves higher robustness and accuracy in state estimation than its current counterparts. To share our findings and make contributions to the community, we open source R$^3$LIVE on our Github: <a href="https://github.com/hku-mars/r3live" target="_blank" rel="noopener">https://github.com/hku-mars/r3live</a>.
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-      <div>
-        
-
-  <span class="author-highlighted">
-      Jiarong Lin</span>, <span >
-      Fu Zhang</span>
-      </div>
-      
-    </div>
-
-    
-    <div class="btn-links">
-      
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="/uploads/r3live.pdf" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
-        data-filename="/publication/paper_r3live/cite.bib">
-  Cite
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-    
-  
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/hku-mars/r3live" target="_blank" rel="noopener">
-    Code on Github (★ 1.4K)</a>
-
-  
-  
-  
-    
-  
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/ziv-lin/r3live_dataset" target="_blank" rel="noopener">
-    Dataset</a>
-
-  
-  
-  
-    
-  
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://www.youtube.com/watch?v=j5fT8NE5fdg" target="_blank" rel="noopener">
-    Video-1</a>
-
-  
-  
-  
-    
-  
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://www.youtube.com/watch?v=4rjrrLgL3nk" target="_blank" rel="noopener">
-    Video-2</a>
-
-  
-  
-  
-    
-  
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/ziv-lin/rxlive_handheld" target="_blank" rel="noopener">
-    Hardware-Design</a>
-
-
-    </div>
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-      
-      <a href="/publication/paper_r3live/" >
-        <img src="/publication/paper_r3live/featured_hu9adb7b6ed429abe8c2ea93041c235f8a_2060838_150x0_resize_q100_h2_lanczos.webp" height="144" width="150"
-            alt="R$^3$LIVE: A Robust, Real-time, RGB-colored, LiDAR-Inertial-Visual tightly-coupled state Estimation and mapping package" loading="lazy">
-      </a>
-    
-  </div>
-</div>
-
-  
-    
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item view-compact">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/project/proj_r2live/" >R$^2$LIVE: A Robust, Real-time, LiDAR-Inertial-Visual tightly-coupled state Estimator and mapping</a>
-    </div>
-
-    
-    <a href="/project/proj_r2live/"  class="summary-link">
-      <div class="article-style">
-        <strong>R$^2$LIVE</strong> is a robust, real-time tightly-coupled multi-sensor fusion framework, which fuses the measurement from the LiDAR, inertial sensor, visual camera to achieve robust, accurate state estimation. Taking advantage of measurement from all individual sensors, our algorithm is robust enough to various visual failure, LiDAR-degenerated scenarios, and is able to run in real time on an on-board computation platform, as shown by extensive experiments conducted in indoor, outdoor, and mixed environment of different scale.
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-      <div>
-        
-
-  <span class="author-highlighted">
-      Jiarong Lin</span>, <span >
-      Fu Zhang</span>
-      </div>
-      
-    </div>
-
-    
-    <div class="btn-links">
-      
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="/uploads/r2live.pdf" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
-        data-filename="/project/proj_r2live/cite.bib">
-  Cite
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-    
-  
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/hku-mars/r2live" target="_blank" rel="noopener">
-    Code on Github (★ 0.6K)</a>
-
-  
-  
-  
-    
-  
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://www.youtube.com/watch?v=9lqRHmlN_MA" target="_blank" rel="noopener">
-    Video</a>
-
-  
-  
-  
-    
-  
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/ziv-lin/rxlive_handheld" target="_blank" rel="noopener">
-    Hardware-Design</a>
-
-
-    </div>
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-      
-      <a href="/project/proj_r2live/" >
-        <img src="/project/proj_r2live/featured_hu12300ba225464ed1120b3bcb23a7c579_1470136_150x0_resize_q100_h2_lanczos.webp" height="124" width="150"
-            alt="R$^2$LIVE: A Robust, Real-time, LiDAR-Inertial-Visual tightly-coupled state Estimator and mapping" loading="lazy">
-      </a>
-    
-  </div>
-</div>
-
-  
-    
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item view-compact">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/publication/paper_r2live/" >R$^2$LIVE: A Robust, Real-time, LiDAR-Inertial-Visual tightly-coupled state Estimator and mapping</a>
-    </div>
-
-    
-    <a href="/publication/paper_r2live/"  class="summary-link">
-      <div class="article-style">
-        In this letter, we propose a robust, real-time tightly-coupled multi-sensor fusion framework, which fuses measurements from LiDAR, inertial sensor, and visual camera to achieve robust and accurate state estimation. Our proposed framework is composed of two parts: the filter-based odometry and factor graph optimization. To guarantee real-time performance, we estimate the state within the framework of error-state iterated Kalman-filter, and further improve the overall precision with our factor graph optimization. Taking advantage of measurements from all individual sensors, our algorithm is robust enough to various visual failure, LiDAR-degenerated scenarios, and is able to run in real time on an on-board computation platform, as shown by extensive experiments conducted in indoor, outdoor, and mixed environments of different scale (see attached video <a href="https://youtu.be/9lqRHmlN_MA%29" target="_blank" rel="noopener">https://youtu.be/9lqRHmlN_MA)</a>. Moreover, the results show that our proposed framework can improve the accuracy of state-of-the-art LiDAR-inertial or visual-inertial odometry. To share our findings and to make contributions to the community, we open source our codes on our Github: <a href="https://github.com/hku-mars/r2live" target="_blank" rel="noopener">https://github.com/hku-mars/r2live</a>.
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-      <div>
-        
-
-  <span class="author-highlighted">
-      Jiarong Lin</span>, <span >
-      Chunran Zheng</span>, <span >
-      Wei Xu</span>, <span >
-      Fu Zhang</span>
-      </div>
-      
-    </div>
-
-    
-    <div class="btn-links">
-      
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="/uploads/r2live.pdf" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
-        data-filename="/publication/paper_r2live/cite.bib">
-  Cite
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-    
-  
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/hku-mars/r2live" target="_blank" rel="noopener">
-    Code on Github (★ 0.6K)</a>
-
-  
-  
-  
-    
-  
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://www.youtube.com/watch?v=9lqRHmlN_MA" target="_blank" rel="noopener">
-    Video</a>
-
-  
-  
-  
-    
-  
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/ziv-lin/rxlive_handheld" target="_blank" rel="noopener">
-    Hardware-Design</a>
-
-
-    </div>
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-      
-      <a href="/publication/paper_r2live/" >
-        <img src="/publication/paper_r2live/featured_hu12300ba225464ed1120b3bcb23a7c579_1470136_150x0_resize_q100_h2_lanczos.webp" height="124" width="150"
-            alt="R$^2$LIVE: A Robust, Real-time, LiDAR-Inertial-Visual tightly-coupled state Estimator and mapping" loading="lazy">
-      </a>
-    
-  </div>
-</div>
-
-  
-
-  
-
-  
-
-</div>
-  </div>
-
-  <div class="page-footer">
-    
-    
-    <div class="container">
-      <footer class="site-footer">
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-
-  
-  
-    
-  
-  
-    
-  
-
-  
-
-  
-  <p class="powered-by copyright-license-text">
-    © 2024 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
-  </p>
-  
-
-  <p class="powered-by footer-license-icons">
-    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
-      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
-      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
-      
-        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
-      
-      
-        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
-      
-    </a>
-  </p>
-
-
-
-
-
-  <p class="powered-by">
-    
-    
-    
-      
-      
-      
-      
-      
-      
-      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
-    
-  </p>
-</footer>
-
-    </div>
-    
-  </div>
-
-  
-
-
-<script src="/js/vendor-bundle.min.d26509351aa0ff874abbee824e982e9b.js"></script>
-
-
-
-
-  
-
-  
-  
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script id="search-hit-fuse-template" type="text/x-template">
-    <div class="search-hit" id="summary-{{key}}">
-      <div class="search-hit-content">
-        <div class="search-hit-name">
-          <a href="{{relpermalink}}">{{title}}</a>
-          <div class="article-metadata search-hit-type">{{type}}</div>
-          <p class="search-hit-description">{{snippet}}</p>
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="https://github.com/hku-mars/r3live"
+                target="_blank"
+                rel="noopener"
+              >
+                Code on Github (★ 1.4K)</a
+              >
+
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="https://www.youtube.com/watch?v=j5fT8NE5fdg"
+                target="_blank"
+                rel="noopener"
+              >
+                Video-1</a
+              >
+
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="https://www.youtube.com/watch?v=4rjrrLgL3nk"
+                target="_blank"
+                rel="noopener"
+              >
+                Video-2</a
+              >
+
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="https://github.com/ziv-lin/rxlive_handheld"
+                target="_blank"
+                rel="noopener"
+              >
+                Hardware-Design</a
+              >
+            </div>
+          </div>
+          <div class="ml-3">
+            <a href="/project/proj_r3live/">
+              <img
+                src="/project/proj_r3live/featured_hu9adb7b6ed429abe8c2ea93041c235f8a_2060838_150x0_resize_q100_h2_lanczos.webp"
+                height="144"
+                width="150"
+                alt="R$^3$LIVE: A Robust, Real-time, RGB-colored, LiDAR-Inertial-Visual tightly-coupled state Estimation and mapping package"
+                loading="lazy"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="media stream-item view-compact">
+          <div class="media-body">
+            <div class="section-subheading article-title mb-0 mt-0">
+              <a href="/publication/paper_r3live/"
+                >R$^3$LIVE: A Robust, Real-time, RGB-colored,
+                LiDAR-Inertial-Visual tightly-coupled state Estimation and
+                mapping package</a
+              >
+            </div>
+
+            <a href="/publication/paper_r3live/" class="summary-link">
+              <div class="article-style">
+                In this paper, we propose a novel LiDAR-Inertial-Visual sensor
+                fusion framework termed R<sup>3</sup>LIVE, which takes advantage
+                of measurement of LiDAR, inertial, and visual sensors to achieve
+                robust and accurate state estimation. R$^3$LIVE consists of two
+                subsystems, a LiDAR-Inertial odometry (LIO) and a
+                Visual-Inertial odometry (VIO). The LIO subsystem (FAST-LIO)
+                utilizes the measurements from LiDAR and inertial sensors and
+                builds the geometric structure (i.e., the positions of 3D
+                points) of the map. The VIO subsystem uses the data of
+                Visual-Inertial sensors and renders the map&rsquo;s texture
+                (i.e., the color of 3D points). More specifically, the VIO
+                subsystem fuses the visual data directly and effectively by
+                minimizing the frame-to-map photometric error. The proposed
+                system R<sup>3</sup>LIVE is developed based on our previous work
+                R$^2$LIVE, with a completely different VIO architecture design.
+                The overall system is able to reconstruct the precise, dense,
+                3D, RGB-colored maps of the surrounding environment in real-time
+                (see our attached video
+                <a
+                  href="https://youtu.be/j5fT8NE5fdg%29"
+                  target="_blank"
+                  rel="noopener"
+                  >https://youtu.be/j5fT8NE5fdg)</a
+                >. Our experiments show that the resultant system achieves
+                higher robustness and accuracy in state estimation than its
+                current counterparts. To share our findings and make
+                contributions to the community, we open source R$^3$LIVE on our
+                Github:
+                <a
+                  href="https://github.com/hku-mars/r3live"
+                  target="_blank"
+                  rel="noopener"
+                  >https://github.com/hku-mars/r3live</a
+                >.
+              </div>
+            </a>
+
+            <div class="stream-meta article-metadata">
+              <div>
+                <span class="author-highlighted"> Jiarong Lin</span>,
+                <span> Fu Zhang</span>
+              </div>
+            </div>
+
+            <div class="btn-links">
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="/uploads/r3live.pdf"
+                target="_blank"
+                rel="noopener"
+              >
+                PDF
+              </a>
+
+              <a
+                href="#"
+                class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+                data-filename="/publication/paper_r3live/cite.bib"
+              >
+                Cite
+              </a>
+
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="https://github.com/hku-mars/r3live"
+                target="_blank"
+                rel="noopener"
+              >
+                Code on Github (★ 1.4K)</a
+              >
+
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="https://github.com/ziv-lin/r3live_dataset"
+                target="_blank"
+                rel="noopener"
+              >
+                Dataset</a
+              >
+
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="https://www.youtube.com/watch?v=j5fT8NE5fdg"
+                target="_blank"
+                rel="noopener"
+              >
+                Video-1</a
+              >
+
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="https://www.youtube.com/watch?v=4rjrrLgL3nk"
+                target="_blank"
+                rel="noopener"
+              >
+                Video-2</a
+              >
+
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="https://github.com/ziv-lin/rxlive_handheld"
+                target="_blank"
+                rel="noopener"
+              >
+                Hardware-Design</a
+              >
+            </div>
+          </div>
+          <div class="ml-3">
+            <a href="/publication/paper_r3live/">
+              <img
+                src="/publication/paper_r3live/featured_hu9adb7b6ed429abe8c2ea93041c235f8a_2060838_150x0_resize_q100_h2_lanczos.webp"
+                height="144"
+                width="150"
+                alt="R$^3$LIVE: A Robust, Real-time, RGB-colored, LiDAR-Inertial-Visual tightly-coupled state Estimation and mapping package"
+                loading="lazy"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="media stream-item view-compact">
+          <div class="media-body">
+            <div class="section-subheading article-title mb-0 mt-0">
+              <a href="/project/proj_r2live/"
+                >R$^2$LIVE: A Robust, Real-time, LiDAR-Inertial-Visual
+                tightly-coupled state Estimator and mapping</a
+              >
+            </div>
+
+            <a href="/project/proj_r2live/" class="summary-link">
+              <div class="article-style">
+                <strong>R$^2$LIVE</strong> is a robust, real-time
+                tightly-coupled multi-sensor fusion framework, which fuses the
+                measurement from the LiDAR, inertial sensor, visual camera to
+                achieve robust, accurate state estimation. Taking advantage of
+                measurement from all individual sensors, our algorithm is robust
+                enough to various visual failure, LiDAR-degenerated scenarios,
+                and is able to run in real time on an on-board computation
+                platform, as shown by extensive experiments conducted in indoor,
+                outdoor, and mixed environment of different scale.
+              </div>
+            </a>
+
+            <div class="stream-meta article-metadata">
+              <div>
+                <span class="author-highlighted"> Jiarong Lin</span>,
+                <span> Fu Zhang</span>
+              </div>
+            </div>
+
+            <div class="btn-links">
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="/uploads/r2live.pdf"
+                target="_blank"
+                rel="noopener"
+              >
+                PDF
+              </a>
+
+              <a
+                href="#"
+                class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+                data-filename="/project/proj_r2live/cite.bib"
+              >
+                Cite
+              </a>
+
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="https://github.com/hku-mars/r2live"
+                target="_blank"
+                rel="noopener"
+              >
+                Code on Github (★ 0.6K)</a
+              >
+
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="https://www.youtube.com/watch?v=9lqRHmlN_MA"
+                target="_blank"
+                rel="noopener"
+              >
+                Video</a
+              >
+
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="https://github.com/ziv-lin/rxlive_handheld"
+                target="_blank"
+                rel="noopener"
+              >
+                Hardware-Design</a
+              >
+            </div>
+          </div>
+          <div class="ml-3">
+            <a href="/project/proj_r2live/">
+              <img
+                src="/project/proj_r2live/featured_hu12300ba225464ed1120b3bcb23a7c579_1470136_150x0_resize_q100_h2_lanczos.webp"
+                height="124"
+                width="150"
+                alt="R$^2$LIVE: A Robust, Real-time, LiDAR-Inertial-Visual tightly-coupled state Estimator and mapping"
+                loading="lazy"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="media stream-item view-compact">
+          <div class="media-body">
+            <div class="section-subheading article-title mb-0 mt-0">
+              <a href="/publication/paper_r2live/"
+                >R$^2$LIVE: A Robust, Real-time, LiDAR-Inertial-Visual
+                tightly-coupled state Estimator and mapping</a
+              >
+            </div>
+
+            <a href="/publication/paper_r2live/" class="summary-link">
+              <div class="article-style">
+                In this letter, we propose a robust, real-time tightly-coupled
+                multi-sensor fusion framework, which fuses measurements from
+                LiDAR, inertial sensor, and visual camera to achieve robust and
+                accurate state estimation. Our proposed framework is composed of
+                two parts: the filter-based odometry and factor graph
+                optimization. To guarantee real-time performance, we estimate
+                the state within the framework of error-state iterated
+                Kalman-filter, and further improve the overall precision with
+                our factor graph optimization. Taking advantage of measurements
+                from all individual sensors, our algorithm is robust enough to
+                various visual failure, LiDAR-degenerated scenarios, and is able
+                to run in real time on an on-board computation platform, as
+                shown by extensive experiments conducted in indoor, outdoor, and
+                mixed environments of different scale (see attached video
+                <a
+                  href="https://youtu.be/9lqRHmlN_MA%29"
+                  target="_blank"
+                  rel="noopener"
+                  >https://youtu.be/9lqRHmlN_MA)</a
+                >. Moreover, the results show that our proposed framework can
+                improve the accuracy of state-of-the-art LiDAR-inertial or
+                visual-inertial odometry. To share our findings and to make
+                contributions to the community, we open source our codes on our
+                Github:
+                <a
+                  href="https://github.com/hku-mars/r2live"
+                  target="_blank"
+                  rel="noopener"
+                  >https://github.com/hku-mars/r2live</a
+                >.
+              </div>
+            </a>
+
+            <div class="stream-meta article-metadata">
+              <div>
+                <span class="author-highlighted"> Jiarong Lin</span>,
+                <span> Chunran Zheng</span>, <span> Wei Xu</span>,
+                <span> Fu Zhang</span>
+              </div>
+            </div>
+
+            <div class="btn-links">
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="/uploads/r2live.pdf"
+                target="_blank"
+                rel="noopener"
+              >
+                PDF
+              </a>
+
+              <a
+                href="#"
+                class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+                data-filename="/publication/paper_r2live/cite.bib"
+              >
+                Cite
+              </a>
+
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="https://github.com/hku-mars/r2live"
+                target="_blank"
+                rel="noopener"
+              >
+                Code on Github (★ 0.6K)</a
+              >
+
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="https://www.youtube.com/watch?v=9lqRHmlN_MA"
+                target="_blank"
+                rel="noopener"
+              >
+                Video</a
+              >
+
+              <a
+                class="btn btn-outline-primary btn-page-header btn-sm"
+                href="https://github.com/ziv-lin/rxlive_handheld"
+                target="_blank"
+                rel="noopener"
+              >
+                Hardware-Design</a
+              >
+            </div>
+          </div>
+          <div class="ml-3">
+            <a href="/publication/paper_r2live/">
+              <img
+                src="/publication/paper_r2live/featured_hu12300ba225464ed1120b3bcb23a7c579_1470136_150x0_resize_q100_h2_lanczos.webp"
+                height="124"
+                width="150"
+                alt="R$^2$LIVE: A Robust, Real-time, LiDAR-Inertial-Visual tightly-coupled state Estimator and mapping"
+                loading="lazy"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </script>
-  
-    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
-  
 
+    <div class="page-footer">
+      <div class="container">
+        <footer class="site-footer">
+          <p class="powered-by copyright-license-text">
+            © 2024 Me. This work is licensed under
+            <a
+              href="https://creativecommons.org/licenses/by-nc-nd/4.0"
+              rel="noopener noreferrer"
+              target="_blank"
+              >CC BY NC ND 4.0</a
+            >
+          </p>
 
+          <p class="powered-by footer-license-icons">
+            <a
+              href="https://creativecommons.org/licenses/by-nc-nd/4.0"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="Creative Commons"
+            >
+              <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+              <i
+                class="fab fa-creative-commons-by fa-2x"
+                aria-hidden="true"
+              ></i>
 
+              <i
+                class="fab fa-creative-commons-nc fa-2x"
+                aria-hidden="true"
+              ></i>
 
+              <i
+                class="fab fa-creative-commons-nd fa-2x"
+                aria-hidden="true"
+              ></i>
+            </a>
+          </p>
 
-
-
-
-
-
-
-
-  
-  
-  
-  
-  
-  
-  
-
-
-
-
-
-
-
-<script id="page-data" type="application/json">{"use_headroom":true}</script>
-
-
-
-  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-<script src="/en/js/wowchemy.min.e8ee06ba8371980ffde659871dd593b0.js"></script>
-
-
-
-
-
-
-
-  
-<div id="modal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Cite</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        
-        <pre><code></code></pre>
-      </div>
-      <div class="modal-footer">
-        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
-          <i class="fas fa-copy"></i> Copy
-        </a>
-        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
-          <i class="fas fa-download"></i> Download
-        </a>
-        <div id="modal-error"></div>
+          <p class="powered-by">
+            Published with
+            <a
+              href="https://wowchemy.com/?utm_campaign=poweredby"
+              target="_blank"
+              rel="noopener"
+              >Wowchemy</a
+            >
+            — the free,
+            <a
+              href="https://github.com/wowchemy/wowchemy-hugo-themes"
+              target="_blank"
+              rel="noopener"
+              >open source</a
+            >
+            website builder that empowers creators.
+          </p>
+        </footer>
       </div>
     </div>
-  </div>
-</div>
 
+    <script src="/js/vendor-bundle.min.d26509351aa0ff874abbee824e982e9b.js"></script>
 
-  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+        <div class="search-hit-content">
+          <div class="search-hit-name">
+            <a href="{{relpermalink}}">{{title}}</a>
+            <div class="article-metadata search-hit-type">{{type}}</div>
+            <p class="search-hit-description">{{snippet}}</p>
+          </div>
+        </div>
+      </div>
+    </script>
 
+    <script
+      src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js"
+      integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js"
+      integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg=="
+      crossorigin="anonymous"
+    ></script>
 
+    <script id="page-data" type="application/json">
+      { "use_headroom": true }
+    </script>
 
+    <script
+      src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js"
+      type="module"
+    ></script>
 
+    <script src="/en/js/wowchemy.min.e8ee06ba8371980ffde659871dd593b0.js"></script>
 
+    <div id="modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cite</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <pre><code></code></pre>
+          </div>
+          <div class="modal-footer">
+            <a
+              class="btn btn-outline-primary my-1 js-copy-cite"
+              href="#"
+              target="_blank"
+            >
+              <i class="fas fa-copy"></i> Copy
+            </a>
+            <a
+              class="btn btn-outline-primary my-1 js-download-cite"
+              href="#"
+              target="_blank"
+            >
+              <i class="fas fa-download"></i> Download
+            </a>
+            <div id="modal-error"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
+    <script
+      src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js"
+      type="module"
+    ></script>
+  </body>
 </html>
