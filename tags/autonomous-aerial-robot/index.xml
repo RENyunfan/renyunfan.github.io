@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Autonomous Aerial Robot | Yunfan (Kevin) REN</title>
-    <link>https://renyunfan.cn/tags/autonomous-aerial-robot/</link>
-      <atom:link href="https://renyunfan.cn/tags/autonomous-aerial-robot/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://renyunfan.github.io/tags/autonomous-aerial-robot/</link>
+      <atom:link href="https://renyunfan.github.io/tags/autonomous-aerial-robot/index.xml" rel="self" type="application/rss+xml" />
     <description>Autonomous Aerial Robot</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 13 Dec 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://renyunfan.cn/media/icon_hu_aa8ce7ec037eb17f.png</url>
+      <url>https://renyunfan.github.io/media/icon_hu_aa8ce7ec037eb17f.png</url>
       <title>Autonomous Aerial Robot</title>
-      <link>https://renyunfan.cn/tags/autonomous-aerial-robot/</link>
+      <link>https://renyunfan.github.io/tags/autonomous-aerial-robot/</link>
     </image>
     
     <item>
       <title>Bubble Explorer: Fast UAV Exploration in Large-Scale and Cluttered 3D-Environments Using Occlusion-Free Spheres</title>
-      <link>https://renyunfan.cn/publication/iros2023-bubble-exp/</link>
+      <link>https://renyunfan.github.io/publication/iros2023-bubble-exp/</link>
       <pubDate>Wed, 13 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/publication/iros2023-bubble-exp/</guid>
+      <guid>https://renyunfan.github.io/publication/iros2023-bubble-exp/</guid>
       <description>&lt;!-- 
 
 
@@ -55,9 +55,9 @@ Add the publication&#39;s **full text** or **supplementary notes** here. You can
     
     <item>
       <title>Decentralized swarm trajectory generation for lidar-based aerial tracking in cluttered environments</title>
-      <link>https://renyunfan.cn/publication/iros2023-st/</link>
+      <link>https://renyunfan.github.io/publication/iros2023-st/</link>
       <pubDate>Wed, 13 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/publication/iros2023-st/</guid>
+      <guid>https://renyunfan.github.io/publication/iros2023-st/</guid>
       <description>&lt;!-- 
 
 
@@ -96,9 +96,9 @@ Add the publication&#39;s **full text** or **supplementary notes** here. You can
     
     <item>
       <title>Perch a Quadrotor on Planes by the Ceiling Effect</title>
-      <link>https://renyunfan.cn/publication/case-2023-perch/</link>
+      <link>https://renyunfan.github.io/publication/case-2023-perch/</link>
       <pubDate>Thu, 28 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/publication/case-2023-perch/</guid>
+      <guid>https://renyunfan.github.io/publication/case-2023-perch/</guid>
       <description>&lt;!-- 
 
 
@@ -137,9 +137,9 @@ Add the publication&#39;s **full text** or **supplementary notes** here. You can
     
     <item>
       <title>Online Whole-Body Motion Planning for Quadrotor using Multi-Resolution Search</title>
-      <link>https://renyunfan.cn/publication/icra-2023-se3/</link>
+      <link>https://renyunfan.github.io/publication/icra-2023-se3/</link>
       <pubDate>Tue, 04 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/publication/icra-2023-se3/</guid>
+      <guid>https://renyunfan.github.io/publication/icra-2023-se3/</guid>
       <description>&lt;!-- 
 
 
@@ -178,9 +178,9 @@ Add the publication&#39;s **full text** or **supplementary notes** here. You can
     
     <item>
       <title>Swarm-LIO: Decentralized Swarm LiDAR-inertial Odometry</title>
-      <link>https://renyunfan.cn/publication/icra-2023-swarm-lio/</link>
+      <link>https://renyunfan.github.io/publication/icra-2023-swarm-lio/</link>
       <pubDate>Tue, 04 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/publication/icra-2023-swarm-lio/</guid>
+      <guid>https://renyunfan.github.io/publication/icra-2023-swarm-lio/</guid>
       <description>&lt;!-- 
 
 
@@ -219,9 +219,9 @@ Add the publication&#39;s **full text** or **supplementary notes** here. You can
     
     <item>
       <title>Bubble planner: Planning high-speed smooth quadrotor trajectories using receding corridors</title>
-      <link>https://renyunfan.cn/publication/iros2022-bubble/</link>
+      <link>https://renyunfan.github.io/publication/iros2022-bubble/</link>
       <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/publication/iros2022-bubble/</guid>
+      <guid>https://renyunfan.github.io/publication/iros2022-bubble/</guid>
       <description>&lt;!-- 
 
 
@@ -260,9 +260,9 @@ Add the publication&#39;s **full text** or **supplementary notes** here. You can
     
     <item>
       <title>Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload</title>
-      <link>https://renyunfan.cn/publication/iros-2021-vison-encoder/</link>
+      <link>https://renyunfan.github.io/publication/iros-2021-vison-encoder/</link>
       <pubDate>Sun, 26 Dec 2021 00:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/publication/iros-2021-vison-encoder/</guid>
+      <guid>https://renyunfan.github.io/publication/iros-2021-vison-encoder/</guid>
       <description>&lt;!-- 
 
 

@@ -2,287 +2,287 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://renyunfan.cn/awards/</loc>
+    <loc>https://renyunfan.github.io/awards/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/awards/iros2023/</loc>
+    <loc>https://renyunfan.github.io/awards/iros2023/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/event/example/</loc>
+    <loc>https://renyunfan.github.io/event/example/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/event/</loc>
+    <loc>https://renyunfan.github.io/event/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/publication_types/article-journal/</loc>
+    <loc>https://renyunfan.github.io/publication_types/article-journal/</loc>
     <lastmod>2025-01-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/tags/autonomous-aerial-robots/</loc>
+    <loc>https://renyunfan.github.io/tags/autonomous-aerial-robots/</loc>
     <lastmod>2025-01-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/post/</loc>
+    <loc>https://renyunfan.github.io/post/</loc>
     <lastmod>2025-01-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/tags/motion-planning/</loc>
+    <loc>https://renyunfan.github.io/tags/motion-planning/</loc>
     <lastmod>2025-01-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/tags/paper_accept/</loc>
+    <loc>https://renyunfan.github.io/tags/paper_accept/</loc>
     <lastmod>2025-01-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/publication_types/</loc>
+    <loc>https://renyunfan.github.io/publication_types/</loc>
     <lastmod>2025-01-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/publication/</loc>
+    <loc>https://renyunfan.github.io/publication/</loc>
     <lastmod>2025-01-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/publication/sr-2025-super/</loc>
+    <loc>https://renyunfan.github.io/publication/sr-2025-super/</loc>
     <lastmod>2025-01-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/post/super_accept/</loc>
+    <loc>https://renyunfan.github.io/post/super_accept/</loc>
     <lastmod>2025-01-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/tags/</loc>
+    <loc>https://renyunfan.github.io/tags/</loc>
     <lastmod>2025-01-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/publication/tro-2025-tailsitter/</loc>
+    <loc>https://renyunfan.github.io/publication/tro-2025-tailsitter/</loc>
     <lastmod>2025-01-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/tags/aerial-robots/</loc>
+    <loc>https://renyunfan.github.io/tags/aerial-robots/</loc>
     <lastmod>2024-12-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/tags/lidar-mapping/</loc>
+    <loc>https://renyunfan.github.io/tags/lidar-mapping/</loc>
     <lastmod>2024-12-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/tags/lidar-slam/</loc>
+    <loc>https://renyunfan.github.io/tags/lidar-slam/</loc>
     <lastmod>2024-12-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/tags/lidar-based-navigation/</loc>
+    <loc>https://renyunfan.github.io/tags/lidar-based-navigation/</loc>
     <lastmod>2024-12-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/publication_types/paper-conference/</loc>
+    <loc>https://renyunfan.github.io/publication_types/paper-conference/</loc>
     <lastmod>2024-12-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/publication/iros2024-ogm-sync/</loc>
+    <loc>https://renyunfan.github.io/publication/iros2024-ogm-sync/</loc>
     <lastmod>2024-12-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/publication/iros2024-rog/</loc>
+    <loc>https://renyunfan.github.io/publication/iros2024-rog/</loc>
     <lastmod>2024-12-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/tags/swarm-intelligence/</loc>
+    <loc>https://renyunfan.github.io/tags/swarm-intelligence/</loc>
     <lastmod>2024-12-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/publication/tro-2024-swarm-lio2/</loc>
+    <loc>https://renyunfan.github.io/publication/tro-2024-swarm-lio2/</loc>
     <lastmod>2024-12-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/publication/ral-2024-lamm/</loc>
+    <loc>https://renyunfan.github.io/publication/ral-2024-lamm/</loc>
     <lastmod>2024-11-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/publication/tro-2024-fast-livo2/</loc>
+    <loc>https://renyunfan.github.io/publication/tro-2024-fast-livo2/</loc>
     <lastmod>2024-11-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/projects/</loc>
+    <loc>https://renyunfan.github.io/projects/</loc>
     <lastmod>2024-05-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/tags/autonomous-aerial-robot/</loc>
+    <loc>https://renyunfan.github.io/tags/autonomous-aerial-robot/</loc>
     <lastmod>2023-12-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/publication/iros2023-bubble-exp/</loc>
+    <loc>https://renyunfan.github.io/publication/iros2023-bubble-exp/</loc>
     <lastmod>2023-12-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/publication/iros2023-st/</loc>
+    <loc>https://renyunfan.github.io/publication/iros2023-st/</loc>
     <lastmod>2023-12-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/tags/optimal-control/</loc>
+    <loc>https://renyunfan.github.io/tags/optimal-control/</loc>
     <lastmod>2023-11-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/publication/ijrr-2023-tailsitter/</loc>
+    <loc>https://renyunfan.github.io/publication/ijrr-2023-tailsitter/</loc>
     <lastmod>2023-11-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/publication/tro-2023-immesh/</loc>
+    <loc>https://renyunfan.github.io/publication/tro-2023-immesh/</loc>
     <lastmod>2023-11-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/post-old/get-started/</loc>
+    <loc>https://renyunfan.github.io/post-old/get-started/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/tags/academic/</loc>
+    <loc>https://renyunfan.github.io/tags/academic/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/post-old/</loc>
+    <loc>https://renyunfan.github.io/post-old/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/tags/hugo-blox/</loc>
+    <loc>https://renyunfan.github.io/tags/hugo-blox/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/tags/markdown/</loc>
+    <loc>https://renyunfan.github.io/tags/markdown/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/tags/hugo/</loc>
+    <loc>https://renyunfan.github.io/tags/hugo/</loc>
     <lastmod>2023-10-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/project/pandas/</loc>
+    <loc>https://renyunfan.github.io/project/pandas/</loc>
     <lastmod>2023-10-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/project/</loc>
+    <loc>https://renyunfan.github.io/project/</loc>
     <lastmod>2023-10-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/project/pytorch/</loc>
+    <loc>https://renyunfan.github.io/project/pytorch/</loc>
     <lastmod>2023-10-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/project/scikit/</loc>
+    <loc>https://renyunfan.github.io/project/scikit/</loc>
     <lastmod>2023-10-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/tags/second-brain/</loc>
+    <loc>https://renyunfan.github.io/tags/second-brain/</loc>
     <lastmod>2023-10-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/tags/wowchemy/</loc>
+    <loc>https://renyunfan.github.io/tags/wowchemy/</loc>
     <lastmod>2023-10-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/post-old/second-brain/</loc>
+    <loc>https://renyunfan.github.io/post-old/second-brain/</loc>
     <lastmod>2023-10-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/post-old/data-visualization/</loc>
+    <loc>https://renyunfan.github.io/post-old/data-visualization/</loc>
     <lastmod>2023-10-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/post-old/teach-courses/</loc>
+    <loc>https://renyunfan.github.io/post-old/teach-courses/</loc>
     <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/experience/</loc>
+    <loc>https://renyunfan.github.io/experience/</loc>
     <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/tags/hugo-blox-builder/</loc>
+    <loc>https://renyunfan.github.io/tags/hugo-blox-builder/</loc>
     <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/tags/javascript/</loc>
+    <loc>https://renyunfan.github.io/tags/javascript/</loc>
     <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/teaching/js/</loc>
+    <loc>https://renyunfan.github.io/teaching/js/</loc>
     <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/teaching/python/</loc>
+    <loc>https://renyunfan.github.io/teaching/python/</loc>
     <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/tags/python/</loc>
+    <loc>https://renyunfan.github.io/tags/python/</loc>
     <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/teaching/</loc>
+    <loc>https://renyunfan.github.io/teaching/</loc>
     <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/post-old/project-management/</loc>
+    <loc>https://renyunfan.github.io/post-old/project-management/</loc>
     <lastmod>2023-10-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/publication/tro-2023-dmap/</loc>
+    <loc>https://renyunfan.github.io/publication/tro-2023-dmap/</loc>
     <lastmod>2023-10-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/publication/case-2023-perch/</loc>
+    <loc>https://renyunfan.github.io/publication/case-2023-perch/</loc>
     <lastmod>2023-09-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/publication/ral-2023-ipc/</loc>
+    <loc>https://renyunfan.github.io/publication/ral-2023-ipc/</loc>
     <lastmod>2023-09-04T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/tags/motion-planing/</loc>
+    <loc>https://renyunfan.github.io/tags/motion-planing/</loc>
     <lastmod>2023-09-04T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/publication/icra-2023-se3/</loc>
+    <loc>https://renyunfan.github.io/publication/icra-2023-se3/</loc>
     <lastmod>2023-07-04T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/publication/icra-2023-swarm-lio/</loc>
+    <loc>https://renyunfan.github.io/publication/icra-2023-swarm-lio/</loc>
     <lastmod>2023-07-04T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/awards/icra2023/</loc>
+    <loc>https://renyunfan.github.io/awards/icra2023/</loc>
     <lastmod>2023-06-01T13:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/publication/ral-2023-marsim/</loc>
+    <loc>https://renyunfan.github.io/publication/ral-2023-marsim/</loc>
     <lastmod>2023-04-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/tags/simulator/</loc>
+    <loc>https://renyunfan.github.io/tags/simulator/</loc>
     <lastmod>2023-04-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/tags/calibration/</loc>
+    <loc>https://renyunfan.github.io/tags/calibration/</loc>
     <lastmod>2022-12-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/tags/lidar-perception/</loc>
+    <loc>https://renyunfan.github.io/tags/lidar-perception/</loc>
     <lastmod>2022-12-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/publication/iros2022-li-init/</loc>
+    <loc>https://renyunfan.github.io/publication/iros2022-li-init/</loc>
     <lastmod>2022-12-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/</loc>
+    <loc>https://renyunfan.github.io/</loc>
     <lastmod>2022-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/publication/iros2022-bubble/</loc>
+    <loc>https://renyunfan.github.io/publication/iros2022-bubble/</loc>
     <lastmod>2022-10-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://renyunfan.cn/publication/iros-2021-vison-encoder/</loc>
+    <loc>https://renyunfan.github.io/publication/iros-2021-vison-encoder/</loc>
     <lastmod>2021-12-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>

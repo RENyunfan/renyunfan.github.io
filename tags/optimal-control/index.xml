@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Optimal Control | Yunfan (Kevin) REN</title>
-    <link>https://renyunfan.cn/tags/optimal-control/</link>
-      <atom:link href="https://renyunfan.cn/tags/optimal-control/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://renyunfan.github.io/tags/optimal-control/</link>
+      <atom:link href="https://renyunfan.github.io/tags/optimal-control/index.xml" rel="self" type="application/rss+xml" />
     <description>Optimal Control</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 07 Nov 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://renyunfan.cn/media/icon_hu_aa8ce7ec037eb17f.png</url>
+      <url>https://renyunfan.github.io/media/icon_hu_aa8ce7ec037eb17f.png</url>
       <title>Optimal Control</title>
-      <link>https://renyunfan.cn/tags/optimal-control/</link>
+      <link>https://renyunfan.github.io/tags/optimal-control/</link>
     </image>
     
     <item>
       <title>Trajectory Generation and Tracking Control for Aggressive Tail-Sitter Flights</title>
-      <link>https://renyunfan.cn/publication/ijrr-2023-tailsitter/</link>
+      <link>https://renyunfan.github.io/publication/ijrr-2023-tailsitter/</link>
       <pubDate>Tue, 07 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/publication/ijrr-2023-tailsitter/</guid>
+      <guid>https://renyunfan.github.io/publication/ijrr-2023-tailsitter/</guid>
       <description>&lt;!-- 
 
 

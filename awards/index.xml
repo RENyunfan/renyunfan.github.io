@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Awards | Yunfan (Kevin) REN</title>
-    <link>https://renyunfan.cn/awards/</link>
-      <atom:link href="https://renyunfan.cn/awards/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://renyunfan.github.io/awards/</link>
+      <atom:link href="https://renyunfan.github.io/awards/index.xml" rel="self" type="application/rss+xml" />
     <description>Awards</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://renyunfan.cn/media/icon_hu_aa8ce7ec037eb17f.png</url>
+      <url>https://renyunfan.github.io/media/icon_hu_aa8ce7ec037eb17f.png</url>
       <title>Awards</title>
-      <link>https://renyunfan.cn/awards/</link>
+      <link>https://renyunfan.github.io/awards/</link>
     </image>
     
     <item>
       <title>Best Overall and Best Student Paper</title>
-      <link>https://renyunfan.cn/awards/iros2023/</link>
+      <link>https://renyunfan.github.io/awards/iros2023/</link>
       <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/awards/iros2023/</guid>
-      <description>&lt;p&gt;We are excited to share that our paper &lt;a href=&#34;https://renyunfan.cn/publication/iros2023-st/&#34;&gt;&lt;span style=&#34;color: #4cc9f0&#34;&gt;Decentralized swarm trajectory generation for lidar-based aerial tracking in cluttered environments&lt;/span&gt;&lt;/a&gt; was selected as the finalist of the &lt;span style=&#34;color: #db7f8e&#34;&gt;Best Overall and Best Student Paper&lt;/span&gt; in IROS 2023.&lt;/p&gt;
+      <guid>https://renyunfan.github.io/awards/iros2023/</guid>
+      <description>&lt;p&gt;We are excited to share that our paper &lt;a href=&#34;https://renyunfan.github.io/publication/iros2023-st/&#34;&gt;&lt;span style=&#34;color: #4cc9f0&#34;&gt;Decentralized swarm trajectory generation for lidar-based aerial tracking in cluttered environments&lt;/span&gt;&lt;/a&gt; was selected as the finalist of the &lt;span style=&#34;color: #db7f8e&#34;&gt;Best Overall and Best Student Paper&lt;/span&gt; in IROS 2023.&lt;/p&gt;
 &lt;!-- 
 
 
@@ -46,10 +46,10 @@ Further event details, including [page elements](https://docs.hugoblox.com/refer
     
     <item>
       <title>Outstanding Navigation Paper</title>
-      <link>https://renyunfan.cn/awards/icra2023/</link>
+      <link>https://renyunfan.github.io/awards/icra2023/</link>
       <pubDate>Thu, 01 Jun 2023 13:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/awards/icra2023/</guid>
-      <description>&lt;p&gt;We are excited to share that our paper &lt;a href=&#34;https://renyunfan.cn/publication/icra-2023-se3/&#34;&gt;&lt;span style=&#34;color: #4cc9f0&#34;&gt;Online Whole-Body Motion Planning for Quadrotor using Multi-Resolution Search&lt;/span&gt;&lt;/a&gt; was selected as the finalist of the &lt;span style=&#34;color: #fb5607&#34;&gt;Outstanding Navigation Paper&lt;/span&gt; in ICRA 2023.&lt;/p&gt;
+      <guid>https://renyunfan.github.io/awards/icra2023/</guid>
+      <description>&lt;p&gt;We are excited to share that our paper &lt;a href=&#34;https://renyunfan.github.io/publication/icra-2023-se3/&#34;&gt;&lt;span style=&#34;color: #4cc9f0&#34;&gt;Online Whole-Body Motion Planning for Quadrotor using Multi-Resolution Search&lt;/span&gt;&lt;/a&gt; was selected as the finalist of the &lt;span style=&#34;color: #fb5607&#34;&gt;Outstanding Navigation Paper&lt;/span&gt; in ICRA 2023.&lt;/p&gt;
 &lt;!-- 
 
 

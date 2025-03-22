@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>LiDAR SLAM | Yunfan (Kevin) REN</title>
-    <link>https://renyunfan.cn/tags/lidar-slam/</link>
-      <atom:link href="https://renyunfan.cn/tags/lidar-slam/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://renyunfan.github.io/tags/lidar-slam/</link>
+      <atom:link href="https://renyunfan.github.io/tags/lidar-slam/index.xml" rel="self" type="application/rss+xml" />
     <description>LiDAR SLAM</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 25 Dec 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://renyunfan.cn/media/icon_hu_aa8ce7ec037eb17f.png</url>
+      <url>https://renyunfan.github.io/media/icon_hu_aa8ce7ec037eb17f.png</url>
       <title>LiDAR SLAM</title>
-      <link>https://renyunfan.cn/tags/lidar-slam/</link>
+      <link>https://renyunfan.github.io/tags/lidar-slam/</link>
     </image>
     
     <item>
       <title>Swarm-LIO2: Decentralized Efficient LiDAR-Inertial Odometry for Aerial Swarm Systems</title>
-      <link>https://renyunfan.cn/publication/tro-2024-swarm-lio2/</link>
+      <link>https://renyunfan.github.io/publication/tro-2024-swarm-lio2/</link>
       <pubDate>Wed, 25 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/publication/tro-2024-swarm-lio2/</guid>
+      <guid>https://renyunfan.github.io/publication/tro-2024-swarm-lio2/</guid>
       <description>&lt;!-- 
 
 
@@ -54,9 +54,9 @@
     
     <item>
       <title>Fast-livo2: Fast, direct lidar-inertial-visual odometry</title>
-      <link>https://renyunfan.cn/publication/tro-2024-fast-livo2/</link>
+      <link>https://renyunfan.github.io/publication/tro-2024-fast-livo2/</link>
       <pubDate>Tue, 19 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/publication/tro-2024-fast-livo2/</guid>
+      <guid>https://renyunfan.github.io/publication/tro-2024-fast-livo2/</guid>
       <description>&lt;!-- 
 
 
@@ -94,9 +94,9 @@
     
     <item>
       <title>Immesh: An immediate lidar localization and meshing framework</title>
-      <link>https://renyunfan.cn/publication/tro-2023-immesh/</link>
+      <link>https://renyunfan.github.io/publication/tro-2023-immesh/</link>
       <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/publication/tro-2023-immesh/</guid>
+      <guid>https://renyunfan.github.io/publication/tro-2023-immesh/</guid>
       <description>&lt;!-- 
 
 
@@ -134,9 +134,9 @@
     
     <item>
       <title>Occupancy grid mapping without ray-casting for high-resolution lidar sensors</title>
-      <link>https://renyunfan.cn/publication/tro-2023-dmap/</link>
+      <link>https://renyunfan.github.io/publication/tro-2023-dmap/</link>
       <pubDate>Mon, 16 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/publication/tro-2023-dmap/</guid>
+      <guid>https://renyunfan.github.io/publication/tro-2023-dmap/</guid>
       <description>&lt;!-- 
 
 
@@ -174,9 +174,9 @@
     
     <item>
       <title>Swarm-LIO: Decentralized Swarm LiDAR-inertial Odometry</title>
-      <link>https://renyunfan.cn/publication/icra-2023-swarm-lio/</link>
+      <link>https://renyunfan.github.io/publication/icra-2023-swarm-lio/</link>
       <pubDate>Tue, 04 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/publication/icra-2023-swarm-lio/</guid>
+      <guid>https://renyunfan.github.io/publication/icra-2023-swarm-lio/</guid>
       <description>&lt;!-- 
 
 

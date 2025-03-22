@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Article-Journal | Yunfan (Kevin) REN</title>
-    <link>https://renyunfan.cn/publication_types/article-journal/</link>
-      <atom:link href="https://renyunfan.cn/publication_types/article-journal/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://renyunfan.github.io/publication_types/article-journal/</link>
+      <atom:link href="https://renyunfan.github.io/publication_types/article-journal/index.xml" rel="self" type="application/rss+xml" />
     <description>Article-Journal</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 29 Jan 2025 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://renyunfan.cn/media/icon_hu_aa8ce7ec037eb17f.png</url>
+      <url>https://renyunfan.github.io/media/icon_hu_aa8ce7ec037eb17f.png</url>
       <title>Article-Journal</title>
-      <link>https://renyunfan.cn/publication_types/article-journal/</link>
+      <link>https://renyunfan.github.io/publication_types/article-journal/</link>
     </image>
     
     <item>
       <title>Safety-assured High-speed Navigation for MAVs</title>
-      <link>https://renyunfan.cn/publication/sr-2025-super/</link>
+      <link>https://renyunfan.github.io/publication/sr-2025-super/</link>
       <pubDate>Wed, 29 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/publication/sr-2025-super/</guid>
+      <guid>https://renyunfan.github.io/publication/sr-2025-super/</guid>
       <description>&lt;!-- 
 
 
@@ -54,9 +54,9 @@
     
     <item>
       <title>Autonomous Tail-Sitter Flights in Unknown Environments</title>
-      <link>https://renyunfan.cn/publication/tro-2025-tailsitter/</link>
+      <link>https://renyunfan.github.io/publication/tro-2025-tailsitter/</link>
       <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/publication/tro-2025-tailsitter/</guid>
+      <guid>https://renyunfan.github.io/publication/tro-2025-tailsitter/</guid>
       <description>&lt;!-- 
 
 
@@ -94,9 +94,9 @@
     
     <item>
       <title>Swarm-LIO2: Decentralized Efficient LiDAR-Inertial Odometry for Aerial Swarm Systems</title>
-      <link>https://renyunfan.cn/publication/tro-2024-swarm-lio2/</link>
+      <link>https://renyunfan.github.io/publication/tro-2024-swarm-lio2/</link>
       <pubDate>Wed, 25 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/publication/tro-2024-swarm-lio2/</guid>
+      <guid>https://renyunfan.github.io/publication/tro-2024-swarm-lio2/</guid>
       <description>&lt;!-- 
 
 
@@ -134,9 +134,9 @@
     
     <item>
       <title>Large-Scale Multi-Session Point-Cloud Map Merging</title>
-      <link>https://renyunfan.cn/publication/ral-2024-lamm/</link>
+      <link>https://renyunfan.github.io/publication/ral-2024-lamm/</link>
       <pubDate>Thu, 21 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/publication/ral-2024-lamm/</guid>
+      <guid>https://renyunfan.github.io/publication/ral-2024-lamm/</guid>
       <description>&lt;!-- 
 
 
@@ -174,9 +174,9 @@
     
     <item>
       <title>Fast-livo2: Fast, direct lidar-inertial-visual odometry</title>
-      <link>https://renyunfan.cn/publication/tro-2024-fast-livo2/</link>
+      <link>https://renyunfan.github.io/publication/tro-2024-fast-livo2/</link>
       <pubDate>Tue, 19 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/publication/tro-2024-fast-livo2/</guid>
+      <guid>https://renyunfan.github.io/publication/tro-2024-fast-livo2/</guid>
       <description>&lt;!-- 
 
 
@@ -214,9 +214,9 @@
     
     <item>
       <title>Trajectory Generation and Tracking Control for Aggressive Tail-Sitter Flights</title>
-      <link>https://renyunfan.cn/publication/ijrr-2023-tailsitter/</link>
+      <link>https://renyunfan.github.io/publication/ijrr-2023-tailsitter/</link>
       <pubDate>Tue, 07 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/publication/ijrr-2023-tailsitter/</guid>
+      <guid>https://renyunfan.github.io/publication/ijrr-2023-tailsitter/</guid>
       <description>&lt;!-- 
 
 
@@ -254,9 +254,9 @@
     
     <item>
       <title>Immesh: An immediate lidar localization and meshing framework</title>
-      <link>https://renyunfan.cn/publication/tro-2023-immesh/</link>
+      <link>https://renyunfan.github.io/publication/tro-2023-immesh/</link>
       <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/publication/tro-2023-immesh/</guid>
+      <guid>https://renyunfan.github.io/publication/tro-2023-immesh/</guid>
       <description>&lt;!-- 
 
 
@@ -294,9 +294,9 @@
     
     <item>
       <title>Occupancy grid mapping without ray-casting for high-resolution lidar sensors</title>
-      <link>https://renyunfan.cn/publication/tro-2023-dmap/</link>
+      <link>https://renyunfan.github.io/publication/tro-2023-dmap/</link>
       <pubDate>Mon, 16 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/publication/tro-2023-dmap/</guid>
+      <guid>https://renyunfan.github.io/publication/tro-2023-dmap/</guid>
       <description>&lt;!-- 
 
 
@@ -334,9 +334,9 @@
     
     <item>
       <title>Integrated Planning and Control for Quadrotor Navigation in Presence of Suddenly Appearing Objects and Disturbances</title>
-      <link>https://renyunfan.cn/publication/ral-2023-ipc/</link>
+      <link>https://renyunfan.github.io/publication/ral-2023-ipc/</link>
       <pubDate>Mon, 04 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/publication/ral-2023-ipc/</guid>
+      <guid>https://renyunfan.github.io/publication/ral-2023-ipc/</guid>
       <description>&lt;!-- 
 
 
@@ -374,9 +374,9 @@
     
     <item>
       <title>MARSIM: A Light-Weight Point-Realistic Simulator for LiDAR-Based UAVs</title>
-      <link>https://renyunfan.cn/publication/ral-2023-marsim/</link>
+      <link>https://renyunfan.github.io/publication/ral-2023-marsim/</link>
       <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/publication/ral-2023-marsim/</guid>
+      <guid>https://renyunfan.github.io/publication/ral-2023-marsim/</guid>
       <description>&lt;!-- 
 
 

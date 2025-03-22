@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>LiDAR Perception | Yunfan (Kevin) REN</title>
-    <link>https://renyunfan.cn/tags/lidar-perception/</link>
-      <atom:link href="https://renyunfan.cn/tags/lidar-perception/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://renyunfan.github.io/tags/lidar-perception/</link>
+      <atom:link href="https://renyunfan.github.io/tags/lidar-perception/index.xml" rel="self" type="application/rss+xml" />
     <description>LiDAR Perception</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 26 Dec 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://renyunfan.cn/media/icon_hu_aa8ce7ec037eb17f.png</url>
+      <url>https://renyunfan.github.io/media/icon_hu_aa8ce7ec037eb17f.png</url>
       <title>LiDAR Perception</title>
-      <link>https://renyunfan.cn/tags/lidar-perception/</link>
+      <link>https://renyunfan.github.io/tags/lidar-perception/</link>
     </image>
     
     <item>
       <title>Robust Real-time LiDAR-inertial Initialization</title>
-      <link>https://renyunfan.cn/publication/iros2022-li-init/</link>
+      <link>https://renyunfan.github.io/publication/iros2022-li-init/</link>
       <pubDate>Mon, 26 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/publication/iros2022-li-init/</guid>
+      <guid>https://renyunfan.github.io/publication/iros2022-li-init/</guid>
       <description>&lt;!-- 
 
 

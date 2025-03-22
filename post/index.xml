@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog | Yunfan (Kevin) REN</title>
-    <link>https://renyunfan.cn/post/</link>
-      <atom:link href="https://renyunfan.cn/post/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://renyunfan.github.io/post/</link>
+      <atom:link href="https://renyunfan.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Blog</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 29 Jan 2025 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://renyunfan.cn/media/icon_hu_aa8ce7ec037eb17f.png</url>
+      <url>https://renyunfan.github.io/media/icon_hu_aa8ce7ec037eb17f.png</url>
       <title>Blog</title>
-      <link>https://renyunfan.cn/post/</link>
+      <link>https://renyunfan.github.io/post/</link>
     </image>
     
     <item>
       <title>SUPER is published in Science Robotics!</title>
-      <link>https://renyunfan.cn/post/super_accept/</link>
+      <link>https://renyunfan.github.io/post/super_accept/</link>
       <pubDate>Wed, 29 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://renyunfan.cn/post/super_accept/</guid>
-      <description>&lt;p&gt;We are excited to share that our paper &lt;a href=&#34;https://renyunfan.cn/publichation/2025-sr-super&#34;&gt;&lt;span style=&#34;color: #4cc9f0&#34;&gt;Safety-assured High-speed Navigation for MAVs&lt;/span&gt;&lt;/a&gt; is now published in Science Robotics. Check the paper and open source code for more information!&lt;/p&gt;
+      <guid>https://renyunfan.github.io/post/super_accept/</guid>
+      <description>&lt;p&gt;We are excited to share that our paper &lt;a href=&#34;https://renyunfan.github.io/publichation/2025-sr-super&#34;&gt;&lt;span style=&#34;color: #4cc9f0&#34;&gt;Safety-assured High-speed Navigation for MAVs&lt;/span&gt;&lt;/a&gt; is now published in Science Robotics. Check the paper and open source code for more information!&lt;/p&gt;
 </description>
     </item>
     

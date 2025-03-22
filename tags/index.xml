@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags | Yunfan (Kevin) REN</title>
-    <link>https://renyunfan.cn/tags/</link>
-      <atom:link href="https://renyunfan.cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://renyunfan.github.io/tags/</link>
+      <atom:link href="https://renyunfan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 29 Jan 2025 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://renyunfan.cn/media/icon_hu_aa8ce7ec037eb17f.png</url>
+      <url>https://renyunfan.github.io/media/icon_hu_aa8ce7ec037eb17f.png</url>
       <title>Tags</title>
-      <link>https://renyunfan.cn/tags/</link>
+      <link>https://renyunfan.github.io/tags/</link>
     </image>
     
   </channel>
