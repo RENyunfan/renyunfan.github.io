@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Paper_accept | Yunfan (Kevin) REN</title>
+    <link>https://renyunfan.cn/tags/paper_accept/</link>
+      <atom:link href="https://renyunfan.cn/tags/paper_accept/index.xml" rel="self" type="application/rss+xml" />
+    <description>Paper_accept</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 29 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://renyunfan.cn/media/icon_hu_aa8ce7ec037eb17f.png</url>
+      <title>Paper_accept</title>
+      <link>https://renyunfan.cn/tags/paper_accept/</link>
+    </image>
+    
+    <item>
+      <title>SUPER is published in Science Robotics!</title>
+      <link>https://renyunfan.cn/post/super_accept/</link>
+      <pubDate>Wed, 29 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://renyunfan.cn/post/super_accept/</guid>
+      <description>&lt;p&gt;We are excited to share that our paper &lt;a href=&#34;https://renyunfan.cn/publichation/2025-sr-super&#34;&gt;&lt;span style=&#34;color: #4cc9f0&#34;&gt;Safety-assured High-speed Navigation for MAVs&lt;/span&gt;&lt;/a&gt; is now published in Science Robotics. Check the paper and open source code for more information!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

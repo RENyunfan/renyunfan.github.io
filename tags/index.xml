@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags | Jiarong Lin</title>
-    <link>https://ziv-lin.github.io/tags/</link>
-      <atom:link href="https://ziv-lin.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <title>Tags | Yunfan (Kevin) REN</title>
+    <link>https://renyunfan.cn/tags/</link>
+      <atom:link href="https://renyunfan.cn/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 16 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 29 Jan 2025 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://ziv-lin.github.io/media/icon_hu9d99c7745ea620931e335f427cb4032d_148591_512x512_fill_lanczos_center_3.png</url>
+      <url>https://renyunfan.cn/media/icon_hu_aa8ce7ec037eb17f.png</url>
       <title>Tags</title>
-      <link>https://ziv-lin.github.io/tags/</link>
+      <link>https://renyunfan.cn/tags/</link>
     </image>
     
   </channel>
