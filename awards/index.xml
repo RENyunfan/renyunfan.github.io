@@ -5,7 +5,7 @@
     <link>https://renyunfan.github.io/awards/</link>
       <atom:link href="https://renyunfan.github.io/awards/index.xml" rel="self" type="application/rss+xml" />
     <description>Awards</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Oct 2023 13:00:00 +0000</lastBuildDate>
     <image>
       <url>https://renyunfan.github.io/media/icon_hu_aa8ce7ec037eb17f.png</url>
       <title>Awards</title>
@@ -15,7 +15,7 @@
     <item>
       <title>Best Overall and Best Student Paper</title>
       <link>https://renyunfan.github.io/awards/iros2023/</link>
-      <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
+      <pubDate>Sun, 01 Oct 2023 13:00:00 +0000</pubDate>
       <guid>https://renyunfan.github.io/awards/iros2023/</guid>
       <description>&lt;p&gt;We are excited to share that our paper &lt;a href=&#34;https://renyunfan.github.io/publication/iros2023-st/&#34;&gt;&lt;span style=&#34;color: #4cc9f0&#34;&gt;Decentralized swarm trajectory generation for lidar-based aerial tracking in cluttered environments&lt;/span&gt;&lt;/a&gt; was selected as the finalist of the &lt;span style=&#34;color: #db7f8e&#34;&gt;Best Overall and Best Student Paper&lt;/span&gt; in IROS 2023.&lt;/p&gt;
 &lt;!-- 
