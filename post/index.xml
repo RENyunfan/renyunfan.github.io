@@ -5,12 +5,48 @@
     <link>https://renyunfan.github.io/post/</link>
       <atom:link href="https://renyunfan.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Blog</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 29 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 13 Sep 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://renyunfan.github.io/media/icon_hu_aa8ce7ec037eb17f.png</url>
       <title>Blog</title>
       <link>https://renyunfan.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>Our New Paper Published in IEEE/ASME T-Mech</title>
+      <link>https://renyunfan.github.io/post/tmech_accept/</link>
+      <pubDate>Sat, 13 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://renyunfan.github.io/post/tmech_accept/</guid>
+      <description>&lt;p&gt;We are thrilled to announce that our paper, &lt;a href=&#34;https://ieeexplore.ieee.org/document/11155197&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;A Survey on LiDAR-based Autonomous Aerial Vehicles&amp;rdquo;&lt;/a&gt;, is now published in IEEE/ASME Transactions on Mechatronics. For more details, visit our &lt;a href=&#34;https://github.com/hku-mars/LiDAR-UAV-Autonomy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub repository&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Starting My Postdoc in RPG at the University of Zurich</title>
+      <link>https://renyunfan.github.io/post/postdoc/</link>
+      <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://renyunfan.github.io/post/postdoc/</guid>
+      <description>&lt;p&gt;I am delighted to announce that I have started my postdoctoral position at the University of Zurich in the Robotics and Perception Group, under the supervision of Prof. Davide Scaramuzza. I am incredibly excited to contribute to cutting-edge research in robotics and perception and to collaborate with such an inspiring team.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>I was accepted by RSS Pioneers Workshop 2025!</title>
+      <link>https://renyunfan.github.io/post/rss_pioneer/</link>
+      <pubDate>Thu, 05 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://renyunfan.github.io/post/rss_pioneer/</guid>
+      <description>&lt;p&gt;I am excited to share that I was selected&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>I have successfully defended my Ph.D.!</title>
+      <link>https://renyunfan.github.io/post/defened_phd/</link>
+      <pubDate>Tue, 20 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://renyunfan.github.io/post/defened_phd/</guid>
+      <description>&lt;p&gt;I am thrilled to share that I have successfully defended my Ph.D., huge thank to my supervisor Prof. Fu Zhang. Also great appreciate the committee member Prof. How for MIT, Prof. Mueller from UCB and Prof. Lu and the chair Prof. Deng.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>SUPER is published in Science Robotics!</title>

@@ -5,12 +5,21 @@
     <link>https://renyunfan.github.io/tags/paper_accept/</link>
       <atom:link href="https://renyunfan.github.io/tags/paper_accept/index.xml" rel="self" type="application/rss+xml" />
     <description>Paper_accept</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 29 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 13 Sep 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://renyunfan.github.io/media/icon_hu_aa8ce7ec037eb17f.png</url>
       <title>Paper_accept</title>
       <link>https://renyunfan.github.io/tags/paper_accept/</link>
     </image>
+    
+    <item>
+      <title>Our New Paper Published in IEEE/ASME T-Mech</title>
+      <link>https://renyunfan.github.io/post/tmech_accept/</link>
+      <pubDate>Sat, 13 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://renyunfan.github.io/post/tmech_accept/</guid>
+      <description>&lt;p&gt;We are thrilled to announce that our paper, &lt;a href=&#34;https://ieeexplore.ieee.org/document/11155197&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;A Survey on LiDAR-based Autonomous Aerial Vehicles&amp;rdquo;&lt;/a&gt;, is now published in IEEE/ASME Transactions on Mechatronics. For more details, visit our &lt;a href=&#34;https://github.com/hku-mars/LiDAR-UAV-Autonomy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub repository&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>SUPER is published in Science Robotics!</title>

@@ -34,6 +34,74 @@
     </item>
     
     <item>
+      <title>Our New Paper Published in IEEE/ASME T-Mech</title>
+      <link>https://renyunfan.github.io/post/tmech_accept/</link>
+      <pubDate>Sat, 13 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://renyunfan.github.io/post/tmech_accept/</guid>
+      <description>&lt;p&gt;We are thrilled to announce that our paper, &lt;a href=&#34;https://ieeexplore.ieee.org/document/11155197&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;A Survey on LiDAR-based Autonomous Aerial Vehicles&amp;rdquo;&lt;/a&gt;, is now published in IEEE/ASME Transactions on Mechatronics. For more details, visit our &lt;a href=&#34;https://github.com/hku-mars/LiDAR-UAV-Autonomy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub repository&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Starting My Postdoc in RPG at the University of Zurich</title>
+      <link>https://renyunfan.github.io/post/postdoc/</link>
+      <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://renyunfan.github.io/post/postdoc/</guid>
+      <description>&lt;p&gt;I am delighted to announce that I have started my postdoctoral position at the University of Zurich in the Robotics and Perception Group, under the supervision of Prof. Davide Scaramuzza. I am incredibly excited to contribute to cutting-edge research in robotics and perception and to collaborate with such an inspiring team.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>RSS Pioneers 2025</title>
+      <link>https://renyunfan.github.io/awards/rss2025/</link>
+      <pubDate>Thu, 05 Jun 2025 13:00:00 +0000</pubDate>
+      <guid>https://renyunfan.github.io/awards/rss2025/</guid>
+      <description>&lt;p&gt;TBD&lt;/p&gt;
+&lt;!-- 
+
+
+
+
+  
+    
+  
+
+&lt;div class=&#34;flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
+&lt;span class=&#34;pr-3 pt-1 text-primary-600 dark:text-primary-300&#34;&gt;
+  &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.&lt;/span&gt;
+&lt;/div&gt;
+
+Slides can be added in a few ways:
+
+- **Create** slides using Hugo Blox Builder&#39;s [_Slides_](https://docs.hugoblox.com/reference/content-types/) feature and link using `slides` parameter in the front matter of the talk file
+- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
+- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://docs.hugoblox.com/reference/markdown/).
+
+Further event details, including [page elements](https://docs.hugoblox.com/reference/markdown/) such as image galleries, can be added to the body of this page. --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>I was accepted by RSS Pioneers Workshop 2025!</title>
+      <link>https://renyunfan.github.io/post/rss_pioneer/</link>
+      <pubDate>Thu, 05 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://renyunfan.github.io/post/rss_pioneer/</guid>
+      <description>&lt;p&gt;I am excited to share that I was selected&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>I have successfully defended my Ph.D.!</title>
+      <link>https://renyunfan.github.io/post/defened_phd/</link>
+      <pubDate>Tue, 20 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://renyunfan.github.io/post/defened_phd/</guid>
+      <description>&lt;p&gt;I am thrilled to share that I have successfully defended my Ph.D., huge thank to my supervisor Prof. Fu Zhang. Also great appreciate the committee member Prof. How for MIT, Prof. Mueller from UCB and Prof. Lu and the chair Prof. Deng.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Safety-assured High-speed Navigation for MAVs</title>
       <link>https://renyunfan.github.io/publication/sr-2025-super/</link>
       <pubDate>Wed, 29 Jan 2025 00:00:00 +0000</pubDate>
@@ -731,7 +799,7 @@ Add the publication&#39;s **full text** or **supplementary notes** here. You can
 
 
 
-&lt;div id=&#34;chart-169785342&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-139547286&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -749,7 +817,7 @@ Add the publication&#39;s **full text** or **supplementary notes** here. You can
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-169785342&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-139547286&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
