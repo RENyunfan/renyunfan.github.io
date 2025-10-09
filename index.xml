@@ -34,6 +34,15 @@
     </item>
     
     <item>
+      <title>New Role as Associate Editor for IEEE RA-L and ICRA 2026！</title>
+      <link>https://renyunfan.github.io/post/ae/</link>
+      <pubDate>Sat, 20 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://renyunfan.github.io/post/ae/</guid>
+      <description>&lt;p&gt;I am thrilled to share that I have been elected as an Associate Editor for IEEE Robotics and Automation Letters (RA-L) and the IEEE International Conference on Robotics and Automation (ICRA) 2026. I am deeply honored by this opportunity and look forward to contributing to the advancement of the robotics community through these prestigious platforms. My goal is to foster high-quality research, support innovative ideas, and help strengthen the global robotics network.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Our New Paper Published in IEEE/ASME T-Mech</title>
       <link>https://renyunfan.github.io/post/tmech_accept/</link>
       <pubDate>Sat, 13 Sep 2025 00:00:00 +0000</pubDate>
@@ -799,7 +808,7 @@ Add the publication&#39;s **full text** or **supplementary notes** here. You can
 
 
 
-&lt;div id=&#34;chart-139547286&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-618349275&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -817,7 +826,7 @@ Add the publication&#39;s **full text** or **supplementary notes** here. You can
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-139547286&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-618349275&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
