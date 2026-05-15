@@ -1,0 +1,768 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>LAFR — Interactive Pipeline</title>
+
+<!-- ─── CDNs: Tailwind, fonts, MathJax ─────────────────────── -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          modA: { 600:'#1e4979', 700:'#0d4f6b' },
+          modB: { 600:'#297d81', 700:'#1a526a' },
+          modC: { 600:'#42216b', 700:'#46286f' },
+          modD: { 600:'#384d78', 700:'#1e2c5a' },
+          modE: { 600:'#c81f3d', 700:'#6a1a25' },
+          modL: { 600:'#1f7a4d', 700:'#114c30' },
+        },
+      },
+    },
+  };
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+  window.MathJax = {
+    loader: { load: ['[tex]/boldsymbol', '[tex]/ams', '[tex]/newcommand', '[tex]/configmacros'] },
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      packages: { '[+]': ['ams', 'newcommand', 'configmacros', 'boldsymbol'] },
+      macros: { bm: ['{\\boldsymbol{#1}}', 1] },
+    },
+    svg: {
+      fontCache: 'global',
+      displayAlign : 'left',   /* left-align \[ … \] blocks (default = center) */
+      displayIndent: '0',      /* no extra horizontal padding                  */
+    },
+    startup: {
+      typeset: false,
+      ready() { MathJax.startup.defaultReady(); document.dispatchEvent(new Event('mathjax-ready')); },
+    },
+  };
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<style>
+/* ════════════════════════════════════════════════════════════════════
+   ▣ LAYOUT CONTROL PANEL — 3 scalars per module: x, y, scale.
+   ════════════════════════════════════════════════════════════════════
+   All three values are unit-less numbers on a 0–100 scale (percent of
+   the canvas):
+     • x     : horizontal position of the module's left edge   (0 = canvas left)
+     • y     : vertical   position of the module's top  edge   (0 = canvas top)
+     • scale : module width as % of canvas width               (50 = half)
+   Each module's HEIGHT is derived automatically from its SVG's native
+   aspect ratio (declared in the `.area-X` rules below) — no manual
+   height tweaking needed.  Stacking order: E gets a higher z-index so
+   it sits inside A's bottom-right L cutout in the overlap region.
+   ════════════════════════════════════════════════════════════════════ */
+:root {
+  /* ── Base canvas ──────────────────────────────────────────────── */
+  --canvas-aspect-ratio : 774 / 472;   /* matches the source figure */
+  --canvas-max-width    : 100%;        /* fill parent; was 1240px cap */
+  --canvas-padding      : 0.4rem;
+  /* Uniform zoom multiplier applied to every module's x, y, and scale
+     so the figure fills the canvas. Default ≈ 1/0.81 brings the
+     rightmost module to ~100 %. Increase to grow everything. */
+  --canvas-zoom         : 1.235;
+
+  /*    name  ── x ──── y ──── scale ─── */
+  /* ── A · Continual Policy Learning ── */
+  --a-x : 0;      --a-y : 0;     --a-scale : 33;
+  /* ── B · Real-World Policy Rollout ── */
+  --b-x : 33.5;     --b-y : 0;     --b-scale : 25;
+  /* ── C · Simulation Model Calibration ── */
+  --c-x : 59;     --c-y : 0;     --c-scale : 21;
+  /* ── D · Real-World Anchored Init ── */
+  --d-x : 33.5;     --d-y : 28;    --d-scale : 25;
+  /* ── E · Adaptive Temporal Scaling (overlaps A's bottom-right) ── */
+  --e-x : 22.8;     --e-y : 54;    --e-scale : 36;
+  /* ── Continual Learning Loop ── */
+  --l-x : 58.5;     --l-y : 54;    --l-scale : 22.3;
+
+  /* ── Interaction tuning ───────────────────────────────────── */
+  --hover-scale       : 1.05;
+  --hover-z           : 50;
+  --spotlight-opacity : 0.30;
+  --spotlight-sat     : 0.55;
+  --spotlight-mask    : rgba(255,255,255,0.55);
+}
+
+/* ════════════════════════════════════════════════════════════════════
+   Page chrome (background, type, helper chips)
+   ════════════════════════════════════════════════════════════════════ */
+html, body { height: 100%; font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
+body {
+  background:
+    radial-gradient(1200px 600px at 80% -10%, #e8f0ff 0%, transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, #fde2e7 0%, transparent 55%),
+    linear-gradient(180deg, #f6f8fc 0%, #eef2f8 100%);
+  color: #0d1b2a;
+  font-feature-settings: "cv11", "ss01";
+}
+.hdr-badge {
+  background: linear-gradient(135deg, #4998dc 0%, #9a73c0 50%, #eb435c 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.chip {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  padding: 0.16rem 0.6rem; border-radius: 9999px;
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.02em;
+  backdrop-filter: blur(6px);
+  background: rgba(255,255,255,0.6);
+}
+
+/* ════════════════════════════════════════════════════════════════════
+   THE CANVAS — responsive, aspect-locked. All modules are absolutely
+   positioned inside it using the variables above. No grid math.
+   ════════════════════════════════════════════════════════════════════ */
+.pipeline-canvas {
+  position: relative;
+  width: 100%;
+  max-width: var(--canvas-max-width);
+  margin-inline: auto;
+  aspect-ratio: var(--canvas-aspect-ratio);
+  padding: var(--canvas-padding);
+  box-sizing: content-box;
+}
+
+/* Shared module styling — TRANSPARENT WRAPPER.
+   The SVG itself carries the colored panel of its module. */
+.module {
+  position: absolute;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  cursor: pointer;
+  outline: none;
+  display: flex; align-items: center; justify-content: center;
+  transform-origin: center;
+  will-change: transform, opacity, filter;
+  transition:
+    transform 320ms cubic-bezier(.2, .7, .2, 1),
+    opacity   280ms ease,
+    filter    280ms ease;
+}
+
+/* Per-module placement — width comes from the panel's `--X-scale`,
+   height is locked to each SVG's native aspect ratio (`<W>mm × <H>mm`
+   read directly from the split SVG files), so changing `--X-scale`
+   resizes the module uniformly without distorting it. */
+.area-A {
+  left: calc(var(--a-x)     * var(--canvas-zoom) * 1%);
+  top : calc(var(--a-y)     * var(--canvas-zoom) * 1%);
+  width: calc(var(--a-scale) * var(--canvas-zoom) * 1%);
+  aspect-ratio: 82.685905 / 122.19047;   /* pipline-A.svg */
+}
+.area-B {
+  left: calc(var(--b-x)     * var(--canvas-zoom) * 1%);
+  top : calc(var(--b-y)     * var(--canvas-zoom) * 1%);
+  width: calc(var(--b-scale) * var(--canvas-zoom) * 1%);
+  aspect-ratio: 61.19212 / 40.605782;    /* pipeline-B.svg */
+}
+.area-C {
+  left: calc(var(--c-x)     * var(--canvas-zoom) * 1%);
+  top : calc(var(--c-y)     * var(--canvas-zoom) * 1%);
+  width: calc(var(--c-scale) * var(--canvas-zoom) * 1%);
+  aspect-ratio: 53.047901 / 81.59996;    /* pipeline-C.svg */
+}
+.area-D {
+  left: calc(var(--d-x)     * var(--canvas-zoom) * 1%);
+  top : calc(var(--d-y)     * var(--canvas-zoom) * 1%);
+  width: calc(var(--d-scale) * var(--canvas-zoom) * 1%);
+  aspect-ratio: 61.192127 / 37.596939;   /* pipeline-D.svg */
+}
+.area-E {
+  left: calc(var(--e-x)     * var(--canvas-zoom) * 1%);
+  top : calc(var(--e-y)     * var(--canvas-zoom) * 1%);
+  width: calc(var(--e-scale) * var(--canvas-zoom) * 1%);
+  aspect-ratio: 90.762665 / 39.793331;   /* pipeline-E.svg */
+  z-index: 3;                            /* docks above A's cutout */
+}
+.area-L {
+  left: calc(var(--l-x)     * var(--canvas-zoom) * 1%);
+  top : calc(var(--l-y)     * var(--canvas-zoom) * 1%);
+  width: calc(var(--l-scale) * var(--canvas-zoom) * 1%);
+  aspect-ratio: 56.049332 / 39.624001;   /* pipeline-Continue.svg */
+}
+
+/* SVG image fills the (now exactly-sized) module. With the module
+   matching the SVG's native aspect, object-fit:contain is a no-op
+   but harmless. */
+.module img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+  display: block;
+}
+
+/* ── Interaction: hover-scale + spotlight ─────────────────────── */
+/* Hover-scale: pinned modules stay scaled. Hover-on-others is only
+   active when nothing is pinned (body has no data-pinned). */
+body:not([data-pinned]) .module:hover,
+body:not([data-pinned]) .module:focus-visible,
+.module.is-pinned {
+  transform: scale(var(--hover-scale));
+  z-index: var(--hover-z);
+}
+/* Spotlight dimming in two cases:
+     (a) free hover, no pin       — body[data-hover-active]:not([data-pinned])
+     (b) pinned (locked) state    — body[data-pinned]; every non-pinned
+                                     module is dimmed regardless of mouse. */
+body[data-hover-active]:not([data-pinned]) .module:not(:hover):not(:focus-visible):not(.is-pinned),
+body[data-pinned] .module:not(.is-pinned) {
+  opacity: var(--spotlight-opacity);
+  filter: saturate(var(--spotlight-sat));
+}
+body[data-hover-active]:not([data-pinned]) .module:not(:hover):not(:focus-visible):not(.is-pinned)::after,
+body[data-pinned] .module:not(.is-pinned)::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: var(--spotlight-mask);
+  pointer-events: none;
+}
+
+/* ── Mobile: stack vertically; positions are overridden ────────── */
+@media (max-width: 768px) {
+  .pipeline-canvas {
+    aspect-ratio: auto;
+    height: auto;
+    display: flex; flex-direction: column;
+    gap: 0.6rem;
+    padding: 0;
+  }
+  .module {
+    position: relative !important;
+    left: 0 !important; top: 0 !important;
+    width: 100% !important; height: auto !important;
+    z-index: auto !important;
+  }
+  .module img { height: auto; }
+}
+
+/* ════════════════════════════════════════════════════════════════════
+   Floating detail popup (LaTeX-rendered via MathJax)
+   ════════════════════════════════════════════════════════════════════ */
+#detail-popup {
+  position: fixed;
+  width: min(30rem, 92vw);
+  max-height: 78vh;
+  overflow: auto;
+  background: linear-gradient(180deg, rgba(255,255,255,0.97), rgba(255,255,255,0.93));
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(15,23,42,0.08);
+  border-radius: 1.1rem;
+  box-shadow: 0 30px 60px -15px rgba(15,23,42,0.35);
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(8px) scale(0.98);
+  transition: opacity 200ms ease, transform 200ms ease;
+  pointer-events: none;
+  font-family: 'Inter', sans-serif;
+}
+#detail-popup.is-visible { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+#detail-popup.is-pinned { box-shadow: 0 36px 70px -18px rgba(15,23,42,0.5); }
+#detail-popup mjx-container[display="true"] { margin: 0.25rem 0 !important; }
+
+/* Inline-math line-break protection — same as index.html. */
+mjx-container:not([display="true"]) {
+  display: inline-block;
+  white-space: nowrap;
+}
+#detail-popup p,
+#detail-popup section,
+#detail-popup .formula-tile { text-wrap: pretty; }
+.nobr { white-space: nowrap; }
+.formula-tile {
+  font-family: 'JetBrains Mono', monospace;
+  border-radius: 0.65rem;
+  background: rgba(241,245,251,0.7);
+  border: 1px solid rgba(15,23,42,0.06);
+  padding: 0.55rem 0.7rem;
+  overflow-x: auto;
+}
+.pop-close {
+  position: sticky; top: 0;
+  display: flex; justify-content: flex-end;
+  padding: 0.45rem 0.6rem 0 0;
+  pointer-events: none;
+}
+.pop-close button {
+  pointer-events: auto;
+  border: none; background: rgba(15,23,42,0.06);
+  color: #3d4f6b; font-size: 0.85rem;
+  border-radius: 9999px; padding: 0.2rem 0.55rem;
+  cursor: pointer; transition: background 160ms ease, color 160ms ease;
+}
+.pop-close button:hover { background: rgba(15,23,42,0.12); color: #0d1b2a; }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- ─── Header ────────────────────────────────────────────── -->
+<header class="max-w-[1320px] mx-auto px-6 pt-10 pb-6">
+  <div class="flex items-center gap-3 text-xs uppercase tracking-[0.18em] text-slate-500 mb-3">
+    <span class="inline-block w-8 h-px bg-slate-300"></span>
+    <span>RSS 2026 · LAFR</span>
+  </div>
+  <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+    <span class="hdr-badge">Self-Adaptive</span> Autonomous Flight Pipeline
+  </h1>
+  <p class="mt-3 max-w-3xl text-slate-700 text-base md:text-lg leading-relaxed">
+    Reconstructed asymmetric layout with an <em>absolute-canvas</em> positioning
+    system. Hover any module to spotlight it; click to pin the detail panel.
+    Tweak every module's <code>left / top / width / height</code> from the
+    single <code>:root</code> control panel at the top of the CSS.
+  </p>
+  <div class="mt-4 flex flex-wrap gap-2 text-xs text-slate-500">
+    <span class="chip" style="background:#d8eefd"><span class="w-1.5 h-1.5 rounded-full bg-modA-600"></span>A · Continual Policy Learning</span>
+    <span class="chip" style="background:#d4e9ea"><span class="w-1.5 h-1.5 rounded-full bg-modB-600"></span>B · Real-World Rollout</span>
+    <span class="chip" style="background:#e0d6ec"><span class="w-1.5 h-1.5 rounded-full bg-modC-600"></span>C · Model Calibration</span>
+    <span class="chip" style="background:#ced9ff"><span class="w-1.5 h-1.5 rounded-full bg-modD-600"></span>D · Anchored Init.</span>
+    <span class="chip" style="background:#fbd6df"><span class="w-1.5 h-1.5 rounded-full bg-modE-600"></span>E · Adaptive Temporal Scaling</span>
+    <span class="chip" style="background:#cdeedc"><span class="w-1.5 h-1.5 rounded-full bg-modL-600"></span>Continual Learning Loop</span>
+  </div>
+</header>
+
+<!-- ─── The diagram canvas (everything in one positioned div) ─── -->
+<main class="max-w-[1320px] mx-auto px-6 pb-12">
+  <div class="pipeline-canvas" id="grid">
+    <article class="module area-A" data-module="A" tabindex="0" aria-label="Module A: Continual Policy Learning">
+      <img src="pipline-A.svg" alt="Module A: Continual Policy Learning (RASH-BPTT) with Hybrid Dynamics Model"/>
+    </article>
+    <article class="module area-B" data-module="B" tabindex="0" aria-label="Module B: Real-World Policy Rollout">
+      <img src="pipeline-B.svg" alt="Module B: Real-World Policy Rollout on the physical quadrotor"/>
+    </article>
+    <article class="module area-C" data-module="C" tabindex="0" aria-label="Module C: Simulation Model Calibration">
+      <img src="pipeline-C.svg" alt="Module C: Simulation Model Calibration (hybrid ODE + neural residual)"/>
+    </article>
+    <article class="module area-D" data-module="D" tabindex="0" aria-label="Module D: Real-World Anchored Initialization">
+      <img src="pipeline-D.svg" alt="Module D: Real-World Anchored Initialization"/>
+    </article>
+    <article class="module area-E" data-module="E" tabindex="0" aria-label="Module E: Adaptive Temporal Scaling">
+      <img src="pipeline-E.svg" alt="Module E: Adaptive Temporal Scaling (alpha-update via closed-loop sensitivity)"/>
+    </article>
+    <article class="module area-L" data-module="L" tabindex="0" aria-label="Continual Learning loop">
+      <img src="pipeline-Continue.svg" alt="Continual Learning loop"/>
+    </article>
+  </div>
+</main>
+
+<!-- ─── Hint footer ─────────────────────────────────────────── -->
+<footer class="max-w-[1320px] mx-auto px-6 pb-10 text-xs text-slate-500 flex flex-wrap items-center gap-3">
+  <span class="chip">Hover · spotlight</span>
+  <span class="chip">Click · pin popup</span>
+  <span class="chip">Esc · unpin</span>
+  <span class="chip">Tab · focus next module</span>
+  <span class="ml-auto">Tweak <code>:root</code> at the top of the CSS to nudge any module.</span>
+</footer>
+
+<!-- ─── Floating detail popup ───────────────────────────────── -->
+<div id="detail-popup" role="dialog" aria-modal="false" aria-live="polite">
+  <div class="pop-close"><button id="popup-close" aria-label="Close detail panel">✕</button></div>
+  <div id="detail-popup-body" class="px-6 pb-6 -mt-2"></div>
+</div>
+
+<!-- ─── Popup content templates ─────────────────────────────── -->
+<template id="tpl-A">
+  <div class="space-y-4">
+    <header>
+      <div class="text-[11px] uppercase tracking-[0.18em] text-modA-600 font-semibold">Module A</div>
+      <h3 class="text-xl font-bold text-modA-700 leading-tight">Continual Policy Learning</h3>
+      <p class="text-sm text-slate-700 mt-1">
+        Real-world Anchored Short-horizon Backpropagation Through Time
+        (<b>RASH-BPTT</b>). The control policy&nbsp;\(\pi_\phi\)&nbsp;is an MLP
+        (2×256 hidden units) producing a 4-D CTBR command
+        \(\mathbf{u}_k=[c,\bm{\omega}_{\mathrm{cmd}}^\top]^\top\). We unroll the
+        learned hybrid dynamics for&nbsp;\(H\)&nbsp;steps and differentiate through the
+        entire trajectory via JAX autodiff + JIT + <code>vmap</code>.
+      </p>
+    </header>
+    <section>
+      <div class="text-[11px] uppercase tracking-wider text-slate-500 font-semibold mb-1">Policy reward</div>
+      <div class="formula-tile">\[ \mathcal{J}(\phi) = \sum_{k=0}^{H-1} \gamma^{k}\, r(\mathbf{x}_k,\mathbf{u}_k,\mathbf{x}_{\mathrm{ref},k}) \]</div>
+    </section>
+    <section>
+      <div class="text-[11px] uppercase tracking-wider text-slate-500 font-semibold mb-1">Hybrid rollout</div>
+      <div class="formula-tile">\[ \mathbf{x}_{k+1} = \mathbf{F}_{\Delta t}(\mathbf{x}_k,\mathbf{u}_k;\theta),\quad \mathbf{u}_k = \pi_\phi(\mathbf{o}_k) \]</div>
+    </section>
+    <section>
+      <div class="text-[11px] uppercase tracking-wider text-slate-500 font-semibold mb-1">Gradient ascent</div>
+      <div class="formula-tile">\[ \phi \leftarrow \phi + \eta_\pi\, \nabla_\phi \mathcal{J} \]</div>
+    </section>
+    <section>
+      <div class="text-[11px] uppercase tracking-wider text-slate-500 font-semibold mb-1">Coupled ATS reward</div>
+      <div class="formula-tile">\[ \mathcal{J}_{\text{ATS}}(\alpha,\mathbf{x}) = \lambda_{\text{speed}}\,\alpha + \lambda_{\text{safe}}\!\sum_{k=0}^{H-1}\Psi\!\big(\mathcal{E}_k(\alpha)-\mathcal{E}_{\text{th}}\big) \]</div>
+      <p class="text-xs text-slate-500 mt-1">Tightly coupled with Module E: \(\phi\)&nbsp;and&nbsp;\(\alpha\)&nbsp;are updated jointly each cycle.</p>
+    </section>
+  </div>
+</template>
+
+<template id="tpl-B">
+  <div class="space-y-4">
+    <header>
+      <div class="text-[11px] uppercase tracking-[0.18em] text-modB-600 font-semibold">Module B</div>
+      <h3 class="text-xl font-bold text-modB-700 leading-tight">Real-World Policy Rollout</h3>
+      <p class="text-sm text-slate-700 mt-1">
+        The quadrotor executes the current policy&nbsp;\(\pi_\phi\)&nbsp;on physical
+        hardware, streaming state-action transitions
+        \((\mathbf{x}_k,\mathbf{u}_k,\mathbf{x}_{k+1})\) into a sliding-window
+        replay buffer&nbsp;\(\mathcal{B}\)&nbsp;for downstream calibration.
+      </p>
+    </header>
+    <section>
+      <div class="text-[11px] uppercase tracking-wider text-slate-500 font-semibold mb-1">State and control</div>
+      <div class="formula-tile">\[ \mathbf{x} \triangleq (\mathbf{p},\mathbf{v},\mathbf{R}) \in \mathbb{R}^3 \times \mathbb{R}^3 \times SO(3) \]</div>
+      <div class="formula-tile mt-2">\[ \mathbf{u} \triangleq [c,\ \bm{\omega}_{\mathrm{cmd}}^\top]^\top \in \mathbb{R}^4 \quad \text{(CTBR)} \]</div>
+    </section>
+    <section>
+      <div class="text-[11px] uppercase tracking-wider text-slate-500 font-semibold mb-1">Observation</div>
+      <div class="formula-tile">\[ \mathbf{o}_k = [\mathbf{x}_k,\ \mathbf{x}_{\mathrm{ref},k},\ \mathbf{h}_k] \]</div>
+      <p class="text-xs text-slate-500 mt-1">Includes a short history&nbsp;\(\mathbf{h}_k\)&nbsp;of past actions for control smoothness.</p>
+    </section>
+  </div>
+</template>
+
+<template id="tpl-C">
+  <div class="space-y-4">
+    <header>
+      <div class="text-[11px] uppercase tracking-[0.18em] text-modC-600 font-semibold">Module C</div>
+      <h3 class="text-xl font-bold text-modC-700 leading-tight">Simulation Model Calibration</h3>
+      <p class="text-sm text-slate-700 mt-1">
+        A neural residual augments nominal rigid-body dynamics to close the
+        reality gap (unmodeled aerodynamics, motor delays, payload). Trained
+        online by minimizing one-step prediction error through a differentiable
+        RK4 integrator on&nbsp;\(SO(3)\).
+      </p>
+    </header>
+    <section>
+      <div class="text-[11px] uppercase tracking-wider text-slate-500 font-semibold mb-1">Hybrid continuous-time dynamics</div>
+      <div class="formula-tile">\[
+        \begin{aligned}
+        \dot{\mathbf{p}} &= \mathbf{v} \\
+        \dot{\mathbf{v}} &= c\,\mathbf{R}\mathbf{e}_3 - g\mathbf{e}_3 + \mathbf{a}_{\mathrm{res}}(\bm\zeta;\theta) \\
+        \dot{\mathbf{R}} &= \mathbf{R}\big(\bm\omega_{\mathrm{cmd}} + \bm\omega_{\mathrm{res}}(\bm\zeta;\theta)\big)^\wedge
+        \end{aligned}
+      \]</div>
+    </section>
+    <section>
+      <div class="text-[11px] uppercase tracking-wider text-slate-500 font-semibold mb-1">Residual loss (spectral-norm regularized)</div>
+      <div class="formula-tile">\[
+        \mathcal{L}_{\text{res}}(\theta) =
+        \tfrac{1}{|\mathcal{B}|}\sum_{k\in\mathcal{B}} \mathcal{D}(\mathbf{x}_{k+1},\hat{\mathbf{x}}_{k+1})
+        + \lambda_{\text{reg}}\sum_l \|\mathbf{W}_l\|_\sigma
+      \]</div>
+      <p class="text-xs text-slate-500 mt-1">
+        \(\mathcal{D}\)&nbsp;combines Euclidean translation error and the geodesic
+        \(\|\mathrm{Log}(\hat{\mathbf{R}}^\top\mathbf{R})^\vee\|_2^2\) on&nbsp;\(SO(3)\).
+      </p>
+    </section>
+  </div>
+</template>
+
+<template id="tpl-D">
+  <div class="space-y-4">
+    <header>
+      <div class="text-[11px] uppercase tracking-[0.18em] text-modD-600 font-semibold">Module D</div>
+      <h3 class="text-xl font-bold text-modD-700 leading-tight">Real-World Anchored Initialization</h3>
+      <p class="text-sm text-slate-700 mt-1">
+        Instead of random simulator resets, every short-horizon rollout starts
+        from the instantaneous physical state estimate. This anchors policy
+        gradients in reality and avoids the <em>model exploitation</em>
+        failure mode of long-horizon BPTT.
+      </p>
+    </header>
+    <section>
+      <div class="text-[11px] uppercase tracking-wider text-slate-500 font-semibold mb-1">Anchored rollout</div>
+      <div class="formula-tile">\[
+        \begin{aligned}
+        \mathbf{x}_0 &:= \mathbf{x}_{\mathrm{real}}(t) \\
+        \mathbf{x}_{k+1} &= \mathbf{F}_{\Delta t}(\mathbf{x}_k,\mathbf{u}_k;\theta),\quad k=0,\ldots,H-1
+        \end{aligned}
+      \]</div>
+    </section>
+    <section>
+      <div class="text-[11px] uppercase tracking-wider text-slate-500 font-semibold mb-1">Why short&nbsp;\(H\)?</div>
+      <p class="text-sm text-slate-700">
+        Compounding prediction errors of the learned residual grow with
+        horizon length. A short&nbsp;\(H\)&nbsp;keeps the gradient&nbsp;\(\nabla_\phi\mathcal{J}\)&nbsp;faithful to the current dynamic regime, so
+        no rollout drifts far from a state the model has actually seen.
+      </p>
+    </section>
+  </div>
+</template>
+
+<template id="tpl-E">
+  <div class="space-y-4">
+    <header>
+      <div class="text-[11px] uppercase tracking-[0.18em] text-modE-600 font-semibold">Module E</div>
+      <h3 class="text-xl font-bold text-modE-700 leading-tight">Adaptive Temporal Scaling (ATS)</h3>
+      <p class="text-sm text-slate-700 mt-1">
+        ATS optimises the time-scale&nbsp;\(\alpha\)&nbsp;by
+        <em>counterfactual reasoning</em> anchored at the actual real-world
+        rollout&nbsp;\(\{(\bar{\mathbf{x}}_k,\bar{\mathbf{u}}_k)\}\). The
+        differentiable hybrid model serves as a proxy to construct a
+        counterfactual state sequence&nbsp;\(\hat{\mathbf{x}}_k(\alpha)\)
+        (what the trajectory <em>would</em> have been at a different
+        time-scale), and gradients flow through this proxy with no
+        physical perturbation. The result is <em>temporal elasticity</em>:
+        ATS compresses time (smaller&nbsp;\(\alpha\)) when tracking is
+        precise, and relaxes it when disturbances or model mismatch grow.
+      </p>
+    </header>
+    <section>
+      <div class="text-[11px] uppercase tracking-wider text-slate-500 font-semibold mb-1">Reference parameterization</div>
+      <div class="formula-tile">\[
+        \begin{aligned}
+        \mathbf{p}_{\text{ref}}(\tau;\alpha) &= \mathbf{C}\,\bm{\beta}(\tau/\alpha) \\
+        \bm{\beta}(t) &= [1,\,t,\,t^2,\,\ldots,\,t^{N-1}]^\top
+        \end{aligned}
+      \]</div>
+    </section>
+    <section>
+      <div class="text-[11px] uppercase tracking-wider text-slate-500 font-semibold mb-1">Composite potential</div>
+      <div class="formula-tile">\[
+        \mathcal{J}_{\text{ATS}}(\alpha) =
+        \lambda_{\mathrm{speed}}\,\alpha
+        + \lambda_{\mathrm{safe}}\sum_{k=0}^{H-1}\Psi\!\big(\mathcal{E}_k(\alpha)-\mathcal{E}_{\mathrm{th}}\big)
+      \]</div>
+      <p class="text-xs text-slate-500 mt-1">
+        \(\Psi(z)=\tfrac{1}{\kappa}\ln(1+e^{\kappa z})\)&nbsp;is a Softplus
+        barrier; \(\mathcal{E}_k\)&nbsp;is the tracking error of the counter-
+        factual rollout&nbsp;\(\hat{\mathbf{x}}_k(\alpha)\).
+      </p>
+    </section>
+    <section>
+      <div class="text-[11px] uppercase tracking-wider text-slate-500 font-semibold mb-1">Projected update rule</div>
+      <div class="formula-tile">\[ \alpha \leftarrow \Pi_{[\alpha_{\min},\,\alpha_{\max}]}\!\big(\alpha - \eta_\alpha\,\nabla_\alpha\mathcal{J}_{\text{ATS}}\big) \]</div>
+    </section>
+    <section>
+      <div class="text-[11px] uppercase tracking-wider text-slate-500 font-semibold mb-1">Closed-loop sensitivity</div>
+      <p class="text-sm text-slate-700">
+        \(\nabla_\alpha\mathcal{J}_{\text{ATS}}\)&nbsp;is propagated along the real
+        rollout via a one-step linearisation of the hybrid model. The state
+        sensitivity \(\mathbf{S}_k \triangleq \mathrm{d}\hat{\mathbf{x}}_k/\mathrm{d}\alpha\),
+        with \(\mathbf{S}_0 = \mathbf{0}\), evolves recursively:
+      </p>
+      <div class="formula-tile mt-2">\[
+        \mathbf{S}_{k+1} \;=\; \mathbf{A}_k\,\mathbf{S}_k \;+\; \mathbf{B}_k\,\frac{\mathrm{d}\mathbf{u}_k}{\mathrm{d}\alpha}
+      \]</div>
+      <p class="text-xs text-slate-500 mt-2">
+        with the Jacobians frozen at the measured real-world rollout
+        <span class="nobr">\((\bar{\mathbf{x}}_k,\bar{\mathbf{u}}_k)\)</span>:
+      </p>
+      <div class="formula-tile mt-1">\[
+        \mathbf{A}_k \,\triangleq\, \left.\frac{\partial \mathbf{F}_{\Delta t}}{\partial \mathbf{x}}\right|_{(\bar{\mathbf{x}}_k,\bar{\mathbf{u}}_k)},
+        \qquad
+        \mathbf{B}_k \,\triangleq\, \left.\frac{\partial \mathbf{F}_{\Delta t}}{\partial \mathbf{u}}\right|_{(\bar{\mathbf{x}}_k,\bar{\mathbf{u}}_k)}
+      \]</div>
+      <p class="text-xs text-slate-500 mt-2">
+        The action sensitivity is obtained by differentiating the policy
+        through its observation
+        <span class="nobr">\(\mathbf{o}_k(\hat{\mathbf{x}}_k, \mathbf{x}_{\mathrm{ref},k}(\alpha))\)</span>:
+      </p>
+      <div class="formula-tile mt-1">\[
+        \frac{\mathrm{d}\mathbf{u}_k}{\mathrm{d}\alpha}
+        \;=\;
+        \frac{\partial \pi_\phi}{\partial \mathbf{o}_k}
+        \!\left(
+          \frac{\partial \mathbf{o}_k}{\partial \hat{\mathbf{x}}_k}\,\mathbf{S}_k
+          \;+\;
+          \frac{\partial \mathbf{o}_k}{\partial \mathbf{x}_{\mathrm{ref},k}}\,
+          \frac{\partial \mathbf{x}_{\mathrm{ref},k}}{\partial \alpha}
+        \right)
+      \]</div>
+      <p class="text-xs text-slate-500 mt-2">
+        Chaining \(\mathbf{S}_k\) into the per-step error gradient
+        \(\partial \mathcal{E}_k/\partial \hat{\mathbf{x}}_k\) closes the
+        loop: \(\alpha\) is then updated by a single projected gradient
+        step using the analytical
+        \(\nabla_\alpha\mathcal{J}_{\text{ATS}}\), with <em>no</em>
+        finite-difference probing of the physical system.
+      </p>
+    </section>
+  </div>
+</template>
+
+<template id="tpl-L">
+  <div class="space-y-4">
+    <header>
+      <div class="text-[11px] uppercase tracking-[0.18em] text-modL-600 font-semibold">Closed loop</div>
+      <h3 class="text-xl font-bold text-modL-700 leading-tight">Continual Learning</h3>
+      <p class="text-sm text-slate-700 mt-1">
+        The five modules form a continuous closed-loop cycle bridging the
+        physical robot and the differentiable simulator. Each pass refines
+        both the dynamics model&nbsp;\(\theta\)&nbsp;and the policy&nbsp;\(\phi\), while
+        ATS retunes the time-scale&nbsp;\(\alpha\).
+      </p>
+    </header>
+    <section>
+      <div class="text-[11px] uppercase tracking-wider text-slate-500 font-semibold mb-1">Per-cycle update</div>
+      <div class="formula-tile">\[
+        \begin{aligned}
+        \theta &\leftarrow \theta - \eta_\theta\,\nabla_\theta \mathcal{L}_{\text{res}} \\
+        \phi   &\leftarrow \phi + \eta_\pi\,\nabla_\phi \mathcal{J} \\
+        \alpha &\leftarrow \Pi_{[\alpha_{\min},\alpha_{\max}]}(\alpha - \eta_\alpha\,\nabla_\alpha \mathcal{J}_{\text{ATS}})
+        \end{aligned}
+      \]</div>
+    </section>
+    <section>
+      <div class="text-[11px] uppercase tracking-wider text-slate-500 font-semibold mb-1">Outcome</div>
+      <p class="text-sm text-slate-700">
+        Base policy evolves from <b>1.9 m/s</b> to <b>7.3 m/s</b> peak speed
+        within roughly <b>100 s</b> of physical flight. No offline system
+        ID, no conservative safety margins.
+      </p>
+    </section>
+  </div>
+</template>
+
+<!-- ─── Behaviour ──────────────────────────────────────────── -->
+<script>
+(function () {
+  const body  = document.body;
+  const popup = document.getElementById('detail-popup');
+  const popupBody = document.getElementById('detail-popup-body');
+  const popupClose = document.getElementById('popup-close');
+  const modules = Array.from(document.querySelectorAll('.module'));
+
+  let pinnedModule = null;
+  let activeModule = null;
+  let mathjaxReady = false;
+  document.addEventListener('mathjax-ready', () => {
+    mathjaxReady = true;
+    if (window.MathJax && MathJax.typesetPromise) {
+      MathJax.typesetPromise([document.body]).catch(() => {});
+    }
+  });
+
+  function loadTemplate(key) {
+    const tpl = document.getElementById('tpl-' + key);
+    return tpl ? tpl.content.cloneNode(true) : null;
+  }
+  function typesetPopup() {
+    if (mathjaxReady && window.MathJax && MathJax.typesetPromise) {
+      MathJax.typesetPromise([popupBody]).catch(() => {});
+    }
+  }
+  function positionPopup(el) {
+    const rect = el.getBoundingClientRect();
+    const popW = popup.offsetWidth, popH = popup.offsetHeight;
+    const margin = 14, vw = window.innerWidth, vh = window.innerHeight;
+    let left, top;
+    if (rect.right + margin + popW <= vw - 8) {
+      left = rect.right + margin;
+      top  = Math.min(Math.max(rect.top, 12), vh - popH - 12);
+    } else if (rect.left - margin - popW >= 8) {
+      left = rect.left - margin - popW;
+      top  = Math.min(Math.max(rect.top, 12), vh - popH - 12);
+    } else if (rect.bottom + margin + popH <= vh - 8) {
+      left = Math.min(Math.max(rect.left, 12), vw - popW - 12);
+      top  = rect.bottom + margin;
+    } else {
+      left = Math.min(Math.max(rect.left, 12), vw - popW - 12);
+      top  = Math.max(rect.top - margin - popH, 12);
+    }
+    popup.style.left = left + 'px';
+    popup.style.top  = top  + 'px';
+  }
+  function showPopup(el) {
+    const node = loadTemplate(el.dataset.module);
+    if (!node) return;
+    popupBody.replaceChildren(node);
+    popup.classList.add('is-visible');
+    requestAnimationFrame(() => {
+      positionPopup(el);
+      typesetPopup();
+      setTimeout(() => positionPopup(el), 120);
+      setTimeout(() => positionPopup(el), 320);
+    });
+  }
+  function hidePopup() { if (!pinnedModule) popup.classList.remove('is-visible'); }
+  function activate(el) {
+    // Lock: while pinned, hover on any other module is a no-op.
+    if (pinnedModule) return;
+    activeModule = el; body.dataset.hoverActive = '1'; showPopup(el);
+  }
+  function deactivate(el) {
+    if (pinnedModule) return;
+    if (activeModule === el) activeModule = null;
+    if (!activeModule) { delete body.dataset.hoverActive; hidePopup(); }
+  }
+  function pin(el) {
+    if (pinnedModule && pinnedModule !== el) pinnedModule.classList.remove('is-pinned');
+    pinnedModule = el;
+    el.classList.add('is-pinned');
+    popup.classList.add('is-pinned');
+    body.dataset.hoverActive = '1';
+    body.dataset.pinned      = '1';   // global lock: CSS suppresses hover effects
+    showPopup(el);
+  }
+  function unpin() {
+    if (!pinnedModule) return;
+    pinnedModule.classList.remove('is-pinned'); pinnedModule = null;
+    popup.classList.remove('is-pinned');
+    delete body.dataset.pinned;        // release the lock
+    // Reset hover state so the next mouseenter cleanly re-engages.
+    activeModule = null;
+    delete body.dataset.hoverActive;
+    hidePopup();
+  }
+
+  modules.forEach((el) => {
+    el.addEventListener('mouseenter', () => activate(el));
+    el.addEventListener('mouseleave', () => deactivate(el));
+    el.addEventListener('focus',      () => activate(el));
+    el.addEventListener('blur',       () => deactivate(el));
+    el.addEventListener('click', (ev) => {
+      ev.stopPropagation();
+      if (pinnedModule === el) unpin(); else pin(el);
+    });
+    el.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Enter' || ev.key === ' ') {
+        ev.preventDefault();
+        if (pinnedModule === el) unpin(); else pin(el);
+      }
+    });
+  });
+
+  document.addEventListener('click', (ev) => {
+    if (!pinnedModule) return;
+    if (popup.contains(ev.target)) return;
+    if (ev.target.closest('.module')) return;
+    unpin();
+  });
+  popupClose.addEventListener('click', () => unpin());
+  document.addEventListener('keydown', (ev) => {
+    if (ev.key === 'Escape') {
+      unpin();
+      if (document.activeElement && document.activeElement.classList.contains('module')) {
+        document.activeElement.blur();
+      }
+    }
+  });
+
+  let rafId = null;
+  function reposition() {
+    if (rafId) return;
+    rafId = requestAnimationFrame(() => {
+      rafId = null;
+      const target = pinnedModule || activeModule;
+      if (target && popup.classList.contains('is-visible')) positionPopup(target);
+    });
+  }
+  window.addEventListener('resize', reposition);
+  window.addEventListener('scroll', reposition, { passive: true });
+})();
+</script>
+</body>
+</html>
