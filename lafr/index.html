@@ -170,6 +170,8 @@
     transform-origin: center;
     outline: none;
     cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
     display: flex; flex-direction: column;
     min-width: 0; min-height: 0;
   }
@@ -320,20 +322,29 @@
     aspect-ratio: 56.049332 / 39.624001;   /* pipeline-Continue.svg */
   }
 
-  /* Mobile: drop absolute positioning, stack vertically. */
-  @media (max-width: 900px) {
-    .pipeline-canvas {
-      aspect-ratio: auto;
-      display: flex; flex-direction: column;
-      gap: 0.6rem;
-      padding: 0;
+  /* Mobile: keep the desktop 2D pipeline layout, just shrunk with the
+     viewport (every module is positioned in % of the canvas, so the whole
+     figure scales down automatically). Switch the floating popup to a
+     bottom-sheet so it's always visible regardless of which module was
+     tapped, and let grid items shrink so the Reproduce code blocks scroll
+     internally instead of pushing the page wider than the screen. */
+  @media (max-width: 720px) {
+    /* code blocks: prevent grid/flex items from inheriting min-width:auto
+       (which would otherwise stretch them to the longest pre-line). */
+    .code-block { min-width: 0; max-width: 100%; }
+    #reproduce .grid > * { min-width: 0; }
+
+    /* bottom-sheet popup */
+    #detail-popup {
+      left: 0 !important; right: 0 !important;
+      top: auto !important; bottom: 0 !important;
+      width: 100% !important; max-width: 100% !important;
+      max-height: 80vh;
+      border-radius: 1.1rem 1.1rem 0 0;
+      transform: translateY(100%) scale(1) !important;
     }
-    .pipeline-canvas .module-card {
-      position: relative;
-      left: 0 !important; top: 0 !important;
-      width: 100% !important;
-      aspect-ratio: auto !important;
-      z-index: auto !important;
+    #detail-popup.is-visible {
+      transform: translateY(0) scale(1) !important;
     }
   }
 
