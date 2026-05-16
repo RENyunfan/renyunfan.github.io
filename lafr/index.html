@@ -475,7 +475,7 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5l8 7 8-7v14"/></svg>
       arXiv
     </a>
-    <a class="pill-btn" href="https://github.com/RENyunfan/flightning" target="_blank" rel="noopener">
+    <a class="pill-btn" href="https://github.com/uzh-rpg/LAFR" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.18c0 .31.21.67.8.56 4.57-1.52 7.86-5.83 7.86-10.91C23.5 5.65 18.35.5 12 .5Z"/></svg>
       Code
     </a>
@@ -630,7 +630,7 @@
       The figure below embeds the official Rerun web viewer (WASM) streaming the
       training recording from this site. Drag to orbit, scroll to zoom, and use the
       <code class="font-mono bg-white/70 px-1.5 py-0.5 rounded">sim_time</code>
-      timeline at the bottom to scrub through the 8 ATS iterations as&nbsp;\(\alpha\)&nbsp;contracts and lap time falls from 8.34&nbsp;s to 2.34&nbsp;s.
+      timeline at the bottom to scrub through the 11 ATS iterations as&nbsp;\(\alpha\)&nbsp;contracts and lap time falls from 8.34&nbsp;s to 2.08&nbsp;s.
     </p>
 
     <div class="rerun-frame mt-5">
@@ -647,8 +647,9 @@
       //   3. file:// (double-clicked HTML): app.rerun.io cannot fetch file://
       //      URLs, so we show clear instructions instead of a broken load.
       (function () {
-        const RERUN_VIEWER = "https://app.rerun.io/version/0.31.4/index.html";
+        const RERUN_VIEWER = "https://app.rerun.io/version/0.32.0/index.html";
         const RRD_PATH     = "data/online_learning.rrd";
+        const BLUEPRINT_PATH = "data/default.rbl";
         const LOCAL_VIEWER = "http://localhost:9090/?url="
                            + encodeURIComponent("rerun+http://localhost:9876/proxy");
 
@@ -680,8 +681,14 @@
 
         // Resolve the .rrd URL relative to this page so production and
         // local both point at docs/data/online_learning.rrd.
-        const rrdUrl     = new URL(RRD_PATH, document.baseURI).toString();
-        const defaultSrc = RERUN_VIEWER + "?url=" + encodeURIComponent(rrdUrl);
+        const rrdUrl       = new URL(RRD_PATH,       document.baseURI).toString();
+        const blueprintUrl = new URL(BLUEPRINT_PATH, document.baseURI).toString();
+        // Multiple ?url= params: the first is the recording, the second is the
+        // default blueprint (2-col layout, sim_time timeline). app.rerun.io
+        // merges them at load.
+        const defaultSrc = RERUN_VIEWER
+                         + "?url=" + encodeURIComponent(rrdUrl)
+                         + "&url=" + encodeURIComponent(blueprintUrl);
         const defaultMsg = "Streaming " + rrdUrl;
 
         const isLocal = (location.hostname === "localhost"
@@ -712,7 +719,7 @@
       <!-- Single-seed, no-wind figure-8 reproduction with the public code
       (<code class="font-mono bg-white/70 px-1.5 py-0.5 rounded">seed: 42</code>,
       RTX 5090, default config).  -->
-      The recording above corresponds row-for-row to the eleven ATS iterations below. \(\alpha\)&nbsp;contracts from 1.0 to its 0.25 floor; the lap time falls from 8.34&nbsp;s to 2.08&nbsp;s and the policy's peak speed grows from 3.4&nbsp;m/s to 10.0&nbsp;m/s, while tracking RMSE stays at or below 0.16&nbsp;m, well clear of the 0.35&nbsp;m safety guard.
+      The recording above corresponds row-for-row to the eleven ATS iterations below. \(\alpha\)&nbsp;contracts from 1.0 to its 0.25 floor; the lap time falls from 8.34&nbsp;s to 2.08&nbsp;s and the policy's peak speed grows from 3.8&nbsp;m/s to 9.9&nbsp;m/s, while tracking RMSE stays at or below 0.16&nbsp;m from the first ATS contraction onward, well clear of the 0.35&nbsp;m safety guard.
     </p>
 
     <div class="mt-5 grid grid-cols-1 lg:grid-cols-5 gap-5 items-start">
@@ -729,17 +736,17 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td>0</td><td>1.000</td><td>8.34 s</td><td>0.60 m</td><td class="text-ink-500">Base policy, pre-residual</td></tr>
-            <tr><td>1</td><td>0.753</td><td>6.28 s</td><td>0.19 m</td><td class="text-ink-500">ATS first contraction</td></tr>
-            <tr><td>2</td><td>0.753</td><td>6.28 s</td><td>0.11 m</td><td class="text-ink-500">Residual closes sim-to-real gap</td></tr>
-            <tr><td>3</td><td>0.579</td><td>4.82 s</td><td>0.06 m</td><td class="text-ink-500"></td></tr>
-            <tr><td>4</td><td>0.471</td><td>3.92 s</td><td>0.04 m</td><td class="text-ink-500">Best RMSE (0.042 m)</td></tr>
-            <tr><td>5</td><td>0.399</td><td>3.32 s</td><td>0.06 m</td><td class="text-ink-500"></td></tr>
-            <tr><td>6</td><td>0.350</td><td>2.92 s</td><td>0.07 m</td><td class="text-ink-500"></td></tr>
-            <tr><td>7</td><td>0.313</td><td>2.60 s</td><td>0.08 m</td><td class="text-ink-500"></td></tr>
-            <tr><td>8</td><td>0.281</td><td>2.34 s</td><td>0.09 m</td><td class="text-ink-500"></td></tr>
-            <tr><td>9</td><td>0.255</td><td>2.12 s</td><td>0.16 m</td><td class="text-ink-500">Approaching \(\alpha\) floor</td></tr>
-            <tr class="best"><td>10</td><td>0.250</td><td>2.08 s</td><td>0.09 m</td><td class="text-modL-700">Converged at \(\alpha\) floor</td></tr>
+            <tr><td>0</td><td>1.000</td><td>8.34 s</td><td>0.85 m</td><td class="text-ink-500">Base policy, pre-residual</td></tr>
+            <tr><td>1</td><td>0.974</td><td>8.12 s</td><td>0.16 m</td><td class="text-ink-500">ATS first contraction</td></tr>
+            <tr><td>2</td><td>0.697</td><td>5.80 s</td><td>0.05 m</td><td class="text-ink-500">Best RMSE (0.052 m)</td></tr>
+            <tr><td>3</td><td>0.542</td><td>4.52 s</td><td>0.09 m</td><td class="text-ink-500"></td></tr>
+            <tr><td>4</td><td>0.444</td><td>3.70 s</td><td>0.07 m</td><td class="text-ink-500"></td></tr>
+            <tr><td>5</td><td>0.374</td><td>3.12 s</td><td>0.12 m</td><td class="text-ink-500"></td></tr>
+            <tr><td>6</td><td>0.325</td><td>2.70 s</td><td>0.05 m</td><td class="text-ink-500">Sim-to-real gap closing</td></tr>
+            <tr><td>7</td><td>0.286</td><td>2.38 s</td><td>0.08 m</td><td class="text-ink-500"></td></tr>
+            <tr><td>8</td><td>0.255</td><td>2.12 s</td><td>0.15 m</td><td class="text-ink-500"></td></tr>
+            <tr><td>9</td><td>0.250</td><td>2.08 s</td><td>0.07 m</td><td class="text-ink-500">\(\alpha\) floor reached</td></tr>
+            <tr class="best"><td>10</td><td>0.250</td><td>2.08 s</td><td>0.07 m</td><td class="text-modL-700">Converged at \(\alpha\) floor</td></tr>
           </tbody>
         </table>
       </div>
@@ -799,31 +806,31 @@
             </text>
 
             <!-- Area under the curve (11 points, iter 0..10) -->
-            <path d="M44,42.37 L79.8,105.93 L115.6,105.93 L151.4,150.98
-                     L187.2,178.75 L223,197.27 L258.8,209.61 L294.6,219.49
-                     L330.4,227.51 L366.2,234.30 L402,235.53
+            <path d="M44,42.37 L79.8,49.15 L115.6,120.74 L151.4,160.24
+                     L187.2,185.54 L223,203.44 L258.8,216.40 L294.6,226.27
+                     L330.4,234.30 L366.2,235.53 L402,235.53
                      L402,238 L44,238 Z"
                   fill="url(#lapAreaG)"/>
 
             <!-- The lap-time line (real data from online_learning.rrd) -->
-            <path d="M44,42.37 L79.8,105.93 L115.6,105.93 L151.4,150.98
-                     L187.2,178.75 L223,197.27 L258.8,209.61 L294.6,219.49
-                     L330.4,227.51 L366.2,234.30 L402,235.53"
+            <path d="M44,42.37 L79.8,49.15 L115.6,120.74 L151.4,160.24
+                     L187.2,185.54 L223,203.44 L258.8,216.40 L294.6,226.27
+                     L330.4,234.30 L366.2,235.53 L402,235.53"
                   fill="none" stroke="url(#lapLineG)" stroke-width="2.6"
                   stroke-linecap="round" stroke-linejoin="round"/>
 
             <!-- Markers per iteration (iter 0..9) -->
             <g fill="#1e4979" stroke="#fff" stroke-width="1.5">
               <circle cx="44"    cy="42.37"  r="3.6"/>
-              <circle cx="79.8"  cy="105.93" r="3.6"/>
-              <circle cx="115.6" cy="105.93" r="3.6"/>
-              <circle cx="151.4" cy="150.98" r="3.6"/>
-              <circle cx="187.2" cy="178.75" r="3.6"/>
-              <circle cx="223"   cy="197.27" r="3.6"/>
-              <circle cx="258.8" cy="209.61" r="3.6"/>
-              <circle cx="294.6" cy="219.49" r="3.6"/>
-              <circle cx="330.4" cy="227.51" r="3.6"/>
-              <circle cx="366.2" cy="234.30" r="3.6"/>
+              <circle cx="79.8"  cy="49.15"  r="3.6"/>
+              <circle cx="115.6" cy="120.74" r="3.6"/>
+              <circle cx="151.4" cy="160.24" r="3.6"/>
+              <circle cx="187.2" cy="185.54" r="3.6"/>
+              <circle cx="223"   cy="203.44" r="3.6"/>
+              <circle cx="258.8" cy="216.40" r="3.6"/>
+              <circle cx="294.6" cy="226.27" r="3.6"/>
+              <circle cx="330.4" cy="234.30" r="3.6"/>
+              <circle cx="366.2" cy="235.53" r="3.6"/>
             </g>
 
             <!-- Converged marker (iter 10) highlighted in modL green -->
@@ -892,11 +899,11 @@ python -m flightning.online_learning.run_pipeline \
     </div>
 
     <div class="mt-6 flex flex-wrap gap-2.5">
-      <a class="pill-btn" href="https://github.com/RENyunfan/flightning" target="_blank" rel="noopener">
+      <a class="pill-btn" href="https://github.com/uzh-rpg/LAFR" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.18c0 .31.21.67.8.56 4.57-1.52 7.86-5.83 7.86-10.91C23.5 5.65 18.35.5 12 .5Z"/></svg>
-        github.com/RENyunfan/flightning
+        github.com/uzh-rpg/LAFR
       </a>
-      <a class="pill-btn" href="https://github.com/RENyunfan/flightning#readme" target="_blank" rel="noopener">
+      <a class="pill-btn" href="https://github.com/uzh-rpg/LAFR#readme" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
         README
       </a>
