@@ -438,7 +438,7 @@
     <a class="toc-link" href="#pipeline">Pipeline</a>
     <a class="toc-link" href="#viewer">3D Viewer</a>
     <a class="toc-link" href="#data">Results</a>
-    <a class="toc-link" href="#reproduce">Reproduce</a>
+    <a class="toc-link" href="#reproduce">Quick-Start</a>
     <a class="toc-link" href="#ack">Acknowledgements</a>
   </div>
 </nav>
@@ -671,7 +671,7 @@
           setStatus(
             "You're opening this file via file://. Browsers block " +
             "external viewers from reading local files. Start a static " +
-            "server in flightning/docs/ (e.g. `python3 -m http.server 8000`) " +
+            "server in the LAFR project folder (e.g. `python3 -m http.server 8000`) " +
             "and open http://localhost:8000/, or run `./tools/preview.sh` " +
             "from the repo root to launch rerun --serve-web.",
             true,
@@ -866,10 +866,10 @@
 <section id="reproduce" class="max-w-[1320px] mx-auto px-6 pb-10">
   <div class="section-card p-7 md:p-9 reveal">
     <div class="section-h"><span class="bar"></span> Run it yourself</div>
-    <h2 class="section-title">Reproduce</h2>
+    <h2 class="section-title">Quick-Start</h2>
     <p class="mt-2 text-ink-700 max-w-3xl">
-      ROS-free, JAX-only reference implementation. A single workstation with a
-      modern NVIDIA GPU reproduces the figure-8 lap-time curve end-to-end.
+      ROS-free, JAX-only reference implementation. LAFR has a single entry
+      point that chains base-policy training and online learning end-to-end.
     </p>
 
     <div class="mt-5 grid md:grid-cols-2 gap-5">
@@ -878,24 +878,53 @@
         <div class="code-block">
           <button class="copy-btn" data-copy-target="repro1">Copy</button>
 <pre id="repro1">conda install -n base -c conda-forge mamba
-mamba create -n flightning python=3.11 -y
-mamba activate flightning
+mamba create -n lafr python=3.11 -y
+mamba activate lafr
 pip install --upgrade "jax[cuda12]"
 pip install -e ".[dev]"</pre>
         </div>
       </div>
 
       <div>
-        <div class="text-[11px] uppercase tracking-wider text-ink-500 font-semibold mb-2">2 · Train + run the pipeline</div>
+        <div class="text-[11px] uppercase tracking-wider text-ink-500 font-semibold mb-2">2 · Run the full pipeline</div>
         <div class="code-block">
           <button class="copy-btn" data-copy-target="repro2">Copy</button>
-<pre id="repro2">python -m flightning.scripts.train \
-    --log_dir outputs/tracking
-
-python -m flightning.online_learning.run_pipeline \
-    --cfg flightning/cfg/online.yaml</pre>
+<pre id="repro2">python -m lafr.online_learning.run_pipeline \
+    --cfg lafr/cfg/online.yaml</pre>
         </div>
       </div>
+    </div>
+
+    <p class="mt-6 text-ink-700 max-w-3xl"><strong>Each invocation:</strong></p>
+    <ul class="mt-2 ml-5 list-disc text-sm text-ink-700 max-w-3xl space-y-1.5">
+      <li>
+        Trains a base tracking policy from
+        <code class="font-mono bg-white/70 px-1.5 py-0.5 rounded">lafr/cfg/base.yaml</code>
+        (~22&nbsp;s on an RTX&nbsp;5090, 2048&nbsp;envs &times; 500&nbsp;epochs by default) and saves it under
+        <code class="font-mono bg-white/70 px-1.5 py-0.5 rounded">outputs/tracking/v*/policy_params</code>.
+      </li>
+      <li>
+        Runs the online residual-learning + ATS loop, writing versioned
+        policies, datasets, ATS diagnostics, metrics, and a Rerun recording to
+        <code class="font-mono bg-white/70 px-1.5 py-0.5 rounded">outputs/online_learning/v*/</code>.
+      </li>
+    </ul>
+
+    <div class="mt-6 text-[11px] uppercase tracking-wider text-ink-500 font-semibold">Useful flags</div>
+    <div class="mt-2 overflow-x-auto rounded-xl ring-1 ring-slate-200/70 bg-white/60">
+      <table class="data">
+        <thead>
+          <tr><th>Flag</th><th>Effect</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code class="font-mono">--base-policy-dir &lt;path&gt;</code></td><td>Reuse an existing checkpoint, skipping base-policy training</td></tr>
+          <tr><td><code class="font-mono">--skip-base-training</code></td><td>Require an existing base policy; do not retrain</td></tr>
+          <tr><td><code class="font-mono">--base-cfg &lt;path&gt; / --base-log-dir &lt;path&gt;</code></td><td>Override the base-training config or output dir</td></tr>
+          <tr><td><code class="font-mono">--iterations N / --policy-epochs N</code></td><td>Override defaults from <code class="font-mono">online.yaml</code></td></tr>
+          <tr><td><code class="font-mono">--smoke</code></td><td>Shrink both stages to a few epochs for a quick CPU sanity check (used by CI)</td></tr>
+          <tr><td><code class="font-mono">--no-record-rerun</code></td><td>Disable the bundled Rerun <code class="font-mono">.rrd</code> recording</td></tr>
+        </tbody>
+      </table>
     </div>
 
     <div class="mt-6 flex flex-wrap gap-2.5">
