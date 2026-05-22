@@ -719,6 +719,21 @@ rt {
     width: 96px;
   }
 
+  .placeholder-figure {
+    width: 96px;
+    gap: 0.25rem;
+    padding: 0.35rem;
+  }
+
+  .placeholder-emoji {
+    font-size: 1.9rem;
+  }
+
+  .placeholder-want {
+    font-size: 0.66rem;
+    letter-spacing: 0.06em;
+  }
+
   .timeline-item {
     grid-template-columns: 1.35rem minmax(0, 1fr);
     gap: 0.35rem;

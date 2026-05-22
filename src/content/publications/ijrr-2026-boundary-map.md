@@ -18,6 +18,10 @@ assets:
 links:
   - label: Source
     url: https://journals.sagepub.com/doi/10.1177/02783649261425266
+  - label: Code
+    url: https://github.com/hku-mars/BDM
+  - label: Video
+    url: https://www.bilibili.com/video/BV1sQPkzpEGk/
 featured: true
 ---
 

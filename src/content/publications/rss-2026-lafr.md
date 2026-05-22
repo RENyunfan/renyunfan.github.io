@@ -11,8 +11,14 @@ summary: "A real-world reinforcement-learning approach for agile quadrotor fligh
 assets:
   - /content-assets/publications/rss-2026-lafr/cite.bib
 links:
+  - label: Project Page
+    url: /projects/lafr/index.html
   - label: arXiv
     url: https://arxiv.org/abs/2602.10111
+  - label: Code
+    url: https://github.com/uzh-rpg/LAFR
+  - label: Video
+    url: https://youtu.be/yz7j-giwJZc?si=yS_AOhrjHNiJKYlo
 featured: true
 ---
 
