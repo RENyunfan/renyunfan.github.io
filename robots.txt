@@ -1,3 +1,0 @@
-User-agent: *
-
-Sitemap: https://renyunfan.github.io/sitemap.xml

@@ -1,0 +1,225 @@
+---
+import { getCollection } from "astro:content";
+import { getImage } from "astro:assets";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { optimizedPublicImage } from "../lib/images";
+
+const news = (await getCollection("news"))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 8);
+
+const publications = (await getCollection("publications"))
+  .filter((paper) => paper.data.featured)
+  .sort((a, b) => b.data.year - a.data.year)
+  .slice(0, 6);
+
+const [profile] = await getCollection("profile");
+const { Content: ProfileContent } = await profile.render();
+
+const socialLabels = {
+  "at-symbol": "Email",
+  "brands/github": "GitHub",
+  "brands/linkedin": "LinkedIn",
+  "academicons/google-scholar": "Scholar",
+  "academicons/orcid": "ORCID",
+};
+
+const heroImageFiles = import.meta.glob("../hero-media/*.{jpg,jpeg,png,webp,avif}", {
+  eager: true,
+  import: "default",
+});
+
+const heroVideoFiles = import.meta.glob("../hero-media/*.{mp4,webm}", {
+  eager: true,
+  import: "default",
+  query: "?url",
+});
+
+const fallbackHeroMedia = [
+  "/content-assets/publications/sr-2025-super/featured.png",
+  "/content-assets/publications/tro-2024-fast-livo2/featured.png",
+  "/content-assets/publications/iros2024-rog/featured.png",
+  "/content-assets/news/postdoc/featured.jpg",
+];
+
+const heroImages = await Promise.all(
+  Object.entries(heroImageFiles)
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(async ([file, image]) => {
+      const optimized = await getImage({
+        src: image,
+        width: 1800,
+        format: "webp",
+        quality: 78,
+      });
+
+      return {
+        file,
+        url: optimized.src,
+        type: "image",
+      };
+    }),
+);
+
+const heroVideos = Object.entries(heroVideoFiles)
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([file, url]) => ({
+    file,
+    url,
+    type: "video",
+  }));
+
+const heroMedia = [...heroImages, ...heroVideos].sort((a, b) => a.file.localeCompare(b.file));
+
+const heroSlides = heroMedia.length
+  ? heroMedia.map(({ url, type }) => ({ url, type }))
+  : fallbackHeroMedia.map((url) => ({ url, type: "image" }));
+
+const newsIcons = {
+  paper: "📄",
+  award: "🎉",
+  role: "💼",
+  milestone: "🚩",
+  other: "📌",
+};
+---
+
+<BaseLayout title="Yunfan Ren">
+  <section class="top-media" aria-label="Research highlights">
+    <div class="top-player">
+      {
+        heroSlides.map((media, index) => (
+          <div class:list={["hero-slide", index === 0 && "is-active"]} data-hero-slide>
+            {
+              media.type === "video" ? (
+                <video src={media.url} muted playsinline loop preload="metadata"></video>
+              ) : (
+                <img src={media.url} alt="" />
+              )
+            }
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="intro-section">
+    <aside class="profile-panel">
+      <div class="avatar-wrap">
+        <img class="avatar" src={optimizedPublicImage(profile.data.avatar, 640)} alt={profile.data.title} />
+        <span class="avatar-emoji">{profile.data.status?.icon}</span>
+      </div>
+      <div class="portrait-title">
+        <h1>
+          {
+            profile.data.name_pronunciation ? (
+              <ruby>
+                <rb>{profile.data.title}</rb>
+                <rt>{profile.data.name_pronunciation}</rt>
+              </ruby>
+            ) : (
+              profile.data.title
+            )
+          }
+        </h1>
+        <p class="role">{profile.data.role}</p>
+        {
+          profile.data.organizations.map((org) => (
+            <a class="org-link" href={org.url}>{org.name}</a>
+          ))
+        }
+      </div>
+      <div class="network">
+        {
+          profile.data.profiles.map((item) => (
+            <a href={item.url} aria-label={item.label || socialLabels[item.icon] || item.icon}>
+              {socialLabels[item.icon] || item.label || "Link"}
+            </a>
+          ))
+        }
+      </div>
+    </aside>
+
+    <div class="bio-panel">
+      <div class="bio-text">
+        <ProfileContent />
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll("[data-hero-slide]"));
+    const displayMs = 6500;
+    const blackGapMs = 650;
+
+    function playSlideMedia(slide) {
+      const video = slide?.querySelector("video");
+      if (!video) return;
+      video.currentTime = 0;
+      video.play().catch(() => {});
+    }
+
+    if (slides.length) {
+      let current = 0;
+      playSlideMedia(slides[current]);
+
+      if (slides.length > 1) {
+        window.setInterval(() => {
+          const previous = slides[current];
+          current = (current + 1) % slides.length;
+          previous.classList.remove("is-active");
+
+          window.setTimeout(() => {
+            const next = slides[current];
+            next.classList.add("is-active");
+            playSlideMedia(next);
+          }, blackGapMs);
+        }, displayMs);
+      }
+    }
+  </script>
+
+  <section class="section" id="news">
+    <div class="section-heading compact-heading">
+      <h2>Recent News</h2>
+    </div>
+    <div class="timeline-list">
+      {
+        news.map((item) => (
+          <article class:list={["timeline-item", `news-${item.data.kind}`]}>
+            <span class="news-icon" aria-hidden="true">{newsIcons[item.data.kind]}</span>
+            <time>{item.data.date.toLocaleDateString("en", { month: "short", day: "numeric", year: "numeric" })}</time>
+            <div>
+              <h3>{item.data.title}</h3>
+              {item.data.summary && <p>{item.data.summary}</p>}
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <h2>Featured Publications</h2>
+    </div>
+    <div class="citation-list">
+      {
+        publications.map((paper) => (
+          <article class="citation-item">
+            <span class="doc-icon">▣</span>
+            <div>
+              <p>
+                <span class="authors">{paper.data.authors.join(", ")}</span> ({paper.data.year}).
+                <a href="#">{paper.data.title}</a>. <em>{paper.data.venue}</em>.
+              </p>
+              <div class="attachment-row">
+                {paper.data.links.map((link) => <a href={link.url}>{link.label}</a>)}
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,42 @@
+---
+import "../styles/global.css";
+
+const { title = "Yunfan Ren" } = Astro.props;
+
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/news/", label: "News" },
+  { href: "/people/", label: "People" },
+  { href: "/projects/", label: "Projects" },
+  { href: "/publications/", label: "Publications" },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Yunfan Ren's personal academic homepage." />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="/">ORCA</a>
+        <nav aria-label="Primary navigation">
+          {
+            navItems.map((item) => (
+              <a href={item.href} aria-current={Astro.url.pathname === item.href ? "page" : undefined}>
+                {item.label}
+              </a>
+            ))
+          }
+        </nav>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

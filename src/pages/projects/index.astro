@@ -1,0 +1,90 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { optimizedPublicImage } from "../../lib/images";
+
+const projects = (await getCollection("projects")).sort((a, b) => a.data.order - b.data.order);
+
+const categories = [
+  { id: "published", title: "Published" },
+  { id: "student-project", title: "Student Projects" },
+];
+---
+
+<BaseLayout title="Projects | Yunfan Ren">
+  <div class="page-title">
+    <h1>Selected Projects</h1>
+    <p>Each project below has a self-contained page with details, video, and code where available.</p>
+  </div>
+
+  {
+    categories.map((category) => {
+      const items = projects.filter((p) => p.data.category === category.id);
+
+      return (
+        <section class="project-section">
+          <h2 class="project-section-title">{category.title}</h2>
+
+          {items.length ? (
+            <div class="card-grid three-col">
+              {items.map((project) => {
+                const primaryLink = project.data.links[0]?.url;
+                const imageSrc = project.data.image
+                  ? optimizedPublicImage(project.data.image, 900)
+                  : undefined;
+
+                return (
+                  <article class="image-card">
+                    {imageSrc &&
+                      (primaryLink ? (
+                        <a href={primaryLink} class="card-image-link" aria-label={project.data.title}>
+                          <img src={imageSrc} alt={project.data.title} />
+                        </a>
+                      ) : (
+                        <img src={imageSrc} alt={project.data.title} />
+                      ))}
+                    <div class="card-body">
+                      {project.data.status && <div class="tag-label">{project.data.status}</div>}
+                      <h2>
+                        {primaryLink ? <a href={primaryLink}>{project.data.title}</a> : project.data.title}
+                      </h2>
+                      <p>{project.data.summary}</p>
+                      <div class="attachment-row">
+                        {project.data.links.map((link) => (
+                          <a href={link.url}>{link.label}</a>
+                        ))}
+                      </div>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          ) : category.id === "student-project" ? (
+            <div class="card-grid">
+              <article class="image-card project-recruit">
+                <div class="placeholder-figure" aria-hidden="true">
+                  <span class="placeholder-emoji">🫵</span>
+                  <span class="placeholder-want">I WANT YOU</span>
+                </div>
+                <div class="card-body">
+                  <div class="tag-label">Open positions</div>
+                  <h2>Looking for motivated students</h2>
+                  <p>
+                    Interested in autonomous aerial robots, swarm intelligence, reinforcement learning,
+                    or embodied AI? I am recruiting PhD students, master's students, visiting researchers,
+                    and undergraduate interns to work on projects in these areas. Reach out to discuss.
+                  </p>
+                  <div class="attachment-row">
+                    <a href="mailto:yunfan@tongji.edu.cn">Email Yunfan</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          ) : (
+            <p class="empty-group">No items in this category yet.</p>
+          )}
+        </section>
+      );
+    })
+  }
+</BaseLayout>

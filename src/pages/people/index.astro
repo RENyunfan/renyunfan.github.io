@@ -1,0 +1,76 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { optimizedPublicImage } from "../../lib/images";
+
+const people = (await getCollection("people")).sort((a, b) => a.data.order - b.data.order);
+
+const groups = [
+  { id: "faculty", title: "Faculty" },
+  { id: "phd-master", title: "PhD / Master" },
+  { id: "visiting-researcher", title: "Visiting Researcher" },
+  { id: "undergraduate-intern", title: "Undergraduate Intern" },
+];
+---
+
+<BaseLayout title="People | Yunfan Ren">
+  <div class="page-title">
+    <h1>People</h1>
+    <p>Lab members and collaborators.</p>
+  </div>
+
+  <div class="people-sections">
+    {
+      groups.map((group) => {
+        const members = people.filter((person) => person.data.group === group.id);
+
+        return (
+          <section class="people-section">
+            <h2>{group.title}</h2>
+            {
+              members.length ? (
+                <div class="people-grid">
+                  {members.map((person) => (
+                    <article class="person-card">
+                      <img src={optimizedPublicImage(person.data.photo || "/images/avatar.jpg", 640)} alt={person.data.name} loading="lazy" />
+                      <div class="person-info">
+                        <h3>{person.data.name}</h3>
+                        {person.data.title && <p class="person-title">{person.data.title}</p>}
+                        {person.data.affiliation && <p>{person.data.affiliation}</p>}
+                        {person.data.highest_degree && <p>{person.data.highest_degree}</p>}
+                        <div class="person-links">
+                          {person.data.email && <a href={`mailto:${person.data.email}`}>Email</a>}
+                          {person.data.website && <a href={person.data.website}>Website</a>}
+                        </div>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              ) : (
+                <div class="people-grid">
+                  <article class="person-card person-card-placeholder">
+                    <div class="placeholder-figure" aria-hidden="true">
+                      <span class="placeholder-emoji">🫵</span>
+                      <span class="placeholder-want">I WANT YOU</span>
+                    </div>
+                    <div class="person-info">
+                      <h3>Join us!</h3>
+                      <p class="person-title">Open positions</p>
+                      <p>
+                        Interested in autonomous aerial robots, swarm intelligence, reinforcement learning,
+                        or embodied AI? We are recruiting — reach out to discuss opportunities.
+                      </p>
+                      <div class="person-links">
+                        <a href="mailto:yunfan@tongji.edu.cn">Email Yunfan</a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              )
+            }
+          </section>
+        );
+      })
+    }
+  </div>
+</BaseLayout>

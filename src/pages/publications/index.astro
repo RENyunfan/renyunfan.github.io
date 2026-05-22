@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const publications = (await getCollection("publications")).sort((a, b) => b.data.year - a.data.year);
+---
+
+<BaseLayout title="Publications | Yunfan Ren">
+  <div class="page-title">
+    <h1>Publications</h1>
+  </div>
+  <div class="citation-list">
+    {
+      publications.map((paper) => (
+        <article class="citation-item">
+          <span class="doc-icon">▣</span>
+          <div>
+            <p>
+              <span class="authors">{paper.data.authors.join(", ")}</span> ({paper.data.year}).
+              <a href="#">{paper.data.title}</a>. <em>{paper.data.venue}</em>.
+            </p>
+            {paper.data.summary && <p class="citation-summary">{paper.data.summary}</p>}
+            <div class="attachment-row">
+              {paper.data.featured && <span>Featured</span>}
+              {paper.data.links.map((link) => <a href={link.url}>{link.label}</a>)}
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</BaseLayout>

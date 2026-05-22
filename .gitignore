@@ -1,0 +1,7 @@
+.astro/
+node_modules/
+dist/
+astro-dist/
+public/_optimized/
+npm-debug.log*
+.DS_Store

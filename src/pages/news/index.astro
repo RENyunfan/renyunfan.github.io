@@ -1,0 +1,30 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { optimizedPublicImage } from "../../lib/images";
+
+const news = (await getCollection("news")).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+---
+
+<BaseLayout title="News | Yunfan Ren">
+  <div class="page-title">
+    <h1>News</h1>
+  </div>
+  <div class="card-grid two-col">
+    {
+      news.map((item) => (
+        <article class="image-card">
+          {item.data.image && <img src={optimizedPublicImage(item.data.image, 900)} alt={item.data.title} />}
+          <div class="card-body">
+            <time>{item.data.date.toLocaleDateString("en", { month: "short", day: "numeric", year: "numeric" })}</time>
+            <h2>{item.data.title}</h2>
+            {item.data.summary && <p>{item.data.summary}</p>}
+            {item.data.link && <a class="attachment-link" href={item.data.link}>Read more</a>}
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</BaseLayout>
