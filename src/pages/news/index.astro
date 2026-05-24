@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { optimizedPublicImage } from "../../lib/images";
+import { splitByVenues } from "../../lib/venues";
 
 const news = (await getCollection("news")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
@@ -19,7 +20,11 @@ const news = (await getCollection("news")).sort(
           {item.data.image && <img src={optimizedPublicImage(item.data.image, 900)} alt={item.data.title} />}
           <div class="card-body">
             <time>{item.data.date.toLocaleDateString("en", { month: "short", day: "numeric", year: "numeric" })}</time>
-            <h2>{item.data.title}</h2>
+            <h2>
+              {splitByVenues(item.data.title).map((part) =>
+                part.venue ? <span class="venue-mark">{part.text}</span> : part.text,
+              )}
+            </h2>
             {item.data.summary && <p>{item.data.summary}</p>}
             {item.data.link && <a class="attachment-link" href={item.data.link}>Read more</a>}
           </div>

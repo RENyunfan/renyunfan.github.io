@@ -17,7 +17,7 @@ const publications = (await getCollection("publications")).sort((a, b) => b.data
           <div>
             <p>
               <span class="authors">{paper.data.authors.join(", ")}</span> ({paper.data.year}).
-              <a href="#">{paper.data.title}</a>. <em>{paper.data.venue}</em>.
+              <a href="#">{paper.data.title}</a>. <em class="venue-mark">{paper.data.venue}</em>.
             </p>
             {paper.data.summary && <p class="citation-summary">{paper.data.summary}</p>}
             <div class="attachment-row">

@@ -372,6 +372,36 @@ rt {
   color: var(--muted);
 }
 
+.intro-callout {
+  max-width: 760px;
+  margin: 0 auto 3.2rem;
+  padding: 1.5rem 1.75rem;
+  background: var(--primary-50);
+  border: 1px solid var(--primary-200);
+  border-left: 4px solid var(--primary-700);
+  border-radius: 12px;
+}
+
+.intro-callout .page-lead {
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: #3f3f46;
+}
+
+.intro-callout .page-lead strong {
+  color: #18181b;
+  font-weight: 700;
+}
+
+.intro-callout .page-lead-zh {
+  margin-top: 0.9rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--primary-200);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
 .timeline-list {
   display: grid;
   gap: 1rem;
@@ -563,6 +593,11 @@ rt {
   font-size: 0.76rem;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.venue-mark {
+  color: #a66b86;
+  font-weight: 700;
 }
 
 .card-body h2 {

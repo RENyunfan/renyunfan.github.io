@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import { getImage } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { optimizedPublicImage } from "../lib/images";
+import { splitByVenues } from "../lib/venues";
 
 const news = (await getCollection("news"))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
@@ -190,7 +191,11 @@ const newsIcons = {
             <span class="news-icon" aria-hidden="true">{newsIcons[item.data.kind]}</span>
             <time>{item.data.date.toLocaleDateString("en", { month: "short", day: "numeric", year: "numeric" })}</time>
             <div>
-              <h3>{item.data.title}</h3>
+              <h3>
+                {splitByVenues(item.data.title).map((part) =>
+                  part.venue ? <span class="venue-mark">{part.text}</span> : part.text,
+                )}
+              </h3>
               {item.data.summary && <p>{item.data.summary}</p>}
             </div>
           </article>
@@ -211,7 +216,7 @@ const newsIcons = {
             <div>
               <p>
                 <span class="authors">{paper.data.authors.join(", ")}</span> ({paper.data.year}).
-                <a href="#">{paper.data.title}</a>. <em>{paper.data.venue}</em>.
+                <a href="#">{paper.data.title}</a>. <em class="venue-mark">{paper.data.venue}</em>.
               </p>
               <div class="attachment-row">
                 {paper.data.links.map((link) => <a href={link.url}>{link.label}</a>)}
