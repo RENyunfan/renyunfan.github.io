@@ -131,5 +131,6 @@ My research focuses on **Autonomous Aerial Robots**, **Manipulation**, **Dextero
 
 - Associate Editor for **IEEE RA-L** and **IEEE ICRA 2026**.
 - Reviewer for **Science Robotics**, **Nature Communications**, **Science Advances**, **T-RO**, **IJRR**, **RSS**, **ICRA**, and **IROS**.
+- Selected as an [**IEEE RA-L Outstanding Reviewer**](https://online.flippingbook.com/view/917250342/57/).
 
 <!-- Beyond academia, I actively contribute to open-source projects. My research code on GitHub has accumulated over **4k stars** ⭐. Notable repositories include [**SUPER (★622)**](https://github.com/hku-mars/SUPER), [**ROG-Map (★460)**](https://github.com/hku-mars/ROG-Map), [**FAST-LIVO2 (★2.8k)**](https://github.com/hku-mars/FAST-LIVO2), and [**LiDAR_IMU_Init (★1k)**](https://github.com/hku-mars/LiDAR_IMU_Init). -->
