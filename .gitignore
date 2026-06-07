@@ -5,3 +5,6 @@ astro-dist/
 public/_optimized/
 npm-debug.log*
 .DS_Store
+
+# 招生 / 个人介绍帖（本地草稿，不发布）
+admissions-posts/

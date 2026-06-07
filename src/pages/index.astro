@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import { getImage } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { optimizedPublicImage } from "../lib/images";
@@ -15,7 +15,7 @@ const publications = (await getCollection("publications"))
   .slice(0, 6);
 
 const [profile] = await getCollection("profile");
-const { Content: ProfileContent } = await profile.render();
+const { Content: ProfileContent } = await render(profile);
 
 const socialLabels = {
   "at-symbol": "Email",
