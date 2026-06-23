@@ -1,0 +1,13 @@
+# Allow the Rerun web viewer (app.rerun.io) to fetch the recording and
+# blueprint cross-origin. Without this, browsers block the fetch and the
+# embedded viewer shows "failed to fetch rrd file".
+<IfModule mod_headers.c>
+  <FilesMatch "\.(rrd|rbl)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
+
+# Serve the Rerun files as binary downloads with a sane content type.
+<IfModule mod_mime.c>
+  AddType application/octet-stream .rrd .rbl
+</IfModule>
