@@ -13,6 +13,7 @@ const VENUE_TERMS = [
   "IJRR",
   "T-RO",
   "TRO",
+  "T-FR",
   "RSS",
 ];
 
